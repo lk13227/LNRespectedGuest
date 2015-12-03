@@ -14,7 +14,7 @@
 #define kScreenWidth        [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight        [UIScreen mainScreen].bounds.size.height
 
-@interface JHCustomMenu()
+@interface JHCustomMenu()//加一句注释
 @property (nonatomic, assign) CGPoint origin;
 @property (nonatomic, assign) CGFloat rowHeight;
 @end
