@@ -54,6 +54,8 @@
 		4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9C1841C02C30900523846 /* MyTableViewCell.xib */; };
 		4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1881C02CB5700523846 /* LoginViewController.m */; };
 		4CD9C18C1C02DD7400523846 /* registeredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C18B1C02DD7400523846 /* registeredViewController.m */; };
+		B572F0051C102234006228A9 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F0031C102234006228A9 /* MerchantCell.m */; };
+		B572F0061C102234006228A9 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B572F0041C102234006228A9 /* MerchantCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,9 @@
 		4CD9C1881C02CB5700523846 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4CD9C18A1C02DD7400523846 /* registeredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registeredViewController.h; sourceTree = "<group>"; };
 		4CD9C18B1C02DD7400523846 /* registeredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registeredViewController.m; sourceTree = "<group>"; };
+		B572F0021C102234006228A9 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
+		B572F0031C102234006228A9 /* MerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCell.m; sourceTree = "<group>"; };
+		B572F0041C102234006228A9 /* MerchantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,12 +200,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C5FAC171C041E2200027064 /* Message */ = {
+		4C5FAC171C041E2200027064 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
 				4C5FAC181C041E3200027064 /* ViewController */,
 			);
-			name = Message;
+			name = "Message(消息)";
 			sourceTree = "<group>";
 		};
 		4C5FAC181C041E3200027064 /* ViewController */ = {
@@ -212,14 +217,14 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		4C5FAC1A1C041E4F00027064 /* Person */ = {
+		4C5FAC1A1C041E4F00027064 /* Person(我) */ = {
 			isa = PBXGroup;
 			children = (
 				4C5FAC1E1C041F4B00027064 /* Register */,
 				4C5FAC1D1C041F3400027064 /* Login */,
 				4C5FAC1B1C041E5700027064 /* ViewController */,
 			);
-			name = Person;
+			name = "Person(我)";
 			sourceTree = "<group>";
 		};
 		4C5FAC1B1C041E5700027064 /* ViewController */ = {
@@ -260,12 +265,12 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
-		4C5FAC7B1C08193C00027064 /* Find */ = {
+		4C5FAC7B1C08193C00027064 /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
 				4C5FAC7C1C08196E00027064 /* ViewController */,
 			);
-			name = Find;
+			name = "Find(发现)";
 			sourceTree = "<group>";
 		};
 		4C5FAC7C1C08196E00027064 /* ViewController */ = {
@@ -277,13 +282,13 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		4C5FAC811C081A0E00027064 /* Friends */ = {
+		4C5FAC811C081A0E00027064 /* Friends(通讯录) */ = {
 			isa = PBXGroup;
 			children = (
 				4C5FACA31C0B271700027064 /* View */,
 				4C5FAC821C081A3100027064 /* ViewController */,
 			);
-			name = Friends;
+			name = "Friends(通讯录)";
 			sourceTree = "<group>";
 		};
 		4C5FAC821C081A3100027064 /* ViewController */ = {
@@ -295,7 +300,7 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		4C5FAC831C081B4F00027064 /* MerchantBusiness */ = {
+		4C5FAC831C081B4F00027064 /* MerchantBusiness(贵人圈) */ = {
 			isa = PBXGroup;
 			children = (
 				4C6FBA7D1C0D542500FACAFF /* JHCustomMenu.h */,
@@ -304,7 +309,7 @@
 				4C5FAC8B1C0849A500027064 /* View */,
 				4C5FAC841C081B6800027064 /* ViewController */,
 			);
-			name = MerchantBusiness;
+			name = "MerchantBusiness(贵人圈)";
 			sourceTree = "<group>";
 		};
 		4C5FAC841C081B6800027064 /* ViewController */ = {
@@ -346,6 +351,9 @@
 				4C5FAC941C098AE300027064 /* BusinessCell.h */,
 				4C5FAC951C098AE300027064 /* BusinessCell.m */,
 				4C5FAC961C098AE300027064 /* BusinessCell.xib */,
+				B572F0021C102234006228A9 /* MerchantCell.h */,
+				B572F0031C102234006228A9 /* MerchantCell.m */,
+				B572F0041C102234006228A9 /* MerchantCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -465,11 +473,11 @@
 			children = (
 				4C8B4E201BFAC42B003A6F65 /* AppDelegate.h */,
 				4C8B4E211BFAC42B003A6F65 /* AppDelegate.m */,
-				4C5FAC831C081B4F00027064 /* MerchantBusiness */,
-				4C5FAC811C081A0E00027064 /* Friends */,
-				4C5FAC171C041E2200027064 /* Message */,
-				4C5FAC7B1C08193C00027064 /* Find */,
-				4C5FAC1A1C041E4F00027064 /* Person */,
+				4C5FAC831C081B4F00027064 /* MerchantBusiness(贵人圈) */,
+				4C5FAC811C081A0E00027064 /* Friends(通讯录) */,
+				4C5FAC171C041E2200027064 /* Message(消息) */,
+				4C5FAC7B1C08193C00027064 /* Find(发现) */,
+				4C5FAC1A1C041E4F00027064 /* Person(我) */,
 				4C5FAC921C09891600027064 /* other */,
 				4C8B4E1D1BFAC42B003A6F65 /* Supporting Files */,
 			);
@@ -609,6 +617,7 @@
 				4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */,
 				4C5FACF21C0BED1500027064 /* Info.plist in Resources */,
 				4C8B4E331BFAC42B003A6F65 /* LaunchScreen.storyboard in Resources */,
+				B572F0061C102234006228A9 /* MerchantCell.xib in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /* Images.xcassets in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
@@ -658,6 +667,7 @@
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,
 				4C5FACCF1C0BED0700027064 /* AFHTTPRequestOperationManager.m in Sources */,
 				4C5FACA91C0B287200027064 /* HeadView.m in Sources */,
+				B572F0051C102234006228A9 /* MerchantCell.m in Sources */,
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
 				4C5FACCE1C0BED0700027064 /* AFHTTPRequestOperation.m in Sources */,
 				4C5FACF51C0BED1500027064 /* MASConstraintMaker.m in Sources */,

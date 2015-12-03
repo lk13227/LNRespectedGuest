@@ -34,7 +34,7 @@
 {
     //self.dataArray = [[NSMutableArray alloc]init];
     if(!_dataArray)
-        _dataArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16"];
+        _dataArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
     
 }
 -(void)initView
@@ -67,12 +67,13 @@
         
     }
     cell.titleLabel.text = self.dataArray[indexPath.row];
+    cell.picImageView.image = [UIImage imageNamed:@"123.jpg"];
     return cell;
 }
 //返回行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70.;
+    return 100.0;
 }
 //设置行的反选
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -115,8 +115,8 @@
 {
     if (_merchantView == nil)
     {
-        _merchantView = [[MerchantView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) ];
-        _merchantView.backgroundColor = [UIColor greenColor];
+        _merchantView = [[MerchantView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
+//        _merchantView.backgroundColor = [UIColor greenColor];
     }
     return _merchantView;
 }
@@ -125,7 +125,7 @@
     if (_businessView == nil)
     {
         
-        _businessView = [[BusinessView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        _businessView = [[BusinessView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
        // _businessView.backgroundColor = [UIColor greenColor];
         
     }
