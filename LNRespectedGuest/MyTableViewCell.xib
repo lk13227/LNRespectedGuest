@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" rowHeight="50" id="KGk-i7-Jjw" customClass="MyTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7T-d8-Auy">
+                        <rect key="frame" x="8" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="B7T-d8-Auy" secondAttribute="height" multiplier="1:1" id="erU-J3-F7w"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1U-fw-izz">
+                        <rect key="frame" x="0.0" y="48" width="380" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="xmu-db-xdd"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHv-Pb-5fk">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7KI-Lf-D6t"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozo-Ra-zaI">
+                        <rect key="frame" x="63" y="11" width="273" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2(1)" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-eN-8mP">
+                        <rect key="frame" x="340" y="10" width="25" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="zXM-Ml-bgB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="n1U-fw-izz" secondAttribute="trailing" constant="180" id="2eG-Py-hwO"/>
+                    <constraint firstItem="n1U-fw-izz" firstAttribute="top" secondItem="B7T-d8-Auy" secondAttribute="bottom" constant="4" id="6D5-IT-w5p"/>
+                    <constraint firstAttribute="trailing" secondItem="vHv-Pb-5fk" secondAttribute="trailing" id="ASN-qH-TYT"/>
+                    <constraint firstAttribute="trailing" secondItem="YTE-eN-8mP" secondAttribute="trailing" constant="15" id="BRk-q5-C4y"/>
+                    <constraint firstItem="vHv-Pb-5fk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CvW-Pi-vWn"/>
+                    <constraint firstItem="vHv-Pb-5fk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fa5-Gk-PkX"/>
+                    <constraint firstAttribute="bottom" secondItem="n1U-fw-izz" secondAttribute="bottom" constant="1" id="KVV-r7-g8C"/>
+                    <constraint firstAttribute="bottom" secondItem="n1U-fw-izz" secondAttribute="bottom" id="Kad-pn-B3t"/>
+                    <constraint firstItem="n1U-fw-izz" firstAttribute="top" secondItem="Ozo-Ra-zaI" secondAttribute="bottom" constant="8" id="KwW-TY-BYz"/>
+                    <constraint firstAttribute="trailing" secondItem="vHv-Pb-5fk" secondAttribute="trailing" constant="180" id="Lzz-iw-p7m"/>
+                    <constraint firstItem="n1U-fw-izz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MfJ-2h-uvh"/>
+                    <constraint firstItem="vHv-Pb-5fk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NVM-1i-TJf"/>
+                    <constraint firstItem="Ozo-Ra-zaI" firstAttribute="top" secondItem="vHv-Pb-5fk" secondAttribute="bottom" constant="10" id="QdV-Th-uzu"/>
+                    <constraint firstItem="vHv-Pb-5fk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QwP-j8-094"/>
+                    <constraint firstAttribute="trailing" secondItem="n1U-fw-izz" secondAttribute="trailing" id="S9w-hf-OIq"/>
+                    <constraint firstAttribute="bottom" secondItem="YTE-eN-8mP" secondAttribute="bottom" constant="10" id="TZm-lL-GxT"/>
+                    <constraint firstItem="Ozo-Ra-zaI" firstAttribute="leading" secondItem="B7T-d8-Auy" secondAttribute="trailing" constant="15" id="VhQ-4W-lZi"/>
+                    <constraint firstItem="n1U-fw-izz" firstAttribute="top" secondItem="B7T-d8-Auy" secondAttribute="bottom" constant="4" id="a2Y-pk-5g1"/>
+                    <constraint firstItem="B7T-d8-Auy" firstAttribute="top" secondItem="vHv-Pb-5fk" secondAttribute="bottom" constant="4" id="bu2-b4-t9u"/>
+                    <constraint firstItem="Ozo-Ra-zaI" firstAttribute="top" secondItem="vHv-Pb-5fk" secondAttribute="bottom" constant="10" id="czs-7X-eKd"/>
+                    <constraint firstAttribute="bottom" secondItem="Ozo-Ra-zaI" secondAttribute="bottom" constant="8" id="dks-sP-aSh"/>
+                    <constraint firstItem="B7T-d8-Auy" firstAttribute="top" secondItem="vHv-Pb-5fk" secondAttribute="bottom" constant="4" id="inC-ZU-KxI"/>
+                    <constraint firstAttribute="trailing" secondItem="Ozo-Ra-zaI" secondAttribute="trailing" constant="44" id="j5i-h4-dIs"/>
+                    <constraint firstItem="B7T-d8-Auy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="jiv-ns-41J"/>
+                    <constraint firstItem="B7T-d8-Auy" firstAttribute="top" secondItem="vHv-Pb-5fk" secondAttribute="bottom" constant="4" id="nmz-wF-yNP"/>
+                    <constraint firstItem="n1U-fw-izz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qMW-5h-RVC"/>
+                    <constraint firstItem="Ozo-Ra-zaI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="sLd-up-nza"/>
+                    <constraint firstItem="B7T-d8-Auy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="wEG-Cf-RNf"/>
+                    <constraint firstItem="YTE-eN-8mP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xmh-tr-49l"/>
+                    <constraint firstAttribute="bottom" secondItem="B7T-d8-Auy" secondAttribute="bottom" constant="4" id="zIK-Ni-RhV"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Fa5-Gk-PkX"/>
+                        <exclude reference="Lzz-iw-p7m"/>
+                        <exclude reference="NVM-1i-TJf"/>
+                        <exclude reference="bu2-b4-t9u"/>
+                        <exclude reference="inC-ZU-KxI"/>
+                        <exclude reference="nmz-wF-yNP"/>
+                        <exclude reference="2eG-Py-hwO"/>
+                        <exclude reference="6D5-IT-w5p"/>
+                        <exclude reference="KVV-r7-g8C"/>
+                        <exclude reference="KwW-TY-BYz"/>
+                        <exclude reference="MfJ-2h-uvh"/>
+                        <exclude reference="a2Y-pk-5g1"/>
+                        <exclude reference="QdV-Th-uzu"/>
+                        <exclude reference="czs-7X-eKd"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backVIew" destination="n1U-fw-izz" id="itD-w0-W4f"/>
+                <outlet property="iconImage" destination="B7T-d8-Auy" id="Jui-Ig-3kR"/>
+                <outlet property="titleText" destination="Ozo-Ra-zaI" id="sIw-Vm-0i8"/>
+            </connections>
+            <point key="canvasLocation" x="324" y="181"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="2(1)" width="32" height="32"/>
+    </resources>
+</document>
