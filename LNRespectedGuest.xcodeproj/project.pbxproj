@@ -10,8 +10,6 @@
 		4C5FAC801C0819E700027064 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC7F1C0819E700027064 /* FindViewController.m */; };
 		4C5FAC871C081B8D00027064 /* MerchantBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC861C081B8D00027064 /* MerchantBusinessViewController.m */; };
 		4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC891C081C5700027064 /* FriendsViewController.m */; };
-		4C5FAC8E1C0849E900027064 /* MerchantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC8D1C0849E900027064 /* MerchantView.m */; };
-		4C5FAC911C0849FC00027064 /* BusinessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC901C0849FC00027064 /* BusinessView.m */; };
 		4C5FAC971C098AE300027064 /* BusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC951C098AE300027064 /* BusinessCell.m */; };
 		4C5FAC981C098AE300027064 /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5FAC961C098AE300027064 /* BusinessCell.xib */; };
 		4C5FACA91C0B287200027064 /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FACA81C0B287200027064 /* HeadView.m */; };
@@ -83,10 +81,6 @@
 		4C5FAC861C081B8D00027064 /* MerchantBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantBusinessViewController.m; sourceTree = "<group>"; };
 		4C5FAC881C081C5700027064 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		4C5FAC891C081C5700027064 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
-		4C5FAC8C1C0849E900027064 /* MerchantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantView.h; sourceTree = "<group>"; };
-		4C5FAC8D1C0849E900027064 /* MerchantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantView.m; sourceTree = "<group>"; };
-		4C5FAC8F1C0849FC00027064 /* BusinessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessView.h; sourceTree = "<group>"; };
-		4C5FAC901C0849FC00027064 /* BusinessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessView.m; sourceTree = "<group>"; };
 		4C5FAC941C098AE300027064 /* BusinessCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCell.h; sourceTree = "<group>"; };
 		4C5FAC951C098AE300027064 /* BusinessCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCell.m; sourceTree = "<group>"; };
 		4C5FAC961C098AE300027064 /* BusinessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
@@ -329,10 +323,6 @@
 		4C5FAC8B1C0849A500027064 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4C5FAC8C1C0849E900027064 /* MerchantView.h */,
-				4C5FAC8D1C0849E900027064 /* MerchantView.m */,
-				4C5FAC8F1C0849FC00027064 /* BusinessView.h */,
-				4C5FAC901C0849FC00027064 /* BusinessView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -654,7 +644,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */,
-				4C5FAC911C0849FC00027064 /* BusinessView.m in Sources */,
 				4C5FAC801C0819E700027064 /* FindViewController.m in Sources */,
 				4C5FACD31C0BED0700027064 /* AFURLConnectionOperation.m in Sources */,
 				4C5FACFB1C0BED1500027064 /* View+MASAdditions.m in Sources */,
@@ -667,7 +656,6 @@
 				4C5FACF31C0BED1500027064 /* MASCompositeConstraint.m in Sources */,
 				4C5FACFA1C0BED1500027064 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				4C5FAC871C081B8D00027064 /* MerchantBusinessViewController.m in Sources */,
-				4C5FAC8E1C0849E900027064 /* MerchantView.m in Sources */,
 				4CD9C1851C02C30900523846 /* MyTableViewCell.m in Sources */,
 				4C5FACF41C0BED1500027064 /* MASConstraint.m in Sources */,
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,

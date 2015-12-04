@@ -9,17 +9,21 @@
 #import "MerchantBusinessViewController.h"
 #import "JHCustomMenu.h"
 
-#import "MerchantView.h"
+//#import "MerchantView.h"
+#import "MerchantCell.h"
 
-#import "BusinessView.h"
+#import "BusinessCell.h"
+#import "takeDinnerViewController.h"
 
-@interface MerchantBusinessViewController ()<JHCustomMenuDelegate>
+@interface MerchantBusinessViewController ()<JHCustomMenuDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) JHCustomMenu *menu;
 
 @property(nonatomic,strong)UISegmentedControl *segmentedControl;
-@property(nonatomic,strong)MerchantView *merchantView;
-@property(nonatomic,strong)BusinessView*businessView;
+@property(nonatomic,strong)UIView *merchantView;
+@property(nonatomic,strong)UITableView *merchantTable;
+@property(nonatomic,strong)UIView *businessView;
+@property(nonatomic,strong)UITableView *businessTable;
 
 @end
 
@@ -48,9 +52,8 @@
 {
     [self initsegmentedControl];
     
-    [self.view addSubview:self.merchantView];
-    [self.view addSubview:self.businessView];
-    //self.view.backgroundColor = [UIColor whiteColor];
+    [self createBusinessView];
+    [self createMerchantView];
     self.businessView.alpha = 0.01;
     
 }
@@ -111,36 +114,109 @@
     }
 }
 
--(MerchantView *)merchantView
+- (void)createMerchantView{
+    _merchantView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
+    self.merchantTable = [[UITableView alloc] initWithFrame:self.merchantView.bounds style:UITableViewStylePlain];
+    self.merchantTable.delegate = self;
+    self.merchantTable.dataSource = self;
+    [self.view addSubview:self.merchantView];
+    [self.merchantView addSubview:self.merchantTable];
+    
+    [self.merchantTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
+    
+}
+
+
+- (void)createBusinessView{
+    _businessView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
+    
+    self.businessTable = [[UITableView alloc]initWithFrame:_businessView.bounds style:UITableViewStylePlain];
+    
+    self.businessTable.dataSource = self;
+    self.businessTable.delegate = self;
+    
+    [self.view addSubview:self.businessView];
+    [self.businessView addSubview:self.businessTable];
+}
+
+#pragma mark -tableView
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (_merchantView == nil)
-    {
-        _merchantView = [[MerchantView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
-//        _merchantView.backgroundColor = [UIColor greenColor];
+    if (tableView == self.businessTable) {
+        return 1;
     }
-    return _merchantView;
+    if (tableView == self.merchantTable) {
+        return 1;
+    }
+    return 1;
 }
--(BusinessView *)businessView
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (_businessView == nil)
-    {
+    if (tableView == self.businessTable) {
+        return 10;
+    }
+    if (tableView == self.merchantTable) {
+        return 5;
+    }
+    return 10;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (tableView == self.businessTable) {
+        static NSString *identifier = @"Cell";
+        BusinessCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        /*判断*/
+        if (cell == nil)
+        {
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:self options:nil]firstObject];
+            
+        }
+        cell.picImageView.image = [UIImage imageNamed:@"123.jpg"];
+        return cell;
+    }
+    
+    if (tableView == self.merchantTable) {
+        MerchantCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guiren" forIndexPath:indexPath];
+        if (!cell) {
+            cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiren"];
+        }
+        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
+        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
-        _businessView = [[BusinessView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
-       // _businessView.backgroundColor = [UIColor greenColor];
+        return cell;
+    }
+    
+    return nil;
+}
+//返回行高
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.businessTable) {
+        return 100.0;
+    }
+    
+    if (tableView == self.merchantTable) {
+        return 300.0;
+    }
+    
+    return 0;
+}
+//设置行的反选
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (tableView == self.businessTable) {
+        takeDinnerViewController *takeVc = [[takeDinnerViewController alloc] init];
         
     }
-    return _businessView;
+    
+    if (tableView == self.merchantTable) {
+        
+    }
+    
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
