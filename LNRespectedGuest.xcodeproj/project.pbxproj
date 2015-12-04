@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25168F841C1126A100B5ACCF /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25168F821C1126A100B5ACCF /* MessageCell.m */; };
+		25168F851C1126A100B5ACCF /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25168F831C1126A100B5ACCF /* MessageCell.xib */; };
 		4C5FAC801C0819E700027064 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC7F1C0819E700027064 /* FindViewController.m */; };
 		4C5FAC871C081B8D00027064 /* MerchantBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC861C081B8D00027064 /* MerchantBusinessViewController.m */; };
 		4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC891C081C5700027064 /* FriendsViewController.m */; };
@@ -75,6 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25168F811C1126A100B5ACCF /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		25168F821C1126A100B5ACCF /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		25168F831C1126A100B5ACCF /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		4C5FAC7E1C0819E700027064 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		4C5FAC7F1C0819E700027064 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		4C5FAC851C081B8D00027064 /* MerchantBusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantBusinessViewController.h; sourceTree = "<group>"; };
@@ -197,6 +202,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25168F801C11266900B5ACCF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				25168F811C1126A100B5ACCF /* MessageCell.h */,
+				25168F821C1126A100B5ACCF /* MessageCell.m */,
+				25168F831C1126A100B5ACCF /* MessageCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		4C5FAC171C041E2200027064 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +225,7 @@
 			children = (
 				4C8B4E5C1BFAC7AC003A6F65 /* MessageViewController.h */,
 				4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */,
+				25168F801C11266900B5ACCF /* Cell */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -613,6 +629,7 @@
 				4C5FACF21C0BED1500027064 /* Info.plist in Resources */,
 				4C8B4E331BFAC42B003A6F65 /* LaunchScreen.storyboard in Resources */,
 				B572F0061C102234006228A9 /* MerchantCell.xib in Resources */,
+				25168F851C1126A100B5ACCF /* MessageCell.xib in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /* Images.xcassets in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
@@ -656,6 +673,11 @@
 				4C5FACF31C0BED1500027064 /* MASCompositeConstraint.m in Sources */,
 				4C5FACFA1C0BED1500027064 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				4C5FAC871C081B8D00027064 /* MerchantBusinessViewController.m in Sources */,
+<<<<<<< .merge_file_jRTT5k
+=======
+				4C5FAC8E1C0849E900027064 /* MerchantView.m in Sources */,
+				25168F841C1126A100B5ACCF /* MessageCell.m in Sources */,
+>>>>>>> .merge_file_eaLzpX
 				4CD9C1851C02C30900523846 /* MyTableViewCell.m in Sources */,
 				4C5FACF41C0BED1500027064 /* MASConstraint.m in Sources */,
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,
