@@ -114,6 +114,7 @@
     }
 }
 
+#pragma mark -创建贵人视图
 - (void)createMerchantView{
     _merchantView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
     self.merchantTable = [[UITableView alloc] initWithFrame:self.merchantView.bounds style:UITableViewStylePlain];
@@ -126,7 +127,7 @@
     
 }
 
-
+#pragma mark -创建商圈视图
 - (void)createBusinessView{
     _businessView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64-50)];
     
@@ -208,7 +209,7 @@
     
     if (tableView == self.businessTable) {
         takeDinnerViewController *takeVc = [[takeDinnerViewController alloc] init];
-        
+        [self.navigationController pushViewController:takeVc animated:YES];
     }
     
     if (tableView == self.merchantTable) {

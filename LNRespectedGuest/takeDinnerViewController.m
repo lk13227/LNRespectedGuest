@@ -18,7 +18,23 @@
     [super viewDidLoad];
     
     self.title = @"点菜";
+    self.view.backgroundColor = [UIColor orangeColor];
+    [self createUI];
+}
+
+
+#pragma mark - 创建UI
+- (void)createUI{
     
+    UIView *backView = [[UIView alloc] init];
+    backView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:backView];
+    [backView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+        make.top.mas_equalTo(self.view.mas_top);
+        make.width.offset(80);
+    }];
     
 }
 
