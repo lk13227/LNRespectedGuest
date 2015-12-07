@@ -38,9 +38,14 @@
     self.merchantBusinessVC = [[MerchantBusinessViewController alloc]init];
     self.merchantBusinessVC.title = @"贵人圈";
     self.merchantBusinessVC.tabBarItem.image = [UIImage imageNamed:@"tab_0"];
-  
+  [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];//去掉导航左边返回按钮上的文字
     /*添加导航控制器*/
     UINavigationController *merchantBusinessNav = [[UINavigationController alloc]initWithRootViewController:self.merchantBusinessVC];
+    merchantBusinessNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [merchantBusinessNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
     [merchantBusinessNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
     
     /*导航栏风格--背景*/
@@ -55,6 +60,10 @@
     self.friendsVC.tabBarItem.image = [UIImage imageNamed:@"tab_1"];
      //self.merchantVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     UINavigationController *friendsNav = [[UINavigationController alloc]initWithRootViewController:self.friendsVC];
+    friendsNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [friendsNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
     [friendsNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
     /*导航栏透明*/
     friendsNav.navigationBar.translucent = YES;
@@ -63,6 +72,10 @@
     self.messageVC.title = @"消息";
     self.messageVC.tabBarItem.image = [UIImage imageNamed:@"tab_2"];
     UINavigationController *messageNav = [[UINavigationController alloc]initWithRootViewController:self.messageVC];
+    messageNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [messageNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
     [messageNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
     /*导航栏透明*/
     messageNav.navigationBar.translucent = YES;
@@ -71,6 +84,10 @@
     self.findVC.title = @"发现";
     self.findVC.tabBarItem.image = [UIImage imageNamed:@"tab_3"];
     UINavigationController *findNav = [[UINavigationController alloc]initWithRootViewController:self.findVC];
+    findNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [findNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
     [findNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
     /*导航栏透明*/
     findNav.navigationBar.translucent = YES;
@@ -79,6 +96,10 @@
     self.personVC.title = @"我";
     self.personVC.tabBarItem.image = [UIImage imageNamed:@"tab_3"];
     UINavigationController *personNav = [[UINavigationController alloc]initWithRootViewController:self.personVC];
+    personNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [personNav.navigationBar setTitleTextAttributes:
+  @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+    NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
     [personNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
     /*导航栏透明*/
     personNav.navigationBar.translucent = YES;
@@ -87,7 +108,7 @@
     UITabBarController *tbc = [[UITabBarController alloc]init];
     [tbc.tabBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"]];
     
-/*把创建好的分栏添加给分栏控制器*/
+    /*把创建好的分栏添加给分栏控制器*/
     tbc.viewControllers = @[merchantBusinessNav,friendsNav,messageNav,findNav,personNav];
     /*设置分栏控制器的委托人属性*/
     tbc.delegate = self;

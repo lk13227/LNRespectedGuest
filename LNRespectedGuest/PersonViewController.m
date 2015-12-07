@@ -9,6 +9,7 @@
 #import "PersonViewController.h"
 #import "MyTableViewCell.h"
 #import "LoginViewController.h"
+#import "accountViewController.h"
 
 @interface PersonViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -58,8 +59,7 @@ static NSString *cellOne = @"cell";
         make.height.offset(100);
     }];
 
-    
-        //icon头像
+    //icon头像
     UIImageView *iconImage = [[UIImageView alloc] init];
     iconImage.image = [UIImage imageNamed:@"123.jpg"];
     iconImage.layer.cornerRadius = 40.0;
@@ -74,7 +74,6 @@ static NSString *cellOne = @"cell";
         make.width.mas_equalTo(iconImage.mas_height);
     }];
     
-    
     /*创建一个登录/注册按钮*/
     self.loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.loginBtn setTitle:_userStr forState:UIControlStateNormal];
@@ -86,6 +85,20 @@ static NSString *cellOne = @"cell";
         make.top.mas_equalTo(imageView.mas_top).offset(+30);
         make.bottom.mas_equalTo(imageView.mas_bottom).offset(-30);
         make.width.offset(80);
+    }];
+    
+    /**
+     二维码按钮
+     */
+    UIButton *qrCodeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    qrCodeBtn.backgroundColor = [UIColor yellowColor];
+//    qrCodeBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [self.view addSubview:qrCodeBtn];
+    [qrCodeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.view.mas_right).offset(-40);
+        make.top.mas_equalTo(imageView.mas_top).offset(+40);
+        make.width.offset(25);
+        make.height.offset(25);
     }];
     
     //tableView
@@ -167,6 +180,11 @@ static NSString *cellOne = @"cell";
 //反选
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0) {
+        accountViewController *VC = [[accountViewController alloc] init];
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end

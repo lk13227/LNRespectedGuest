@@ -20,6 +20,9 @@
 
 #endif /* PrefixHeader_pch */
 
+#define WIDTH  self.view.frame.size.width
+#define HEIGTH self.view.frame.size.height
+
 #import "Masonry.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"

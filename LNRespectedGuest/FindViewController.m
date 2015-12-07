@@ -18,9 +18,53 @@
 @implementation FindViewController
 
 //创建tableView
--(void)creatTableView
+-(void)creatUI
 {
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+    //上面三个按钮
+    //贵圈
+    UIButton *circleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [circleBtn setTitle:@"贵圈" forState:UIControlStateNormal];
+    [circleBtn setBackgroundColor:[UIColor redColor]];
+    [circleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    circleBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [self.view addSubview:circleBtn];
+    //贵元
+    UIButton *memberBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [memberBtn setTitle:@"贵员" forState:UIControlStateNormal];
+    [memberBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [memberBtn setBackgroundColor:[UIColor yellowColor]];
+//    memberBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [self.view addSubview:memberBtn];
+    //贵人
+    UIButton *peopleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [peopleBtn setTitle:@"贵人" forState:UIControlStateNormal];
+    [peopleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [peopleBtn setBackgroundColor:[UIColor blueColor]];
+//    peopleBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [self.view addSubview:peopleBtn];
+    //三个按钮的约束
+    NSInteger W = self.view.frame.size.width/3;
+    [circleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left);
+        make.width.offset(W);
+        make.top.mas_equalTo(self.view.mas_top).offset(+64);
+        make.height.offset(100);
+    }];
+    [memberBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(circleBtn.mas_right);
+        make.width.mas_equalTo(circleBtn.mas_width);
+        make.top.mas_equalTo(self.view.mas_top).offset(+64);
+        make.height.offset(100);
+    }];
+    [peopleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(memberBtn.mas_right);
+        make.width.mas_equalTo(circleBtn.mas_width);
+        make.top.mas_equalTo(self.view.mas_top).offset(+64);
+        make.height.offset(100);
+    }];
+    
+    //tableview
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 164, self.view.bounds.size.width, self.view.bounds.size.height-164) style:UITableViewStylePlain];
     self.tableView.scrollEnabled = NO;//设置tableview不滚动
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -45,7 +89,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //调用方法
-    [self creatTableView];
+    [self creatUI];
     [self creatDataArray];
 }
 
@@ -82,19 +126,5 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
