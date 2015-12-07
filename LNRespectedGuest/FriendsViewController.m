@@ -37,19 +37,18 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.tableFooterView = [[UIView alloc] init]; //只显示数据的cell
-    //self.tableView.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:self.tableView];
     
     
 }
-
+#pragma mark - 创建数据源
 -(void)createData
 {
     if(!_dataArray)
         _dataArray = [NSMutableArray array];
     if(!_headViewArray)
         _headViewArray = [NSMutableArray array];
-    for(NSUInteger i = 0 ; i < 2; i++)
+    for(NSUInteger i = 0 ; i < 3; i++)
     {
         /*头视图*/
         HeadView *head = [[HeadView alloc] init];
@@ -59,10 +58,21 @@
         [self.headViewArray addObject:head];
     }
     /*设置分组上每一个分组显示的标题*/
-    [((HeadView *)self.headViewArray[0]).backButton setTitle:@"推宝人" forState:UIControlStateNormal];
-    [((HeadView *)self.headViewArray[1]).backButton setTitle:@"通讯录" forState:UIControlStateNormal];
-   
+    [((HeadView *)self.headViewArray[0]).backButton setImage:[UIImage imageNamed:@"tab_0.jpg"] forState:UIControlStateNormal];
+    [((HeadView *)self.headViewArray[0]).backButton setTitle:@"    群聊  " forState:UIControlStateNormal];
+    [((HeadView *)self.headViewArray[1]).backButton setImage:[UIImage imageNamed:@"tab_0.jpg"] forState:UIControlStateNormal];
+    [((HeadView *)self.headViewArray[1]).backButton setTitle:@"   推宝人" forState:UIControlStateNormal];
+    [((HeadView *)self.headViewArray[2]).backButton setImage:[UIImage imageNamed:@"tab_0.jpg"] forState:UIControlStateNormal];
+    [((HeadView *)self.headViewArray[2]).backButton setTitle:@"   通讯录" forState:UIControlStateNormal];
     /*每个分段里边的内容*/
+    if (self.dataArray.count == 0)
+    {
+        //[self createEmptyData];
+    }
+    else
+    {
+        
+    }
     for(NSUInteger i = 0 ; i < 10 ; i++)
     {
         if(i < 9)
@@ -77,20 +87,45 @@
     [self.tableView reloadData];
 }
 
-
+#pragma mark- 数据为空时
+-(void)createEmptyData
+{
+    /**
+     创建Label
+     */
+    UILabel *label = [[UILabel alloc]init];
+    label.frame = CGRectMake(0, 155, self.view.frame.size.width, self.view.frame.size.height - 155);
+    label.backgroundColor = [UIColor colorWithRed:241./255. green:241./255. blue:241./255. alpha:1.0];
+    [self.view addSubview:label];
+    /**
+     *  创建imageView
+     */
+    UIImageView *imageView = [[UIImageView alloc]init];
+    imageView.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/2 - 100, 70, 70);
+    imageView.image = [UIImage imageNamed:@"emptyData.jpg"];
+    [self.view addSubview:imageView];
+    /**
+     *  创建titleLabel
+     */
+    UILabel *titleLabel = [[UILabel alloc]init];
+    label.frame = CGRectMake(self.view.frame.size.width/4+70, self.view.frame.size.height/2 - 90, 200, 50);
+    label.backgroundColor = [UIColor whiteColor];
+    label.text = @"没有联系人。。。";
+    label.font = [UIFont systemFontOfSize:20.];
+    [self.view addSubview:titleLabel];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //调用
     [self createUI];
     [self createData];
+   // [self createEmptyData];
     
     self.navigationController.navigationBar.translucent = NO;
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"schoolListItem.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSchoolList:)];
     
     self.navigationItem.rightBarButtonItem = rightItem;
-    
-    
 }
 
 
@@ -119,6 +154,11 @@
     cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
 }
+//行的点击事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 -(CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -128,7 +168,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 45.0f;
+    return 50.0f;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -149,7 +189,7 @@
 {
     __weak __typeof(self) weakSelf = self;
     if (!self.menu) {
-        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(0, 0) width:125 rowHeight:44];
+        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
         _menu.delegate = self;
         _menu.dismiss = ^() {
             weakSelf.menu = nil;
@@ -162,7 +202,6 @@
         }];
     }
 }
-
 - (void)jhCustomMenu:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select: %ld", indexPath.row);

@@ -120,7 +120,7 @@
     __weak __typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.2 animations:^{
         weakSelf.alpha = 0;
-        weakSelf.tableView.frame = CGRectMake(weakSelf.origin.x + RightToView, weakSelf.origin.y + TopToView, 0, 0);
+        weakSelf.tableView.frame = CGRectMake(RightToView * 36, TopToView, 0, 0);
     } completion:^(BOOL finished) {
         [weakSelf removeFromSuperview];
         if (completion) {
