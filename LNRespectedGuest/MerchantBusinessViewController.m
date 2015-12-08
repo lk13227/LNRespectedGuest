@@ -93,7 +93,7 @@
 - (void)businessClick:(UIButton *)btn{
     [UIView beginAnimations:nil context:nil]; // 开始动画
     
-    [UIView setAnimationDuration:0.3]; // 动画时长
+    [UIView setAnimationDuration:0.15]; // 动画时长
     /**
      *  图像动画
      */
@@ -107,7 +107,7 @@
 - (void)merchantClick:(UIButton *)btn{
     [UIView beginAnimations:nil context:nil]; // 开始动画
     
-    [UIView setAnimationDuration:0.3]; // 动画时长
+    [UIView setAnimationDuration:0.15]; // 动画时长
     /**
      *  图像动画
      */
@@ -121,7 +121,7 @@
 
 #pragma mark - 创建滑动视图
 - (void)createScrollView{
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGTH)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGTH)];
 //    self.scrollView.backgroundColor = [UIColor redColor];
     // 是否支持滑动最顶端
     //    scrollView.scrollsToTop = NO;
@@ -136,6 +136,13 @@
     [self.scrollView flashScrollIndicators];
     // 是否同时运动,lock
     self.scrollView.directionalLockEnabled = YES;
+    //如果viewController在导航里，这个vc的第一个子视图是scrollView
+    //系统会让scrollView有个下沉的效果
+    //因为这个效果有时候会跟自己的代码冲突，通常会把他关闭
+    //判断self是否实现了下沉效果
+    if ([self respondsToSelector:@selector(setAutomaticallyAdjustsScrollViewInsets:)]) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     [self.view addSubview:self.scrollView];
     
     [self createBusinessView];
@@ -282,7 +289,7 @@
     if (scrollViewWidth == 0){//商圈
         [UIView beginAnimations:nil context:nil]; // 开始动画
         
-        [UIView setAnimationDuration:0.3]; // 动画时长
+        [UIView setAnimationDuration:0.15]; // 动画时长
         /**
          *  图像动画
          */
@@ -294,7 +301,7 @@
     }else{//贵圈
         [UIView beginAnimations:nil context:nil]; // 开始动画
         
-        [UIView setAnimationDuration:0.3]; // 动画时长
+        [UIView setAnimationDuration:0.15]; // 动画时长
         /**
          *  图像动画
          */
