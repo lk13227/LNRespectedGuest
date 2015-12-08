@@ -42,7 +42,7 @@
     [self createLine:originalView];
     
     UILabel *originalLabel = [[UILabel alloc] init];
-    originalLabel.text = @"原密码:";
+    originalLabel.text = @"原密码 :";
     [originalView addSubview:originalLabel];
     [originalLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(originalView.mas_left).offset(10);
@@ -72,7 +72,7 @@
     [self createLine:passwordVIew];
     
     UILabel *passwordLabel = [[UILabel alloc] init];
-    passwordLabel.text = @"新密码:";
+    passwordLabel.text = @"新密码 :";
     [passwordVIew addSubview:passwordLabel];
     [passwordLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(passwordVIew.mas_left).offset(10);
@@ -148,7 +148,18 @@
 
 
 
-
+#pragma mark - 收起键盘
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if (![self.originalText isExclusiveTouch]) {
+        [self.originalText resignFirstResponder];
+    }
+    if (![self.passwordText isExclusiveTouch]) {
+        [self.passwordText resignFirstResponder];
+    }
+    if (![self.confirmText isExclusiveTouch]) {
+        [self.confirmText resignFirstResponder];
+    }
+}
 
 #pragma mark - createLine划线
 - (void)createLine:(UIView *)view{

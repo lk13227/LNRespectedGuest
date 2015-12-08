@@ -44,10 +44,10 @@
     [super viewDidLoad];
     [self initView];
     
-    self.navigationController.navigationBar.translucent = NO;
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"schoolListItem.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSchoolList:)];
-    
-    self.navigationItem.rightBarButtonItem = rightItem;
+//    self.navigationController.navigationBar.translucent = NO;
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"schoolListItem.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSchoolList:)];
+//    
+//    self.navigationItem.rightBarButtonItem = rightItem;
 }
 -(void)initView
 {
@@ -85,7 +85,7 @@
     
     //下面的白线
     self.titleLine = [[UIView alloc] init];
-    self.titleLine.frame = CGRectMake(30, 39, 40, 1);
+    self.titleLine.frame = CGRectMake(20, 39, 60, 1);
     self.titleLine.backgroundColor = [UIColor whiteColor];
     [view addSubview:self.titleLine];
 }
@@ -144,23 +144,23 @@
 
 
 //右上角+号
-- (void)showSchoolList:(UIBarButtonItem *)barButtonItem
-{
-    __weak __typeof(self) weakSelf = self;
-    if (!self.menu) {
-        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
-        _menu.delegate = self;
-        _menu.dismiss = ^() {
-            weakSelf.menu = nil;
-        };
-        _menu.arrImgName = @[@"item_school.png", @"item_battle.png", @"item_list.png", @"item_chat.png", @"item_share.png"];
-        [self.view addSubview:_menu];
-    } else {
-        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
-            weakSelf.menu = nil;
-        }];
-    }
-}
+//- (void)showSchoolList:(UIBarButtonItem *)barButtonItem
+//{
+//    __weak __typeof(self) weakSelf = self;
+//    if (!self.menu) {
+//        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
+//        _menu.delegate = self;
+//        _menu.dismiss = ^() {
+//            weakSelf.menu = nil;
+//        };
+//        _menu.arrImgName = @[@"item_school.png", @"item_battle.png", @"item_list.png", @"item_chat.png", @"item_share.png"];
+//        [self.view addSubview:_menu];
+//    } else {
+//        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
+//            weakSelf.menu = nil;
+//        }];
+//    }
+//}
 
 - (void)jhCustomMenu:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
