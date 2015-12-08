@@ -26,8 +26,6 @@
 @property(nonatomic,strong)UITableView *businessTable;
 @property (nonatomic,strong)UIScrollView *scrollView;
 @property (nonatomic,strong)UIView *titleLine;
-@property (nonatomic,assign)BOOL isOriginal;
-@property (nonatomic,assign)BOOL isSame;
 
 @end
 
@@ -44,9 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.isOriginal = NO;
-    self.isSame = YES;
-    
     [self initView];
     
     self.navigationController.navigationBar.translucent = NO;
@@ -96,53 +91,32 @@
 }
 #pragma mark - 导航栏上按钮事件
 - (void)businessClick:(UIButton *)btn{
-//    self.isOriginal = YES;
-    [self animationClick:self.isOriginal];
+    [UIView beginAnimations:nil context:nil]; // 开始动画
+    
+    [UIView setAnimationDuration:0.3]; // 动画时长
+    /**
+     *  图像动画
+     */
+    CGPoint point = self.titleLine.center;
+    point.x = 50;
+    [self.titleLine setCenter:point];
+    
+    [UIView commitAnimations]; // 提交动画
     [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 - (void)merchantClick:(UIButton *)btn{
-//    self.isOriginal = NO;
-    [self animationClick:self.isOriginal];
+    [UIView beginAnimations:nil context:nil]; // 开始动画
+    
+    [UIView setAnimationDuration:0.3]; // 动画时长
+    /**
+     *  图像动画
+     */
+    CGPoint point = self.titleLine.center;
+    point.x = 150;
+    [self.titleLine setCenter:point];
+    
+    [UIView commitAnimations]; // 提交动画
     [self.scrollView setContentOffset:CGPointMake(WIDTH, 0) animated:YES];
-}
-#pragma mark - 导航view的动画
-- (void)animationClick:(BOOL)offset{
-    
-    if (self.isSame == offset) {
-        return;
-    }
-    
-    if (offset == YES) {
-        [UIView beginAnimations:nil context:nil]; // 开始动画
-        
-        [UIView setAnimationDuration:0.3]; // 动画时长
-        /**
-         *  图像动画
-         */
-        CGPoint point = self.titleLine.center;
-        point.x -= 100;
-        [self.titleLine setCenter:point];
-        
-        [UIView commitAnimations]; // 提交动画
-        self.isOriginal = !self.isOriginal;
-        self.isSame = offset;
-        return;
-    }else if (offset == NO){
-        [UIView beginAnimations:nil context:nil]; // 开始动画
-        
-        [UIView setAnimationDuration:0.3]; // 动画时长
-        /**
-         *  图像动画
-         */
-        CGPoint point = self.titleLine.center;
-        point.x += 100;
-        [self.titleLine setCenter:point];
-        
-        [UIView commitAnimations]; // 提交动画
-        self.isOriginal = !self.isOriginal;
-        self.isSame = offset;
-        return;
-    }
 }
 
 #pragma mark - 创建滑动视图
@@ -306,9 +280,29 @@
 //    NSInteger currentIndex =   (NSInteger)_scrollView.contentOffset.x / (NSInteger)WIDTH ;
     NSInteger scrollViewWidth = (NSInteger)_scrollView.contentOffset.x;//获取scrollView的偏移量
     if (scrollViewWidth == 0){//商圈
-        [self businessClick:nil];
+        [UIView beginAnimations:nil context:nil]; // 开始动画
+        
+        [UIView setAnimationDuration:0.3]; // 动画时长
+        /**
+         *  图像动画
+         */
+        CGPoint point = self.titleLine.center;
+        point.x = 50;
+        [self.titleLine setCenter:point];
+        
+        [UIView commitAnimations]; // 提交动画
     }else{//贵圈
-        [self merchantClick:nil];
+        [UIView beginAnimations:nil context:nil]; // 开始动画
+        
+        [UIView setAnimationDuration:0.3]; // 动画时长
+        /**
+         *  图像动画
+         */
+        CGPoint point = self.titleLine.center;
+        point.x = 150;
+        [self.titleLine setCenter:point];
+        
+        [UIView commitAnimations]; // 提交动画
     }
 }
 
