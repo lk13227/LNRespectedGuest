@@ -79,7 +79,7 @@
     self.dataArray = [[NSMutableArray alloc]init];
     [self.dataArray addObject:@{@"content":@"附近搜索",@"pic":@"tab_0"}];
     [self.dataArray addObject:@{@"content":@"扫一扫",@"pic":@"tab_0"}];
-    [self.dataArray addObject:@{@"content":@"商家搜索",@"pic":@"tab_0"}];
+    [self.dataArray addObject:@{@"content":@"商家",@"pic":@"tab_0"}];
     [self.dataArray addObject:@{@"content":@"找实惠",@"pic":@"tab_0"}];
     //载入数据
     [self.tableView reloadData];
@@ -124,6 +124,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 2) {
+        LKLog(@"商家");
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
