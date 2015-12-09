@@ -23,49 +23,81 @@
 {
     //上面三个按钮
     //贵圈
+    UIView *circleView = [[UIView alloc] init];
+    circleView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:circleView];
+    [self createLine:circleView];
+    
     UIButton *circleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [circleBtn setTitle:@"贵圈" forState:UIControlStateNormal];
-    [circleBtn setBackgroundColor:[UIColor redColor]];
-    [circleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [circleBtn setImage:[UIImage imageNamed:@"发现_03"] forState:UIControlStateNormal];
 //    circleBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
     [self.view addSubview:circleBtn];
+    
     //贵元
+    UIView *memberView = [[UIView alloc] init];
+    memberView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:memberView];
+    [self createBottomLine:memberView];
+    
     UIButton *memberBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [memberBtn setTitle:@"贵员" forState:UIControlStateNormal];
-    [memberBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [memberBtn setBackgroundColor:[UIColor yellowColor]];
+    [memberBtn setImage:[UIImage imageNamed:@"发现_05"] forState:UIControlStateNormal];
 //    memberBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
     [self.view addSubview:memberBtn];
+    
     //贵人
+    UIView *peopleView = [[UIView alloc] init];
+    peopleView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:peopleView];
+    [self createRightLine:peopleView];
+    
     UIButton *peopleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [peopleBtn setTitle:@"贵人" forState:UIControlStateNormal];
-    [peopleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [peopleBtn setBackgroundColor:[UIColor blueColor]];
+    [peopleBtn setImage:[UIImage imageNamed:@"发现_07"] forState:UIControlStateNormal];
 //    peopleBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
     [self.view addSubview:peopleBtn];
-    //三个按钮的约束
+    
+    //三个背景view的约束
     NSInteger W = self.view.frame.size.width/3;
-    [circleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [circleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left);
         make.width.offset(W);
         make.top.mas_equalTo(self.view.mas_top).offset(+64);
-        make.height.offset(100);
+        make.height.offset(150);
+    }];
+    [memberView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(circleView.mas_right);
+        make.width.mas_equalTo(circleView.mas_width);
+        make.top.mas_equalTo(self.view.mas_top).offset(+64);
+        make.height.offset(150);
+    }];
+    [peopleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(memberView.mas_right);
+        make.width.mas_equalTo(circleView.mas_width);
+        make.top.mas_equalTo(self.view.mas_top).offset(+64);
+        make.height.offset(150);
+    }];
+    
+    //三个按钮的约束
+    [circleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(circleView.mas_left).offset(20);
+        make.right.mas_equalTo(circleView.mas_right).offset(-20);
+        make.top.mas_equalTo(circleView.mas_top).offset(10);
+        make.bottom.mas_equalTo(circleView.mas_bottom).offset(-10);
     }];
     [memberBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(circleBtn.mas_right);
-        make.width.mas_equalTo(circleBtn.mas_width);
-        make.top.mas_equalTo(self.view.mas_top).offset(+64);
-        make.height.offset(100);
+        make.left.mas_equalTo(memberView.mas_left).offset(20);
+        make.right.mas_equalTo(memberView.mas_right).offset(-20);
+        make.top.mas_equalTo(memberView.mas_top).offset(10);
+        make.bottom.mas_equalTo(memberView.mas_bottom).offset(-10);
     }];
     [peopleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(memberBtn.mas_right);
-        make.width.mas_equalTo(circleBtn.mas_width);
-        make.top.mas_equalTo(self.view.mas_top).offset(+64);
-        make.height.offset(100);
+        make.left.mas_equalTo(peopleView.mas_left).offset(20);
+        make.right.mas_equalTo(peopleView.mas_right).offset(-20);
+        make.top.mas_equalTo(peopleView.mas_top).offset(10);
+        make.bottom.mas_equalTo(peopleView.mas_bottom).offset(-10);
     }];
     
     //tableview
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 164, self.view.bounds.size.width, self.view.bounds.size.height-164) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 214, self.view.bounds.size.width, self.view.bounds.size.height-214) style:UITableViewStylePlain];
     self.tableView.scrollEnabled = NO;//设置tableview不滚动
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -133,6 +165,62 @@
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+#pragma mark - createLine划线
+- (void)createLine:(UIView *)view{
+    UIView *rightView = [[UIView alloc] init];
+    rightView.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:rightView];
+    [rightView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(view.mas_bottom);
+        make.right.mas_equalTo(view.mas_right);
+        make.top.mas_equalTo(view.mas_top);
+        make.width.offset(1);
+    }];
+    
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:bottomView];
+    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(view.mas_left);
+        make.right.mas_equalTo(view.mas_right);
+        make.bottom.mas_equalTo(view.mas_bottom);
+        make.height.offset(1);
+    }];
+}
+- (void)createRightLine:(UIView *)view{
+    UIView *leftView = [[UIView alloc] init];
+    leftView.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:leftView];
+    [leftView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(view.mas_left);
+        make.bottom.mas_equalTo(view.mas_bottom);
+        make.top.mas_equalTo(view.mas_top);
+        make.width.offset(1);
+    }];
+    
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:bottomView];
+    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(view.mas_left);
+        make.right.mas_equalTo(view.mas_right);
+        make.bottom.mas_equalTo(view.mas_bottom);
+        make.height.offset(1);
+    }];
+}
+- (void)createBottomLine:(UIView *)view{
+    UIView *bottomView = [[UIView alloc] init];
+    bottomView.backgroundColor = [UIColor lightGrayColor];
+    [view addSubview:bottomView];
+    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(view.mas_left);
+        make.right.mas_equalTo(view.mas_right);
+        make.bottom.mas_equalTo(view.mas_bottom);
+        make.height.offset(1);
+    }];
 }
 
 @end
