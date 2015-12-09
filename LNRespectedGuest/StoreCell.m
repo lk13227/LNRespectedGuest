@@ -13,6 +13,11 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+/**
+ *  添加按钮-点击事件
+ */
+- (IBAction)addBtn:(UIButton *)sender {
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

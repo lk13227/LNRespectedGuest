@@ -7,6 +7,7 @@
 //
 
 #import "FindViewController.h"
+#import "BusinessViewController.h"
 
 @interface FindViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -126,6 +127,9 @@
 {
     if (indexPath.row == 2) {
         LKLog(@"商家");
+        BusinessViewController *businessVC = [[BusinessViewController alloc]init];
+        [self.navigationController pushViewController:businessVC animated:YES];
+        
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -10,7 +10,7 @@
 
 @interface BusinessCell : UITableViewCell
 /**
- *  头像
+ *  图片
  */
 @property (weak, nonatomic) IBOutlet UIImageView *picImageView;
 /**
@@ -22,8 +22,20 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
 /**
- *  详细（送达时间）
+ *  详细（满减优惠）
  */
 @property (weak, nonatomic) IBOutlet UILabel *detailTitleLabel;
+/**
+ *  贵圈
+ */
+@property (weak, nonatomic) IBOutlet UIButton *GuiQuanBtn;
+/**
+ *  贵员
+ */
+@property (weak, nonatomic) IBOutlet UIButton *GuiYuanBtn;
+/**
+ *  贵人
+ */
+@property (weak, nonatomic) IBOutlet UIButton *GuiRenBtn;
 
 @end

@@ -13,6 +13,24 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+/**
+ *  贵圈
+ */
+- (IBAction)guiQuanBtn:(UIButton *)sender {
+    LKLog(@"贵圈");
+}
+/**
+ *  贵员
+ */
+- (IBAction)guiYuanBtn:(UIButton *)sender {
+    LKLog(@"贵员");
+}
+/**
+ *  贵人
+ */
+- (IBAction)guiRenBtn:(UIButton *)sender {
+    LKLog(@"贵人");
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
