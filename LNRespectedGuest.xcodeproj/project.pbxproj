@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		255029961C17FAF4001B46A8 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255029941C17FAF4001B46A8 /* StoreCell.m */; };
+		255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255029951C17FAF4001B46A8 /* StoreCell.xib */; };
 		258416B21C1518B7005C2E30 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 258416B01C1518B7005C2E30 /* MessageCell.m */; };
 		258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258416B11C1518B7005C2E30 /* MessageCell.xib */; };
 		4C5FAC801C0819E700027064 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC7F1C0819E700027064 /* FindViewController.m */; };
@@ -79,6 +81,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		255029931C17FAF4001B46A8 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
+		255029941C17FAF4001B46A8 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
+		255029951C17FAF4001B46A8 /* StoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		258416AF1C1518B7005C2E30 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		258416B01C1518B7005C2E30 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		258416B11C1518B7005C2E30 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -372,6 +377,9 @@
 				B572F0021C102234006228A9 /* MerchantCell.h */,
 				B572F0031C102234006228A9 /* MerchantCell.m */,
 				B572F0041C102234006228A9 /* MerchantCell.xib */,
+				255029931C17FAF4001B46A8 /* StoreCell.h */,
+				255029941C17FAF4001B46A8 /* StoreCell.m */,
+				255029951C17FAF4001B46A8 /* StoreCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -650,6 +658,7 @@
 				258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /* Images.xcassets in Resources */,
+				255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,
 				4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */,
@@ -705,6 +714,7 @@
 				4C5FACF61C0BED1500027064 /* MASLayoutConstraint.m in Sources */,
 				4C5FACD61C0BED0700027064 /* AFURLSessionManager.m in Sources */,
 				4C5FAC971C098AE300027064 /* BusinessCell.m in Sources */,
+				255029961C17FAF4001B46A8 /* StoreCell.m in Sources */,
 				4C5FACF81C0BED1500027064 /* MASViewConstraint.m in Sources */,
 				4C5FACF71C0BED1500027064 /* MASViewAttribute.m in Sources */,
 				4C6FBA7F1C0D542500FACAFF /* JHCustomMenu.m in Sources */,
