@@ -87,7 +87,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     //调用方法
     [self creatUI];
     [self creatDataArray];
@@ -124,7 +124,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 2) {
+    if (indexPath.row == 2) {//商家
         LKLog(@"商家");
     }
     
