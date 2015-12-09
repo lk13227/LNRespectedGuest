@@ -12,11 +12,17 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+//    [self createUI];
 }
+
+//#pragma mark - cell适配
+//- (void)createUI{
+//    
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 - (IBAction)iconClick:(id)sender {

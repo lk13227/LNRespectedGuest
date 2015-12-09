@@ -185,7 +185,6 @@
     [self.merchantView addSubview:self.merchantTable];
     
     [self.merchantTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
-    
 }
 
 #pragma mark -创建贵圈视图
@@ -199,6 +198,8 @@
     
     [self.scrollView addSubview:self.businessView];
     [self.businessView addSubview:self.businessTable];
+    
+    [self.businessTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
 }
 
 #pragma mark -tableView
@@ -226,15 +227,13 @@
 {
     
     if (tableView == self.businessTable) {
-        static NSString *identifier = @"Cell";
-        BusinessCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        MerchantCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guiren" forIndexPath:indexPath];
         /*判断*/
-        if (cell == nil)
-        {
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:self options:nil]firstObject];
-            
+        if (!cell) {
+            cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiren"];
         }
-        cell.picImageView.image = [UIImage imageNamed:@"123.jpg"];
+        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
+        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         return cell;
     }
     
@@ -243,6 +242,11 @@
         if (!cell) {
             cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiren"];
         }
+//        if (indexPath.row==1) {
+//            cell.contentImage.image = nil;
+//        }else{
+//            cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
+//        }
         cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
         [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
@@ -255,11 +259,15 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.businessTable) {
-        return 100.0;
+        return 340.0;
     }
     
     if (tableView == self.merchantTable) {
-        return 300.0;
+//        MerchantCell *cell = (MerchantCell*)[self tableView:self.merchantTable cellForRowAtIndexPath:indexPath];
+//        if (cell.contentImage.image != nil) {
+//            return 340.0;
+//        }
+        return 340.0;
     }
     
     return 0;

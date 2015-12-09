@@ -40,7 +40,7 @@ static NSString *cellOne = @"cell";
     
     [self createUI];
     
-    self.titleArr = @[@"我的账户",@"我的积分",@"优惠券链接",@"信用管理",@"交易管理",@"推荐管理"];
+    self.titleArr = @[@"我的账户",@"我的链接",@"我的交易"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MyTableViewCell" bundle:nil] forCellReuseIdentifier:@"mycell"];
     
@@ -132,6 +132,13 @@ static NSString *cellOne = @"cell";
         make.height.offset(40);
     }];
 
+    //导航右按钮
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [infoButton setTitle:@"设置" forState:normal];
+    infoButton.frame = CGRectMake(0, 0, 40, 40);
+    //[infoButton addTarget:self action:@selector(infoClick:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *infoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+    self.navigationItem.rightBarButtonItem = infoButtonItem;
 }
 
 //loginClick
@@ -153,7 +160,7 @@ static NSString *cellOne = @"cell";
 #pragma mark - 黄金三问
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 3;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
@@ -168,7 +175,7 @@ static NSString *cellOne = @"cell";
     
     cell.titleText.text = self.titleArr[indexPath.row];
     cell.iconImage.image = [UIImage imageNamed:@"tab_1"];
-    if (indexPath.row != 5) {
+    if (indexPath.row != 2) {
         cell.backVIew.backgroundColor = [UIColor whiteColor];
     }
     
