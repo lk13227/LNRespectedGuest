@@ -59,6 +59,12 @@
 		4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1881C02CB5700523846 /* LoginViewController.m */; };
 		4CD9C18C1C02DD7400523846 /* registeredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C18B1C02DD7400523846 /* registeredViewController.m */; };
 		B5041C3A1C1811DD003715F6 /* NSString+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B5041C391C1811DD003715F6 /* NSString+Unicode.m */; };
+		B519B5FA1C1AC6140005E2AE /* merchantsOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */; };
+		B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */; };
+		B519B5FF1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B5FD1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m */; };
+		B519B6001C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */; };
+		B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */; };
+		B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */; };
 		B56C47CB1C152452005C15E7 /* accountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56C47CA1C152452005C15E7 /* accountViewController.m */; };
 		B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56C47CE1C152FE2005C15E7 /* ChangeThePasswordViewController.m */; };
 		B572F0051C102234006228A9 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F0031C102234006228A9 /* MerchantCell.m */; };
@@ -185,6 +191,15 @@
 		4CD9C18B1C02DD7400523846 /* registeredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registeredViewController.m; sourceTree = "<group>"; };
 		B5041C381C1811DD003715F6 /* NSString+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Unicode.h"; sourceTree = "<group>"; };
 		B5041C391C1811DD003715F6 /* NSString+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Unicode.m"; sourceTree = "<group>"; };
+		B519B5F71C1AC6140005E2AE /* merchantsOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsOneTableViewCell.h; sourceTree = "<group>"; };
+		B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsOneTableViewCell.m; sourceTree = "<group>"; };
+		B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsOneTableViewCell.xib; sourceTree = "<group>"; };
+		B519B5FC1C1AC62C0005E2AE /* merchantsTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsTwoTableViewCell.h; sourceTree = "<group>"; };
+		B519B5FD1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsTwoTableViewCell.m; sourceTree = "<group>"; };
+		B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsTwoTableViewCell.xib; sourceTree = "<group>"; };
+		B519B6011C1AC63F0005E2AE /* merchantsThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeTableViewCell.h; sourceTree = "<group>"; };
+		B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeTableViewCell.m; sourceTree = "<group>"; };
+		B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsThreeTableViewCell.xib; sourceTree = "<group>"; };
 		B56C47C91C152452005C15E7 /* accountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = accountViewController.h; sourceTree = "<group>"; };
 		B56C47CA1C152452005C15E7 /* accountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = accountViewController.m; sourceTree = "<group>"; };
 		B56C47CD1C152FE2005C15E7 /* ChangeThePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeThePasswordViewController.h; sourceTree = "<group>"; };
@@ -312,6 +327,7 @@
 		4C5FAC7B1C08193C00027064 /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				B519B5F51C1AC4F90005E2AE /* merchants(商家) */,
 				255029981C18013D001B46A8 /* Cell */,
 				4C5FAC7C1C08196E00027064 /* ViewController */,
 			);
@@ -323,10 +339,6 @@
 			children = (
 				4C5FAC7E1C0819E700027064 /* FindViewController.h */,
 				4C5FAC7F1C0819E700027064 /* FindViewController.m */,
-				255029991C1802AA001B46A8 /* BusinessViewController.h */,
-				2550299A1C1802AA001B46A8 /* BusinessViewController.m */,
-				2550299C1C181C4F001B46A8 /* StoreViewController.h */,
-				2550299D1C181C4F001B46A8 /* StoreViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -555,6 +567,34 @@
 			path = LNRespectedGuestUITests;
 			sourceTree = "<group>";
 		};
+		B519B5F51C1AC4F90005E2AE /* merchants(商家) */ = {
+			isa = PBXGroup;
+			children = (
+				255029991C1802AA001B46A8 /* BusinessViewController.h */,
+				2550299A1C1802AA001B46A8 /* BusinessViewController.m */,
+				2550299C1C181C4F001B46A8 /* StoreViewController.h */,
+				2550299D1C181C4F001B46A8 /* StoreViewController.m */,
+				B519B5F61C1AC5E40005E2AE /* cell */,
+			);
+			name = "merchants(商家)";
+			sourceTree = "<group>";
+		};
+		B519B5F61C1AC5E40005E2AE /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B519B5F71C1AC6140005E2AE /* merchantsOneTableViewCell.h */,
+				B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */,
+				B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */,
+				B519B5FC1C1AC62C0005E2AE /* merchantsTwoTableViewCell.h */,
+				B519B5FD1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m */,
+				B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */,
+				B519B6011C1AC63F0005E2AE /* merchantsThreeTableViewCell.h */,
+				B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */,
+				B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		B56C47CC1C152F77005C15E7 /* MyAccount(我的账户) */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +709,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B519B6001C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib in Resources */,
+				B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */,
 				4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */,
 				4C5FACF21C0BED1500027064 /* Info.plist in Resources */,
 				4C8B4E331BFAC42B003A6F65 /* LaunchScreen.storyboard in Resources */,
@@ -681,6 +723,7 @@
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,
 				4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */,
 				4C5FAC981C098AE300027064 /* BusinessCell.xib in Resources */,
+				B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B519B5FF1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m in Sources */,
 				4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */,
 				4C5FAC801C0819E700027064 /* FindViewController.m in Sources */,
 				4C5FACD31C0BED0700027064 /* AFURLConnectionOperation.m in Sources */,
@@ -729,6 +773,7 @@
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
 				4C5FACCE1C0BED0700027064 /* AFHTTPRequestOperation.m in Sources */,
 				4C5FACF51C0BED1500027064 /* MASConstraintMaker.m in Sources */,
+				B519B5FA1C1AC6140005E2AE /* merchantsOneTableViewCell.m in Sources */,
 				4C5FACF61C0BED1500027064 /* MASLayoutConstraint.m in Sources */,
 				4C5FACD61C0BED0700027064 /* AFURLSessionManager.m in Sources */,
 				4C5FAC971C098AE300027064 /* BusinessCell.m in Sources */,
@@ -744,6 +789,7 @@
 				4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */,
 				4C647A5A1BFDB2330007203F /* PersonViewController.m in Sources */,
 				4C8B4E5E1BFAC7AC003A6F65 /* MessageViewController.m in Sources */,
+				B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */,
 				4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */,
 				4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */,
 				B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */,

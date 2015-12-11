@@ -8,141 +8,129 @@
 
 #import "StoreViewController.h"
 #import "StoreCell.h"
+#import "merchantsOneTableViewCell.h"
+#import "merchantsTwoTableViewCell.h"
+#import "merchantsThreeTableViewCell.h"
 
 @interface StoreViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property(nonatomic,strong)NSMutableArray *dataArray;
-@property(nonatomic,strong)NSMutableArray *array;
-@property(nonatomic,strong)UITableView *leftTableView;
-@property(nonatomic,strong)UITableView *rightTableView;
+
+@property (nonatomic,strong)UITableView *tableView;
 
 @end
 
 @implementation StoreViewController
 
-/**
- *  创建数据源
- */
--(void)createData
-{
-    self.array = [[NSMutableArray alloc]init];//左侧的tableView
-    self.dataArray = [[NSMutableArray alloc]init];//右侧的tableView
-}
-/**
-*  创建左侧的UI
-*/
-- (void)createLeftTableView
-{
-    self.leftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0,100, self.view.frame.size.height) style:UITableViewStylePlain];
-    self.leftTableView.backgroundColor = [UIColor whiteColor];
-    self.leftTableView.dataSource = self;
-    self.leftTableView.delegate = self;
-    [self.view addSubview:self.leftTableView];
-}
-/**
- *  创建右侧的UI
- */
-- (void)createRightTableView
-{
-    self.rightTableView = [[UITableView alloc]initWithFrame:CGRectMake(110,64, self.view.frame.size.width-110, self.view.frame.size.height-64) style:UITableViewStylePlain];
-    self.rightTableView.dataSource = self;
-    self.rightTableView.delegate = self;
-    [self.view addSubview:self.rightTableView];
-    
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"商家信息";
-    /**
-     *  调用方法
-     */
-    [self createLeftTableView];
-    [self createRightTableView];
-    [self createData];
+    self.view.backgroundColor = [UIColor orangeColor];
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];//隐藏导航栏
+    
+    [self createTableView];
+    [self createReturn];
 }
-#pragma mark - tableView的方法
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    if (tableView == self.leftTableView)
-    {
-        return 1;
-    }
-    else
-    {
-        return 1;
-    }
+
+/**
+ *  创建tableView
+ */
+- (void)createTableView{
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left);
+        make.right.mas_equalTo(self.view.mas_right);
+        make.top.mas_equalTo(self.view.mas_top);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+    }];
+    [self.tableView registerNib:[UINib nibWithNibName:@"merchantsOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"one"];
 }
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (tableView == self.leftTableView)
-    {
-        if (self.array.count == 0)
-        {
-            return 100;
-        }
-        else
-            return self.array.count;
 
+#pragma mark - tableView代理方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 2) {
+        return 5;
     }
-    else
-    {
-        if (self.dataArray.count == 0)
-        {
-            return 100;
-        }
-        else
-            return self.dataArray.count;
-
-    }
+    return 1;
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellName = @"Cell";
-
-    if (tableView == self.leftTableView)
-    {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-        if (!cell)
-        {
-            //cell = [[[NSBundle mainBundle]loadNibNamed:@"StoreLeftCell" owner:nil options:nil]firstObject];
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
-        }
-        //cell.textLabel.text = self.dataArray[indexPath.row];
-        cell.backgroundColor = [UIColor lightGrayColor];
-        cell.textLabel.text = @"奶茶";
-        cell.textLabel.font = [UIFont systemFontOfSize:17.0];
-        
-        return cell;
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 200;
     }
-    else
-    {
-        StoreCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-        if (!cell)
-        {
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"StoreCell" owner:nil options:nil]firstObject];
+    if (indexPath.section == 1) {
+        return 90;
+    }
+    if (indexPath.section == 2) {
+        return 200;
+    }
+    return 0;
+}
+//脚视图
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [[UIView  alloc] init];
+    view.backgroundColor = [UIColor lightGrayColor];
+    view.frame = CGRectMake(0, 0, WIDTH, HEIGTH);
+    
+    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section == 2) {
+        return 0;
+    }
+    return 20;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //第一个cell
+    if (indexPath.section == 0) {
+        merchantsOneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"one" forIndexPath:indexPath];
+        if (!cell) {
+            cell = [[merchantsOneTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"one"];
         }
-        //cell.textLabel.text = self.dataArray[indexPath.row];
         return cell;
     }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"让我加班先死个妈 第%ld组 第%ld个",(long)indexPath.section,(long)indexPath.row];
+    
+    return cell;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+/**
+ *  返回按钮
+ */
+- (void)createReturn{
+    UIButton *returnBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [returnBtn setBackgroundImage:[UIImage imageNamed:@"返回 拷贝"] forState:UIControlStateNormal];
+    [returnBtn addTarget:self action:@selector(returnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.tableView addSubview:returnBtn];
+    [returnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.width.offset(20);
+        make.top.mas_equalTo(self.view.mas_top).offset(20);
+        make.height.offset(25);
+    }];
 }
-*/
+/**
+ *  返回事件
+ */
+- (void)returnClick{
+    [[self navigationController] setNavigationBarHidden:NO animated:NO];
+    self.hidesBottomBarWhenPushed=NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end
