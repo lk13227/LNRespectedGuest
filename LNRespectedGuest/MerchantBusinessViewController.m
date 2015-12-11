@@ -13,7 +13,6 @@
 #import "MerchantCell.h"
 
 #import "BusinessCell.h"
-#import "takeDinnerViewController.h"
 
 @interface MerchantBusinessViewController ()<JHCustomMenuDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
@@ -34,8 +33,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-    self.navigationController.navigationBarHidden = NO;
+//    self.tabBarController.tabBar.hidden = NO;
+//    self.navigationController.navigationBarHidden = NO;
     
 }
 
@@ -168,7 +167,7 @@
 //        }];
 //    }
 //}
-
+#pragma mark - 导航栏加号按钮tableView的点击方法
 - (void)jhCustomMenu:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select: %ld", indexPath.row);
@@ -277,8 +276,8 @@
 {
     
     if (tableView == self.businessTable) {
-        takeDinnerViewController *takeVc = [[takeDinnerViewController alloc] init];
-        [self.navigationController pushViewController:takeVc animated:YES];
+
+        LKLog(@"你点了这个Cell");
     }
     
     if (tableView == self.merchantTable) {

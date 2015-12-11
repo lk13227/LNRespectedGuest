@@ -12,6 +12,12 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.picImageView.image = [UIImage imageNamed:@"scrollView5.jpg"];
+    self.titleLabel.text = @"红豆相思奶茶";
+    self.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+    self.subLabel.text = @"12元/杯";
+    self.subLabel.font = [UIFont systemFontOfSize:15.0f];
+    
 }
 /**
  *  添加按钮-点击事件

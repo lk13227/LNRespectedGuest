@@ -23,16 +23,6 @@
                             <constraint firstAttribute="width" secondItem="rDP-wz-EZ3" secondAttribute="height" multiplier="1:1" id="cnh-lM-e8I"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-kC-QWt" userLabel="Label1">
-                        <rect key="frame" x="78" y="8" width="100" height="23"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="100" id="tWc-tb-F7K"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXG-2R-rYT" userLabel="Label2">
                         <rect key="frame" x="78" y="41" width="100" height="22"/>
                         <animations/>
@@ -48,6 +38,16 @@
                             <action selector="addBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QYE-HO-H9R"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVB-kC-QWt" userLabel="Label1">
+                        <rect key="frame" x="78" y="8" width="100" height="23"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="tWc-tb-F7K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>

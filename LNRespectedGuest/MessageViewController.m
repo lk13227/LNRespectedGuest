@@ -99,7 +99,7 @@
 //    
 //    view.backgroundColor = [UIColor clearColor];
 //    
-//    [tableView setTableFooterView:view];
+//    [tableView setTableFooterView:view       ];
 //}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

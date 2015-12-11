@@ -63,7 +63,6 @@
 		B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56C47CE1C152FE2005C15E7 /* ChangeThePasswordViewController.m */; };
 		B572F0051C102234006228A9 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F0031C102234006228A9 /* MerchantCell.m */; };
 		B572F0061C102234006228A9 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B572F0041C102234006228A9 /* MerchantCell.xib */; };
-		B5C276361C1036B20004E120 /* UITableViewCellStyleSubtitle.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C276351C1036B20004E120 /* UITableViewCellStyleSubtitle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,8 +192,6 @@
 		B572F0021C102234006228A9 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
 		B572F0031C102234006228A9 /* MerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCell.m; sourceTree = "<group>"; };
 		B572F0041C102234006228A9 /* MerchantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
-		B5C276341C1036B20004E120 /* takeDinnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = takeDinnerViewController.h; sourceTree = "<group>"; };
-		B5C276351C1036B20004E120 /* UITableViewCellStyleSubtitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellStyleSubtitle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,8 +366,6 @@
 			children = (
 				4C5FAC851C081B8D00027064 /* MerchantBusinessViewController.h */,
 				4C5FAC861C081B8D00027064 /* MerchantBusinessViewController.m */,
-				B5C276341C1036B20004E120 /* takeDinnerViewController.h */,
-				B5C276351C1036B20004E120 /* UITableViewCellStyleSubtitle.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -717,7 +712,6 @@
 				4C5FACFB1C0BED1500027064 /* View+MASAdditions.m in Sources */,
 				4C5FACD21C0BED0700027064 /* AFSecurityPolicy.m in Sources */,
 				4C5FACF91C0BED1500027064 /* NSArray+MASAdditions.m in Sources */,
-				B5C276361C1036B20004E120 /* UITableViewCellStyleSubtitle.m in Sources */,
 				4C5FACD01C0BED0700027064 /* AFHTTPSessionManager.m in Sources */,
 				B56C47CB1C152452005C15E7 /* accountViewController.m in Sources */,
 				4C5FACFC1C0BED1500027064 /* ViewController+MASAdditions.m in Sources */,
