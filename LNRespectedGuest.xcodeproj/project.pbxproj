@@ -11,6 +11,7 @@
 		255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255029951C17FAF4001B46A8 /* StoreCell.xib */; };
 		2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299A1C1802AA001B46A8 /* BusinessViewController.m */; };
 		2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299D1C181C4F001B46A8 /* StoreViewController.m */; };
+		256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256A51D81C1AC6E8001F20EF /* SetViewController.m */; };
 		258416B21C1518B7005C2E30 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 258416B01C1518B7005C2E30 /* MessageCell.m */; };
 		258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258416B11C1518B7005C2E30 /* MessageCell.xib */; };
 		4C5FAC801C0819E700027064 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FAC7F1C0819E700027064 /* FindViewController.m */; };
@@ -90,6 +91,8 @@
 		2550299A1C1802AA001B46A8 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
 		2550299C1C181C4F001B46A8 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		2550299D1C181C4F001B46A8 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		256A51D71C1AC6E8001F20EF /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		256A51D81C1AC6E8001F20EF /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		258416AF1C1518B7005C2E30 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		258416B01C1518B7005C2E30 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		258416B11C1518B7005C2E30 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 			children = (
 				4C647A581BFDB2330007203F /* PersonViewController.h */,
 				4C647A591BFDB2330007203F /* PersonViewController.m */,
+				256A51D71C1AC6E8001F20EF /* SetViewController.h */,
+				256A51D81C1AC6E8001F20EF /* SetViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -740,6 +745,7 @@
 				2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */,
 				4C5FACD11C0BED0700027064 /* AFNetworkReachabilityManager.m in Sources */,
 				4C5FACD51C0BED0700027064 /* AFURLResponseSerialization.m in Sources */,
+				256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */,
 				4C5FACD41C0BED0700027064 /* AFURLRequestSerialization.m in Sources */,
 				4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */,
 				4C647A5A1BFDB2330007203F /* PersonViewController.m in Sources */,
