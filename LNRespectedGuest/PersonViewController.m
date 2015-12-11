@@ -10,6 +10,7 @@
 #import "MyTableViewCell.h"
 #import "LoginViewController.h"
 #import "accountViewController.h"
+#import "SetViewController.h"
 
 @interface PersonViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -24,6 +25,8 @@
 @property (nonatomic,strong) NSArray *titleArr;
 
 @property (nonatomic,strong) UIButton *loginBtn;
+
+@property(nonatomic,strong)SetViewController *setVC;
 @end
 
 
@@ -133,12 +136,12 @@ static NSString *cellOne = @"cell";
     }];
 
     //导航右按钮
-    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [infoButton setTitle:@"设置" forState:normal];
-    infoButton.frame = CGRectMake(0, 0, 40, 40);
-    //[infoButton addTarget:self action:@selector(infoClick:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *infoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
-    self.navigationItem.rightBarButtonItem = infoButtonItem;
+    UIButton *setButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [setButton setTitle:@"设置" forState:normal];
+    setButton.frame = CGRectMake(0, 0, 40, 40);
+    [setButton addTarget:self action:@selector(setClick:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *setButtonItem = [[UIBarButtonItem alloc] initWithCustomView:setButton];
+    self.navigationItem.rightBarButtonItem = setButtonItem;
 }
 
 //loginClick
@@ -151,6 +154,12 @@ static NSString *cellOne = @"cell";
     }];
     [self presentViewController:VC animated:YES completion:nil];
     
+}
+//设置按钮的点击事件 - setClick
+-(void)setClick:(UIButton *)setBtn
+{
+    self.setVC = [[SetViewController alloc]init];
+    [self.navigationController pushViewController:self.setVC animated:YES];
 }
 #pragma mark 退出登录
 - (void)exitClick:(UIButton *)btn{
