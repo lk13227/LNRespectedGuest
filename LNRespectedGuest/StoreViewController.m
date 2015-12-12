@@ -100,7 +100,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"让我加班先死个妈 第%ld组 第%ld个",(long)indexPath.section,(long)indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"理念空间 第%ld组 第%ld个",(long)indexPath.section,(long)indexPath.row];
     
     return cell;
 }

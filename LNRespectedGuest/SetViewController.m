@@ -7,11 +7,13 @@
 //
 
 #import "SetViewController.h"
+#import "DisclaimerViewController.h"
 
 @interface SetViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
+@property(nonatomic,strong)DisclaimerViewController *disclaimerVC;
 
 @end
 
@@ -78,6 +80,11 @@
 #pragma mark - cell的点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 0)
+    {
+        self.disclaimerVC = [[DisclaimerViewController alloc]init];
+        [self.navigationController pushViewController:self.disclaimerVC animated:YES];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];//反选效果
 }
 - (void)didReceiveMemoryWarning {

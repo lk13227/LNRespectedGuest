@@ -11,6 +11,7 @@
 		255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255029951C17FAF4001B46A8 /* StoreCell.xib */; };
 		2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299A1C1802AA001B46A8 /* BusinessViewController.m */; };
 		2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299D1C181C4F001B46A8 /* StoreViewController.m */; };
+		255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */; };
 		256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256A51D81C1AC6E8001F20EF /* SetViewController.m */; };
 		258416B21C1518B7005C2E30 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 258416B01C1518B7005C2E30 /* MessageCell.m */; };
 		258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258416B11C1518B7005C2E30 /* MessageCell.xib */; };
@@ -97,6 +98,8 @@
 		2550299A1C1802AA001B46A8 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
 		2550299C1C181C4F001B46A8 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		2550299D1C181C4F001B46A8 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
+		255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		256A51D71C1AC6E8001F20EF /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		256A51D81C1AC6E8001F20EF /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		258416AF1C1518B7005C2E30 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 				4C647A591BFDB2330007203F /* PersonViewController.m */,
 				256A51D71C1AC6E8001F20EF /* SetViewController.h */,
 				256A51D81C1AC6E8001F20EF /* SetViewController.m */,
+				255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */,
+				255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -784,6 +789,7 @@
 				4C5FAC971C098AE300027064 /* BusinessCell.m in Sources */,
 				255029961C17FAF4001B46A8 /* StoreCell.m in Sources */,
 				4C5FACF81C0BED1500027064 /* MASViewConstraint.m in Sources */,
+				255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */,
 				4C5FACF71C0BED1500027064 /* MASViewAttribute.m in Sources */,
 				4C6FBA7F1C0D542500FACAFF /* JHCustomMenu.m in Sources */,
 				2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */,
