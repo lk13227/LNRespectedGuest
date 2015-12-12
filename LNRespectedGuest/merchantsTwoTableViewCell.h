@@ -10,4 +10,8 @@
 
 @interface merchantsTwoTableViewCell : UITableViewCell
 
+@property(nonatomic,strong)UILabel *circleLabel;
+@property(nonatomic,strong)UILabel *memberLabel;
+@property(nonatomic,strong)UILabel *peopleLabel;
+
 @end

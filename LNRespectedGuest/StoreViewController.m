@@ -47,6 +47,8 @@
         make.bottom.mas_equalTo(self.view.mas_bottom);
     }];
     [self.tableView registerNib:[UINib nibWithNibName:@"merchantsOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"one"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"merchantsTwoTableViewCell" bundle:nil] forCellReuseIdentifier:@"two"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"merchantsThreeTableViewCell" bundle:nil] forCellReuseIdentifier:@"three"];
 }
 
 #pragma mark - tableView代理方法
@@ -67,7 +69,7 @@
         return 90;
     }
     if (indexPath.section == 2) {
-        return 200;
+        return 240;
     }
     return 0;
 }
@@ -96,6 +98,24 @@
         return cell;
     }
     
+    //第二个cell
+    if (indexPath.section == 1) {
+        merchantsTwoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"two" forIndexPath:indexPath];
+        if (!cell) {
+            cell = [[merchantsTwoTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"two"];
+        }
+        return cell;
+    }
+    
+    //第三个cell
+    if (indexPath.section == 2) {
+        merchantsThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"three" forIndexPath:indexPath];
+        if (!cell) {
+            cell = [[merchantsThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"three"];
+        }
+        return cell;
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
@@ -103,6 +123,13 @@
     cell.textLabel.text = [NSString stringWithFormat:@"理念空间 第%ld组 第%ld个",(long)indexPath.section,(long)indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0 || indexPath.section == 1) {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 
