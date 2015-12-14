@@ -149,9 +149,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     if(!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellName];
     }
     cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.detailTextLabel.text = @"mona";//cell右边显示文字，只有tableView样式为UITableViewCellStyleValue1才有效
     return cell;
 }
 //行的点击事件

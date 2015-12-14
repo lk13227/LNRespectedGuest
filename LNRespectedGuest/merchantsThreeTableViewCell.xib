@@ -111,16 +111,16 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="Ho9-ue-vp9"/>
-                        <exclude reference="oDN-VW-Z25"/>
                         <exclude reference="2mF-SF-L3s"/>
                         <exclude reference="2wo-NC-csx"/>
                         <exclude reference="qXd-cg-7FN"/>
+                        <exclude reference="Ho9-ue-vp9"/>
+                        <exclude reference="oDN-VW-Z25"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <animations/>
-            <point key="canvasLocation" x="289.5" y="391"/>
+            <point key="canvasLocation" x="153.5" y="148"/>
         </tableViewCell>
     </objects>
     <resources>

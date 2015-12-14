@@ -11,15 +11,25 @@
 #import "merchantsOneTableViewCell.h"
 #import "merchantsTwoTableViewCell.h"
 #import "merchantsThreeTableViewCell.h"
+#import "merchantsThreeCell.h"
+#import "merchantsThreeModel.h"
 
 @interface StoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong)UITableView *tableView;
 
+@property (nonatomic,strong)NSArray *threeModels;
+
 @end
 
 @implementation StoreViewController
 
+-(NSArray *)threeModels{//懒加载加载数据
+    if (!_threeModels) {
+        _threeModels = [merchantsThreeModel threeModelList];
+    }
+    return _threeModels;
+}
 
 
 - (void)viewDidLoad {
@@ -54,7 +64,7 @@
 #pragma mark - tableView代理方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 2) {
-        return 5;
+        return self.threeModels.count;
     }
     return 1;
 }
@@ -69,7 +79,7 @@
         return 90;
     }
     if (indexPath.section == 2) {
-        return 240;
+        return 44;
     }
     return 0;
 }
@@ -109,10 +119,16 @@
     
     //第三个cell
     if (indexPath.section == 2) {
-        merchantsThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"three" forIndexPath:indexPath];
-        if (!cell) {
-            cell = [[merchantsThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"three"];
-        }
+//        merchantsThreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"three" forIndexPath:indexPath];
+//        if (!cell) {
+//            cell = [[merchantsThreeTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"three"];
+//        }
+        
+        merchantsThreeCell *cell = [merchantsThreeCell threeCellWithTableView:tableView];
+        
+        merchantsThreeModel *model = self.threeModels[indexPath.row];
+        cell.threeModel = model;
+        
         return cell;
     }
     
