@@ -13,23 +13,40 @@
 #import "merchantsThreeTableViewCell.h"
 #import "merchantsThreeCell.h"
 #import "merchantsThreeModel.h"
+#import "merchantsThreeFrame.h"
 
 @interface StoreViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong)UITableView *tableView;
 
-@property (nonatomic,strong)NSArray *threeModels;
+@property (nonatomic,strong)NSArray *threeModelFrames;
 
 @end
 
 @implementation StoreViewController
 
--(NSArray *)threeModels{//懒加载加载数据
-    if (!_threeModels) {
-        _threeModels = [merchantsThreeModel threeModelList];
+- (NSArray *)threeModelFrames{
+    if (!_threeModelFrames) {
+        //加载数据模型
+        NSArray *threeModels = [merchantsThreeModel threeModelList];
+        NSMutableArray *frames = [NSMutableArray array];
+        for (merchantsThreeModel *model in threeModels) {
+            //创建frame模型对象
+            merchantsThreeFrame *frame = [[merchantsThreeFrame alloc] init];
+            frame.threeModel = model;
+            //添加到临时数组
+            [frames addObject:frame];
+        }
+        _threeModelFrames = frames;
     }
-    return _threeModels;
+    return _threeModelFrames;
 }
+//-(NSArray *)threeModels{//懒加载加载数据
+//    if (!_threeModels) {
+//        _threeModels = [merchantsThreeModel threeModelList];
+//    }
+//    return _threeModels;
+//}
 
 
 - (void)viewDidLoad {
@@ -64,7 +81,7 @@
 #pragma mark - tableView代理方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 2) {
-        return self.threeModels.count;
+        return self.threeModelFrames.count;
     }
     return 1;
 }
@@ -79,7 +96,10 @@
         return 90;
     }
     if (indexPath.section == 2) {
-        return 44;
+        //计算行高
+        merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
+        
+        return frame.rowHeight;
     }
     return 0;
 }
@@ -126,8 +146,8 @@
         
         merchantsThreeCell *cell = [merchantsThreeCell threeCellWithTableView:tableView];
         
-        merchantsThreeModel *model = self.threeModels[indexPath.row];
-        cell.threeModel = model;
+        merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
+        cell.threeModelFrame = frame;
         
         return cell;
     }

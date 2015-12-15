@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class merchantsThreeModel;
+@class merchantsThreeFrame;
 @interface merchantsThreeCell : UITableViewCell
 
-@property (nonatomic,strong)merchantsThreeModel *threeModel;
+//@property (nonatomic,strong)merchantsThreeModel *threeModel;
+@property (nonatomic,strong)merchantsThreeFrame *threeModelFrame;
 
 + (instancetype)threeCellWithTableView:(UITableView *)tableView;
 

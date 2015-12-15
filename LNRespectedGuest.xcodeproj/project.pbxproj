@@ -74,6 +74,7 @@
 		B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56C47CE1C152FE2005C15E7 /* ChangeThePasswordViewController.m */; };
 		B572F0051C102234006228A9 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F0031C102234006228A9 /* MerchantCell.m */; };
 		B572F0061C102234006228A9 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B572F0041C102234006228A9 /* MerchantCell.xib */; };
+		B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,8 @@
 		B572F0021C102234006228A9 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
 		B572F0031C102234006228A9 /* MerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCell.m; sourceTree = "<group>"; };
 		B572F0041C102234006228A9 /* MerchantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
+		B588F29F1C1FDACA00C51D90 /* merchantsThreeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeFrame.h; sourceTree = "<group>"; };
+		B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -622,6 +625,8 @@
 			children = (
 				B552BCF01C1E5FF500A2DB40 /* merchantsThreeModel.h */,
 				B552BCF11C1E5FF500A2DB40 /* merchantsThreeModel.m */,
+				B588F29F1C1FDACA00C51D90 /* merchantsThreeFrame.h */,
+				B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -802,6 +807,7 @@
 				4C5FACCF1C0BED0700027064 /* AFHTTPRequestOperationManager.m in Sources */,
 				4C5FACA91C0B287200027064 /* HeadView.m in Sources */,
 				B572F0051C102234006228A9 /* MerchantCell.m in Sources */,
+				B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */,
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
 				4C5FACCE1C0BED0700027064 /* AFHTTPRequestOperation.m in Sources */,
 				4C5FACF51C0BED1500027064 /* MASConstraintMaker.m in Sources */,
