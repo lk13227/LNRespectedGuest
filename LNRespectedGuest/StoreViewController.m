@@ -192,7 +192,6 @@
  */
 - (void)returnClick{
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
-    self.hidesBottomBarWhenPushed=NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

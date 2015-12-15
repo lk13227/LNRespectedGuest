@@ -51,6 +51,7 @@
         UIImageView *vipView = [[UIImageView alloc] init];
         [self.contentView addSubview:vipView];
         self.vipView = vipView;
+        self.vipView.image = [UIImage imageNamed:@"vip"];
         //内容
         UILabel *textLabel = [[UILabel alloc] init];
         textLabel.font = [UIFont systemFontOfSize:TextFont];
@@ -86,7 +87,7 @@
     merchantsThreeModel *threeModel = self.threeModelFrame.threeModel;
     self.iconView.image = [UIImage imageNamed:threeModel.icon];
     self.nameLabel.text = threeModel.name;
-    self.vipView.image = [UIImage imageNamed:@"vip"];
+    
     //如果不是会员 隐藏
     if (!threeModel.isVip) {
         self.vipView.hidden = YES;
