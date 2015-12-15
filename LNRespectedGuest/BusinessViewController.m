@@ -66,6 +66,18 @@
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:nil options:nil]firstObject];
     }
+    
+    NSString *guiquan = @"10";
+    NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
+    [cell.GuiQuanBtn setTitle:str1 forState:UIControlStateNormal];
+    
+    NSString *guiyuan = @"10";
+    NSString *str2 = [NSString stringWithFormat:@"商员(%@)",guiyuan];
+    [cell.GuiYuanBtn setTitle:str2 forState:UIControlStateNormal];
+    
+    NSString *guiren = @"10";
+    NSString *str = [NSString stringWithFormat:@"商人(%@)",guiren];
+    [cell.GuiRenBtn setTitle:str forState:UIControlStateNormal];
     //cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
 }
@@ -76,14 +88,12 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //1.设置self.tabBarController.tabBar.hidden=YES;
-    self.tabBarController.tabBar.hidden=YES;
+//    self.tabBarController.tabBar.hidden=YES;
     //2.如果在push跳转时需要隐藏tabBar，设置self.hidesBottomBarWhenPushed=YES;
     self.hidesBottomBarWhenPushed=YES;
     StoreViewController *storeVC = [[StoreViewController alloc]init];
     [self.navigationController pushViewController:storeVC animated:YES];
-    self.hidesBottomBarWhenPushed=NO;
-    //并在push后设置self.hidesBottomBarWhenPushed=NO;
-    //这样back回来的时候，tabBar会恢复正常显示。
+
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
 

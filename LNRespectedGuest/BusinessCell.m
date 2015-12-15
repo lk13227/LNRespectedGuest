@@ -9,6 +9,13 @@
 #import "BusinessCell.h"
 
 @implementation BusinessCell
+/**
+ *  get方法
+ */
+//- (void)setGuiRenBtn:(UIButton *)GuiRenBtn{
+//    _GuiRenBtn = GuiRenBtn;
+//    _GuiQuanBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+//}
 
 - (void)awakeFromNib {
     // Initialization code

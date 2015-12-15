@@ -190,6 +190,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = self.dataArray[indexPath.row][@"content"];
     cell.imageView.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"pic"]];
+  
     return cell;
 }
 //-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section
@@ -201,8 +202,17 @@
 {
     if (indexPath.row == 2) {//商家
         LKLog(@"商家");
-        BusinessViewController *businessVC = [[BusinessViewController alloc]init];
-        [self.navigationController pushViewController:businessVC animated:YES];
+        
+    //1.设置self.tabBarController.tabBar.hidden=YES;
+    self.tabBarController.tabBar.hidden=YES;
+    //2.如果在push跳转时需要隐藏tabBar，设置self.hidesBottomBarWhenPushed=YES;
+    self.hidesBottomBarWhenPushed=YES;
+   BusinessViewController *businessVC = [[BusinessViewController alloc]init];
+    [self.navigationController pushViewController:businessVC animated:YES];
+    self.hidesBottomBarWhenPushed=NO;
+    //并在push后设置self.hidesBottomBarWhenPushed=NO;
+    //这样back回来的时候，tabBar会恢复正常显示。
+
         
     }
     
