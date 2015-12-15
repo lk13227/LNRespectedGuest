@@ -53,11 +53,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2C-pN-ZCK" userLabel="Button1">
-                        <rect key="frame" x="89" y="38" width="50" height="25"/>
+                        <rect key="frame" x="89" y="38" width="58" height="25"/>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.51734808800031762" blue="0.60389085749411731" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="yYh-QH-aYT"/>
+                            <constraint firstAttribute="width" constant="58" id="yYh-QH-aYT"/>
                         </constraints>
                         <state key="normal" title="贵圈"/>
                         <connections>
@@ -65,7 +65,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRm-NS-T2t" userLabel="Button2">
-                        <rect key="frame" x="144" y="38" width="50" height="25"/>
+                        <rect key="frame" x="152" y="38" width="58" height="25"/>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.92267010833290086" blue="0.18841095106793349" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="贵员"/>
@@ -74,7 +74,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-bV-8Wy" userLabel="Button3">
-                        <rect key="frame" x="199" y="38" width="50" height="25"/>
+                        <rect key="frame" x="215" y="38" width="58" height="25"/>
                         <animations/>
                         <color key="backgroundColor" red="0.44157480414989625" green="0.90646684287900525" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="贵人"/>
