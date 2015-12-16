@@ -87,10 +87,6 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //1.设置self.tabBarController.tabBar.hidden=YES;
-//    self.tabBarController.tabBar.hidden=YES;
-    //2.如果在push跳转时需要隐藏tabBar，设置self.hidesBottomBarWhenPushed=YES;
-    self.hidesBottomBarWhenPushed=YES;
     StoreViewController *storeVC = [[StoreViewController alloc]init];
     [self.navigationController pushViewController:storeVC animated:YES];
 
