@@ -106,7 +106,7 @@
     
     /*创建一个导航分栏控制器的对象*/
     UITabBarController *tbc = [[UITabBarController alloc]init];
-    [tbc.tabBar setBackgroundColor:[UIColor colorWithRed:59.0/255 green:58.0/255 blue:63.0/255 alpha:1.0]];
+    [tbc.tabBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"]];
     
     /*把创建好的分栏添加给分栏控制器*/
     tbc.viewControllers = @[merchantBusinessNav,friendsNav,messageNav,findNav,personNav];
