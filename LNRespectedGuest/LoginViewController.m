@@ -17,9 +17,9 @@
 @property (nonatomic,strong) UILabel *userLabel;
 @property (nonatomic,strong) UILabel *passwordLabel;
 @property (nonatomic,strong) UIImageView *imageView;
+@property(nonatomic,strong) UIBarButtonItem *barButton;
 
 @end
-
 @implementation LoginViewController
 
 - (void)viewDidLoad {
@@ -34,6 +34,7 @@
 }
 
 - (void)createUI{
+    
     //假导航
     UIView *titleView = [[UIView alloc] init];
     //    titleView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 64);
