@@ -87,6 +87,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     StoreViewController *storeVC = [[StoreViewController alloc]init];
     [self.navigationController pushViewController:storeVC animated:YES];
 

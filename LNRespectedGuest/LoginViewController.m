@@ -29,7 +29,7 @@
 
    
     [self createUI];
-   
+    [self createReturn];
     
 }
 
@@ -60,7 +60,7 @@
         make.top.mas_equalTo(titleView.mas_top).offset(+10);
         make.height.offset(50);
     }];
-
+    
     //logo
     self.imageView = [[UIImageView alloc] init];
     [self.imageView setImage:[UIImage imageNamed:@"123.jpg"]];
@@ -293,5 +293,29 @@
     }];
 }
 
+
+
+
+/**
+ *  返回按钮
+ */
+- (void)createReturn{
+    UIButton *returnBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [returnBtn setBackgroundImage:[UIImage imageNamed:@"返回 拷贝.png"] forState:UIControlStateNormal];
+    [returnBtn addTarget:self action:@selector(returnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:returnBtn];
+    [returnBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.width.offset(15);
+        make.top.mas_equalTo(self.view.mas_top).offset(25);
+        make.height.offset(20);
+    }];
+}
+/**
+ *  返回事件
+ */
+- (void)returnClick{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

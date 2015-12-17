@@ -38,7 +38,7 @@
     self.merchantBusinessVC = [[MerchantBusinessViewController alloc]init];
     self.merchantBusinessVC.title = @"贵人圈";
     self.merchantBusinessVC.tabBarItem.image = [UIImage imageNamed:@"tab_0"];
-  [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];//去掉导航左边返回按钮上的文字
     /*添加导航控制器*/
     UINavigationController *merchantBusinessNav = [[UINavigationController alloc]initWithRootViewController:self.merchantBusinessVC];
@@ -106,7 +106,7 @@
     
     /*创建一个导航分栏控制器的对象*/
     UITabBarController *tbc = [[UITabBarController alloc]init];
-    [tbc.tabBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"]];
+    [tbc.tabBar setBackgroundColor:[UIColor colorWithRed:59.0/255 green:58.0/255 blue:63.0/255 alpha:1.0]];
     
     /*把创建好的分栏添加给分栏控制器*/
     tbc.viewControllers = @[merchantBusinessNav,friendsNav,messageNav,findNav,personNav];

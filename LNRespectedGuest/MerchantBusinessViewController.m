@@ -123,7 +123,7 @@
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGTH)];
 //    self.scrollView.backgroundColor = [UIColor redColor];
     // 是否支持滑动最顶端
-    //    scrollView.scrollsToTop = NO;
+    [_scrollView setShowsHorizontalScrollIndicator:NO];
     self.scrollView.delegate = self;
     // 设置内容大小
     self.scrollView.contentSize = CGSizeMake(WIDTH*2, HEIGTH);

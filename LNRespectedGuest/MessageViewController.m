@@ -59,7 +59,7 @@
     /*返回每一个分段有多少行*/
     if (self.dataArray.count == 0)
     {
-        return 100;
+        return 15;
     }
     else
     return self.dataArray.count;
