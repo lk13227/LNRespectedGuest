@@ -74,6 +74,9 @@
 		B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B56C47CE1C152FE2005C15E7 /* ChangeThePasswordViewController.m */; };
 		B572F0051C102234006228A9 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F0031C102234006228A9 /* MerchantCell.m */; };
 		B572F0061C102234006228A9 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B572F0041C102234006228A9 /* MerchantCell.xib */; };
+		B58081EF1C23C8360073EEEB /* StoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B58081EE1C23C8360073EEEB /* StoreVC.m */; };
+		B58081F41C23CB5D0073EEEB /* StoreOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B58081F21C23CB5D0073EEEB /* StoreOneCell.m */; };
+		B58081F51C23CB5D0073EEEB /* StoreOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58081F31C23CB5D0073EEEB /* StoreOneCell.xib */; };
 		B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +225,11 @@
 		B572F0021C102234006228A9 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
 		B572F0031C102234006228A9 /* MerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCell.m; sourceTree = "<group>"; };
 		B572F0041C102234006228A9 /* MerchantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
+		B58081ED1C23C8360073EEEB /* StoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreVC.h; sourceTree = "<group>"; };
+		B58081EE1C23C8360073EEEB /* StoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreVC.m; sourceTree = "<group>"; };
+		B58081F11C23CB5D0073EEEB /* StoreOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreOneCell.h; sourceTree = "<group>"; };
+		B58081F21C23CB5D0073EEEB /* StoreOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreOneCell.m; sourceTree = "<group>"; };
+		B58081F31C23CB5D0073EEEB /* StoreOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreOneCell.xib; sourceTree = "<group>"; };
 		B588F29F1C1FDACA00C51D90 /* merchantsThreeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeFrame.h; sourceTree = "<group>"; };
 		B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -594,9 +602,12 @@
 			children = (
 				255029991C1802AA001B46A8 /* BusinessViewController.h */,
 				2550299A1C1802AA001B46A8 /* BusinessViewController.m */,
+				B58081ED1C23C8360073EEEB /* StoreVC.h */,
+				B58081EE1C23C8360073EEEB /* StoreVC.m */,
 				2550299C1C181C4F001B46A8 /* StoreViewController.h */,
 				2550299D1C181C4F001B46A8 /* StoreViewController.m */,
 				B552BCEF1C1E5FC700A2DB40 /* model */,
+				B58081F01C23CA5F0073EEEB /* New cell */,
 				B519B5F61C1AC5E40005E2AE /* cell */,
 			);
 			name = "merchants(商家)";
@@ -640,6 +651,16 @@
 				B56C47CE1C152FE2005C15E7 /* ChangeThePasswordViewController.m */,
 			);
 			name = "MyAccount(我的账户)";
+			sourceTree = "<group>";
+		};
+		B58081F01C23CA5F0073EEEB /* New cell */ = {
+			isa = PBXGroup;
+			children = (
+				B58081F11C23CB5D0073EEEB /* StoreOneCell.h */,
+				B58081F21C23CB5D0073EEEB /* StoreOneCell.m */,
+				B58081F31C23CB5D0073EEEB /* StoreOneCell.xib */,
+			);
+			name = "New cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -758,6 +779,7 @@
 				255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,
+				B58081F51C23CB5D0073EEEB /* StoreOneCell.xib in Resources */,
 				4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */,
 				4C5FAC981C098AE300027064 /* BusinessCell.xib in Resources */,
 				B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */,
@@ -817,12 +839,14 @@
 				B552BCF21C1E5FF500A2DB40 /* merchantsThreeModel.m in Sources */,
 				B552BCEE1C1E5AE300A2DB40 /* merchantsThreeCell.m in Sources */,
 				4C5FAC971C098AE300027064 /* BusinessCell.m in Sources */,
+				B58081F41C23CB5D0073EEEB /* StoreOneCell.m in Sources */,
 				255029961C17FAF4001B46A8 /* StoreCell.m in Sources */,
 				4C5FACF81C0BED1500027064 /* MASViewConstraint.m in Sources */,
 				255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */,
 				4C5FACF71C0BED1500027064 /* MASViewAttribute.m in Sources */,
 				4C6FBA7F1C0D542500FACAFF /* JHCustomMenu.m in Sources */,
 				2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */,
+				B58081EF1C23C8360073EEEB /* StoreVC.m in Sources */,
 				2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */,
 				4C5FACD11C0BED0700027064 /* AFNetworkReachabilityManager.m in Sources */,
 				4C5FACD51C0BED0700027064 /* AFURLResponseSerialization.m in Sources */,

@@ -27,6 +27,8 @@
 @property (nonatomic,strong) UIButton *loginBtn;
 
 @property(nonatomic,strong)SetViewController *setVC;
+
+@property (nonatomic,copy)NSString *integralStr;
 @end
 
 
@@ -39,11 +41,11 @@ static NSString *cellOne = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _userStr = [NSMutableString stringWithFormat:@"登录/注册"];
+    _userStr = [NSMutableString stringWithFormat:@"细枝末节"];
     
     [self createUI];
     
-    self.titleArr = @[@"我的账户",@"我的链接",@"我的交易"];
+    self.titleArr = @[@"我的账户",@"我的交易",@"链接管理",@"分享链接",@"申请链接"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MyTableViewCell" bundle:nil] forCellReuseIdentifier:@"mycell"];
     
@@ -86,7 +88,22 @@ static NSString *cellOne = @"cell";
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(iconImage.mas_right).offset(+20);
         make.top.mas_equalTo(imageView.mas_top).offset(+30);
-        make.bottom.mas_equalTo(imageView.mas_bottom).offset(-30);
+        make.height.offset(20);
+        make.width.offset(80);
+    }];
+    
+    /**
+     *  积分
+     */
+    self.integralStr = @"123";
+    UILabel *integralLabel = [[UILabel alloc] init];
+    integralLabel.text = [NSString stringWithFormat:@" 积分: %@ 分",self.integralStr];
+    integralLabel.font = [UIFont systemFontOfSize:12];
+    [imageView addSubview:integralLabel];
+    [integralLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.loginBtn.mas_left);
+        make.top.mas_equalTo(self.loginBtn.mas_bottom).offset(10);
+        make.height.offset(20);
         make.width.offset(80);
     }];
     
@@ -171,7 +188,7 @@ static NSString *cellOne = @"cell";
 #pragma mark - 黄金三问
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 5;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
@@ -186,7 +203,7 @@ static NSString *cellOne = @"cell";
     
     cell.titleText.text = self.titleArr[indexPath.row];
     cell.iconImage.image = [UIImage imageNamed:@"tab_1"];
-    if (indexPath.row != 2) {
+    if (indexPath.row != 4) {
         cell.backVIew.backgroundColor = [UIColor whiteColor];
     }
     

@@ -147,15 +147,87 @@
     [self.view addSubview:self.tableView];
 }
 
+- (void)createTableView{
+    //tableview
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 240, self.view.bounds.size.width, self.view.bounds.size.height-240) style:UITableViewStylePlain];
+    self.tableView.scrollEnabled = NO;//设置tableview不滚动
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.tableFooterView = [[UIView alloc] init]; //只显示数据的cell
+    [self.view addSubview:self.tableView];
+}
+
+/**
+ *  创建附近贵人之类的控件
+ */
+- (void)createTitleView{
+    //附近贵人
+    UILabel *guiRenLabel = [[UILabel alloc] init];
+    guiRenLabel.text = @"附近贵人";
+    guiRenLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:guiRenLabel];
+    [self createBottomLine:guiRenLabel];
+    [guiRenLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.right.mas_equalTo(self.view.mas_right).offset(-20);
+        make.top.mas_equalTo(self.view.mas_top).offset(4+64);
+        make.height.offset(40);
+    }];
+    
+    //三个链接
+    UIButton *oneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [oneBtn setTitle:@"诺娃隐秘行动 7.7折 细微末节 至2016年6月" forState:UIControlStateNormal];
+//    oneBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [oneBtn setTitleColor:[UIColor colorWithRed:120.0/255 green:217.0/255 blue:204.0/255 alpha:1.0] forState:UIControlStateNormal];
+    oneBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    [self.view addSubview:oneBtn];
+    [self createBottomLine:oneBtn];
+    [oneBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.right.mas_equalTo(self.view.mas_right).offset(-20);
+        make.top.mas_equalTo(guiRenLabel.mas_bottom).offset(4);
+        make.height.offset(40);
+    }];
+    
+    UIButton *twoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [twoBtn setTitle:@"诺娃隐秘行动 7.7折 细微末节 至2016年6月" forState:UIControlStateNormal];
+    //    twoBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [twoBtn setTitleColor:[UIColor colorWithRed:120.0/255 green:217.0/255 blue:204.0/255 alpha:1.0] forState:UIControlStateNormal];
+    twoBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    [self.view addSubview:twoBtn];
+    [self createBottomLine:twoBtn];
+    [twoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.right.mas_equalTo(self.view.mas_right).offset(-20);
+        make.top.mas_equalTo(oneBtn.mas_bottom).offset(4);
+        make.height.offset(40);
+    }];
+    
+    UIButton *threeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [threeBtn setTitle:@"诺娃隐秘行动 7.7折 细微末节 至2016年6月" forState:UIControlStateNormal];
+    //    threeBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [threeBtn setTitleColor:[UIColor colorWithRed:120.0/255 green:217.0/255 blue:204.0/255 alpha:1.0] forState:UIControlStateNormal];
+    threeBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    [self.view addSubview:threeBtn];
+    [self createBottomLine:threeBtn];
+    [threeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(20);
+        make.right.mas_equalTo(self.view.mas_right).offset(-20);
+        make.top.mas_equalTo(twoBtn.mas_bottom).offset(4);
+        make.height.offset(40);
+    }];
+}
+
 //创建数据源
 -(void)creatDataArray
 {
     //初始化数组
     self.dataArray = [[NSMutableArray alloc]init];
-    [self.dataArray addObject:@{@"content":@"附近搜索",@"pic":@"tab_0"}];
+    [self.dataArray addObject:@{@"content":@"搜索",@"pic":@"tab_0"}];
     [self.dataArray addObject:@{@"content":@"扫一扫",@"pic":@"tab_0"}];
-    [self.dataArray addObject:@{@"content":@"商家",@"pic":@"tab_0"}];
-    [self.dataArray addObject:@{@"content":@"找实惠",@"pic":@"tab_0"}];
+    [self.dataArray addObject:@{@"content":@"好友更新",@"pic":@"tab_0"}];
+    [self.dataArray addObject:@{@"content":@"谁要贵员",@"pic":@"tab_0"}];
+    [self.dataArray addObject:@{@"content":@"谁要贵圈",@"pic":@"tab_0"}];
     //载入数据
     [self.tableView reloadData];
 }
@@ -164,7 +236,9 @@
     [super viewDidLoad];
     
     //调用方法
-    [self creatUI];
+    //[self creatUI];
+    [self createTitleView];
+    [self createTableView];
     [self creatDataArray];
 }
 
@@ -200,13 +274,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 2) {//商家
+    if (indexPath.row == 0) {//商家
         LKLog(@"商家");
     BusinessViewController *businessVC = [[BusinessViewController alloc]init];
         businessVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:businessVC animated:YES];
     
-}
+    }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -257,7 +331,7 @@
 }
 - (void)createBottomLine:(UIView *)view{
     UIView *bottomView = [[UIView alloc] init];
-    bottomView.backgroundColor = [UIColor lightGrayColor];
+    bottomView.backgroundColor = [UIColor colorWithRed:228.0/255 green:228.0/255 blue:228.0/255 alpha:1.0];
     [view addSubview:bottomView];
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(view.mas_left);
