@@ -59,7 +59,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="58" id="yYh-QH-aYT"/>
                         </constraints>
-                        <state key="normal" title="贵圈"/>
                         <connections>
                             <action selector="guiQuanBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="o04-Pd-hOA"/>
                         </connections>
@@ -68,7 +67,6 @@
                         <rect key="frame" x="152" y="38" width="58" height="25"/>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.92267010833290086" blue="0.18841095106793349" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="贵员"/>
                         <connections>
                             <action selector="guiYuanBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ar1-GQ-muh"/>
                         </connections>
@@ -77,7 +75,6 @@
                         <rect key="frame" x="215" y="38" width="58" height="25"/>
                         <animations/>
                         <color key="backgroundColor" red="0.44157480414989625" green="0.90646684287900525" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="贵人"/>
                         <connections>
                             <action selector="guiRenBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d53-5W-9FR"/>
                         </connections>

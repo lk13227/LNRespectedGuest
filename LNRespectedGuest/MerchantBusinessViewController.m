@@ -25,6 +25,7 @@
 @property(nonatomic,strong)UITableView *businessTable;
 @property (nonatomic,strong)UIScrollView *scrollView;
 @property (nonatomic,strong)UIView *titleLine;
+@property(nonatomic,strong)UIBarButtonItem *rightBarBtn;
 
 @end
 
@@ -43,6 +44,8 @@
     [super viewDidLoad];
     [self initView];
     
+    self.rightBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(rightBarBtnClick:)];
+    self.navigationItem.rightBarButtonItem = self.rightBarBtn;
 //    self.navigationController.navigationBar.translucent = NO;
 //    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"schoolListItem.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSchoolList:)];
 //    
@@ -231,6 +234,18 @@
         if (!cell) {
             cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiren"];
         }
+        NSString *guiquan = @"10";
+        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
+        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
+        
+        NSString *guiyuan = @"10";
+        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
+        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
+        
+        NSString *guiren = @"10";
+        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
+        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
+        
         cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
         [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         return cell;
@@ -246,6 +261,18 @@
 //        }else{
 //            cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
 //        }
+        NSString *guiquan = @"10";
+        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
+        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
+        
+        NSString *guiyuan = @"10";
+        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
+        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
+        
+        NSString *guiren = @"10";
+        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
+        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
+        
         cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
         [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
@@ -287,7 +314,11 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
+#pragma mark - rightBarBtn方法
+-(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
+{
+    LKLog(@"呵呵");
+}
 #pragma mark - scrollView代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {

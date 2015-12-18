@@ -19,6 +19,15 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.GuiQuanBtn.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    self.GuiQuanBtn.layer.cornerRadius = 6.0;//圆角
+    
+    self.GuiYuanBtn.titleLabel.font = [UIFont systemFontOfSize:14.];
+    self.GuiYuanBtn.layer.cornerRadius = 6.0;//圆角
+    
+    self.GuiRenBtn.titleLabel.font = [UIFont systemFontOfSize:14.];
+    self.GuiRenBtn.layer.cornerRadius = 6.0;//圆角
+
 }
 /**
  *  贵圈

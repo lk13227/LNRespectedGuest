@@ -42,5 +42,8 @@
  *  赞
  */
 @property (weak, nonatomic) IBOutlet UILabel *praiseLabel;
+@property (weak, nonatomic) IBOutlet UIButton *quanBtn;
+@property (weak, nonatomic) IBOutlet UIButton *yuanBtn;
+@property (weak, nonatomic) IBOutlet UIButton *renBtn;
 
 @end
