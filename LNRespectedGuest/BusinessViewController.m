@@ -8,7 +8,8 @@
 
 #import "BusinessViewController.h"
 #import "BusinessCell.h"
-#import "StoreViewController.h"
+//#import "StoreViewController.h"
+#import "StoreVC.h"
 
 @interface BusinessViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -88,8 +89,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    StoreViewController *storeVC = [[StoreViewController alloc]init];
-    [self.navigationController pushViewController:storeVC animated:YES];
+//    StoreViewController *storeVC = [[StoreViewController alloc]init];
+//    [self.navigationController pushViewController:storeVC animated:YES];
+    StoreVC *VC = [[StoreVC alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
 
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storetwotwo" id="KGk-i7-Jjw" customClass="StoreTwoTwoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星际争霸2:虚空之遗 阿坦尼斯 到xxxx年x月" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLD-SY-sfM">
+                        <rect key="frame" x="15" y="8" width="237" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.65098039215686276" green="0.81176470588235294" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22h-bh-HUg">
+                        <rect key="frame" x="262" y="8" width="50" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="hvv-dS-jmp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="【我抢】">
+                            <color key="titleColor" red="0.78823529411764703" green="0.0" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hLD-SY-sfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="2Iv-cI-F2k"/>
+                    <constraint firstAttribute="bottom" secondItem="22h-bh-HUg" secondAttribute="bottom" constant="8" id="G3E-fK-j0x"/>
+                    <constraint firstItem="hLD-SY-sfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="GGE-FK-sTX"/>
+                    <constraint firstAttribute="bottom" secondItem="hLD-SY-sfM" secondAttribute="bottom" constant="8" id="MYc-PG-ItZ"/>
+                    <constraint firstItem="hLD-SY-sfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="OD6-Lg-cBK"/>
+                    <constraint firstAttribute="trailing" secondItem="22h-bh-HUg" secondAttribute="trailing" constant="8" id="R1W-Y2-Pua"/>
+                    <constraint firstAttribute="trailing" secondItem="22h-bh-HUg" secondAttribute="trailing" constant="8" id="R6x-4g-A8a"/>
+                    <constraint firstItem="22h-bh-HUg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SfI-Aw-b7T"/>
+                    <constraint firstItem="22h-bh-HUg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Slr-Tt-HFp"/>
+                    <constraint firstAttribute="bottom" secondItem="hLD-SY-sfM" secondAttribute="bottom" constant="8" id="d37-rd-u9q"/>
+                    <constraint firstAttribute="bottom" secondItem="22h-bh-HUg" secondAttribute="bottom" constant="8" id="iZ6-mh-go8"/>
+                    <constraint firstItem="22h-bh-HUg" firstAttribute="leading" secondItem="hLD-SY-sfM" secondAttribute="trailing" constant="10" id="lEM-Da-LWD"/>
+                    <constraint firstItem="hLD-SY-sfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="rRI-qb-9tb"/>
+                    <constraint firstItem="22h-bh-HUg" firstAttribute="leading" secondItem="hLD-SY-sfM" secondAttribute="trailing" constant="10" id="tMV-64-ck2"/>
+                    <constraint firstItem="22h-bh-HUg" firstAttribute="leading" secondItem="hLD-SY-sfM" secondAttribute="trailing" constant="10" id="ukr-0o-Lap"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="GGE-FK-sTX"/>
+                        <exclude reference="OD6-Lg-cBK"/>
+                        <exclude reference="d37-rd-u9q"/>
+                        <exclude reference="R6x-4g-A8a"/>
+                        <exclude reference="Slr-Tt-HFp"/>
+                        <exclude reference="iZ6-mh-go8"/>
+                        <exclude reference="lEM-Da-LWD"/>
+                        <exclude reference="ukr-0o-Lap"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

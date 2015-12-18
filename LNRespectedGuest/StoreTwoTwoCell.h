@@ -1,5 +1,5 @@
 //
-//  StoreOneCell.h
+//  StoreTwoTwoCell.h
 //  LNRespectedGuest
 //
 //  Created by 理念科技有限公司 on 15/12/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StoreOneCell : UITableViewCell
+@interface StoreTwoTwoCell : UITableViewCell
 
 @end

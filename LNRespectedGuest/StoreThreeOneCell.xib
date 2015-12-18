@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="storethreeone" id="KGk-i7-Jjw" customClass="StoreThreeOneCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD9-eG-Jca">
+                        <rect key="frame" x="50" y="11" width="220" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.33725490196078434" green="0.66666666666666663" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xD9-eG-Jca" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="3Pz-fn-5tu"/>
+                    <constraint firstAttribute="trailing" secondItem="xD9-eG-Jca" secondAttribute="trailing" constant="50" id="7o9-Sw-hDf"/>
+                    <constraint firstAttribute="bottom" secondItem="xD9-eG-Jca" secondAttribute="bottom" constant="11" id="R7P-aK-ZBX"/>
+                    <constraint firstItem="xD9-eG-Jca" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="SxR-g9-quQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="xD9-eG-Jca" id="ds0-7u-azJ"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="368"/>
+        </tableViewCell>
+    </objects>
+</document>

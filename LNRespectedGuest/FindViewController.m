@@ -9,6 +9,8 @@
 #import "FindViewController.h"
 #import "BusinessViewController.h"
 
+#import "OrderConfirmationVC.h"
+
 @interface FindViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *tableView;
@@ -177,7 +179,7 @@
     //三个链接
     UIButton *oneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [oneBtn setTitle:@"诺娃隐秘行动 7.7折 细微末节 至2016年6月" forState:UIControlStateNormal];
-//    oneBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [oneBtn addTarget:self action:@selector(oneBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [oneBtn setTitleColor:[UIColor colorWithRed:120.0/255 green:217.0/255 blue:204.0/255 alpha:1.0] forState:UIControlStateNormal];
     oneBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:oneBtn];
@@ -191,7 +193,7 @@
     
     UIButton *twoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [twoBtn setTitle:@"诺娃隐秘行动 7.7折 细微末节 至2016年6月" forState:UIControlStateNormal];
-    //    twoBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [twoBtn addTarget:self action:@selector(oneBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [twoBtn setTitleColor:[UIColor colorWithRed:120.0/255 green:217.0/255 blue:204.0/255 alpha:1.0] forState:UIControlStateNormal];
     twoBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:twoBtn];
@@ -205,7 +207,7 @@
     
     UIButton *threeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [threeBtn setTitle:@"诺娃隐秘行动 7.7折 细微末节 至2016年6月" forState:UIControlStateNormal];
-    //    threeBtn addTarget:<#(nullable id)#> action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+    [threeBtn addTarget:self action:@selector(oneBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [threeBtn setTitleColor:[UIColor colorWithRed:120.0/255 green:217.0/255 blue:204.0/255 alpha:1.0] forState:UIControlStateNormal];
     threeBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:threeBtn];
@@ -216,6 +218,12 @@
         make.top.mas_equalTo(twoBtn.mas_bottom).offset(4);
         make.height.offset(40);
     }];
+}
+
+- (void)oneBtnClick:(UIButton *)btn{
+    OrderConfirmationVC *VC = [[OrderConfirmationVC alloc] init];
+    VC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 //创建数据源

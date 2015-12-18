@@ -144,7 +144,7 @@ static NSString *cellOne = @"cell";
     btn.backgroundColor = [UIColor colorWithRed:77.0/255 green:181.0/255 blue:185.0/255 alpha:1.0];
     [btn addTarget:self action:@selector(exitClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-    
+    btn.layer.cornerRadius = 8.0;//圆角
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left).offset(+50);
         make.right.mas_equalTo(self.view.mas_right).offset(-50);
