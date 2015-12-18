@@ -12,6 +12,16 @@
 
 - (void)awakeFromNib {
     // Initialization code
+
+    self.quanBtn.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    self.quanBtn.layer.cornerRadius = 6.0;//圆角
+    
+    self.yuanBtn.titleLabel.font = [UIFont systemFontOfSize:14.];
+    self.yuanBtn.layer.cornerRadius = 6.0;//圆角
+    
+    self.renBtn.titleLabel.font = [UIFont systemFontOfSize:14.];
+    self.renBtn.layer.cornerRadius = 6.0;//圆角
+
     
 //    [self createUI];
 }
@@ -33,6 +43,12 @@
 }
 - (IBAction)commentsClick:(id)sender {
     LKLog(@"点击了评论");
+}
+- (IBAction)quanBtnClick:(UIButton *)sender {
+}
+- (IBAction)yuanBtnClick:(UIButton *)sender {
+}
+- (IBAction)renBtnClick:(UIButton *)sender {
 }
 
 @end
