@@ -56,7 +56,7 @@
 		4C8B4E3E1BFAC42B003A6F65 /* LNRespectedGuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E3D1BFAC42B003A6F65 /* LNRespectedGuestTests.m */; };
 		4C8B4E491BFAC42B003A6F65 /* LNRespectedGuestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E481BFAC42B003A6F65 /* LNRespectedGuestUITests.m */; };
 		4C8B4E5E1BFAC7AC003A6F65 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */; };
-		4C8B4ED11BFAE67D003A6F65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8B4ED01BFAE67D003A6F65 /* Images.xcassets */; };
+		4C8B4ED11BFAE67D003A6F65 /*  .xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8B4ED01BFAE67D003A6F65 /*  .xcassets */; };
 		4CD9C1851C02C30900523846 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1831C02C30900523846 /* MyTableViewCell.m */; };
 		4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9C1841C02C30900523846 /* MyTableViewCell.xib */; };
 		4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1881C02CB5700523846 /* LoginViewController.m */; };
@@ -203,7 +203,7 @@
 		4C8B4E4A1BFAC42B003A6F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8B4E5C1BFAC7AC003A6F65 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
-		4C8B4ED01BFAE67D003A6F65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4C8B4ED01BFAE67D003A6F65 /*  .xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = " .xcassets"; sourceTree = "<group>"; };
 		4CD9C1821C02C30900523846 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		4CD9C1831C02C30900523846 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		4CD9C1841C02C30900523846 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
@@ -443,7 +443,7 @@
 			children = (
 				4C8B4E2C1BFAC42B003A6F65 /* Main.storyboard */,
 				4C8B4E2F1BFAC42B003A6F65 /* Assets.xcassets */,
-				4C8B4ED01BFAE67D003A6F65 /* Images.xcassets */,
+				4C8B4ED01BFAE67D003A6F65 /*  .xcassets */,
 				4C8B4E311BFAC42B003A6F65 /* LaunchScreen.storyboard */,
 				4C8B4E341BFAC42B003A6F65 /* Info.plist */,
 				4C8B4E231BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld */,
@@ -816,7 +816,7 @@
 				B58082021C23EE2D0073EEEB /* StoreTwoTwoCell.xib in Resources */,
 				B552BD2B1C1EC33500A2DB40 /* microblog.plist in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
-				4C8B4ED11BFAE67D003A6F65 /* Images.xcassets in Resources */,
+				4C8B4ED11BFAE67D003A6F65 /*  .xcassets in Resources */,
 				255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,

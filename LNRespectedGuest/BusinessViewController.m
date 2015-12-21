@@ -87,14 +87,15 @@
             NSInteger index = i % 4;
             NSInteger page = i / 4;
             //圆角按钮
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.layer.cornerRadius = 25;
-            button.backgroundColor = [UIColor redColor];
+            button.backgroundColor = [UIColor lightGrayColor];
             button.frame = CGRectMake(index * (Width_Space + Button_Width)+start_x, page * (Hight_sapce + Button_Higth) + start_y, Button_Width, Button_Higth);
+            [button setImage:[UIImage imageNamed:@"food.png"] forState:UIControlStateNormal];
             
             UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y+button.frame.size.height+labelOfbutton, label_Width, label_Hight)];
             [pageView addSubview:button];
-            label.backgroundColor = [UIColor blueColor];
+            label.backgroundColor = [UIColor blackColor];
             [pageView addSubview:label];
         }
         
@@ -164,7 +165,7 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:nil options:nil]firstObject];
     }
         NSString *guiquan = @"10";
-        NSString *str1 = [NSString stringWithFormat:@"商商(%@)",guiquan];
+        NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
         [cell.GuiQuanBtn setTitle:str1 forState:UIControlStateNormal];
         
         NSString *guiyuan = @"10";
