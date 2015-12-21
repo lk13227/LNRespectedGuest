@@ -12,6 +12,7 @@
 		2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299A1C1802AA001B46A8 /* BusinessViewController.m */; };
 		2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299D1C181C4F001B46A8 /* StoreViewController.m */; };
 		255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */; };
+		256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256834B61C27D8E300E7BB1B /* SearchViewController.m */; };
 		256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256A51D81C1AC6E8001F20EF /* SetViewController.m */; };
 		258416B21C1518B7005C2E30 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 258416B01C1518B7005C2E30 /* MessageCell.m */; };
 		258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258416B11C1518B7005C2E30 /* MessageCell.xib */; };
@@ -113,6 +114,8 @@
 		2550299D1C181C4F001B46A8 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
+		256834B51C27D8E300E7BB1B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		256834B61C27D8E300E7BB1B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		256A51D71C1AC6E8001F20EF /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		256A51D81C1AC6E8001F20EF /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		258416AF1C1518B7005C2E30 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 			children = (
 				255029991C1802AA001B46A8 /* BusinessViewController.h */,
 				2550299A1C1802AA001B46A8 /* BusinessViewController.m */,
+				256834B51C27D8E300E7BB1B /* SearchViewController.h */,
+				256834B61C27D8E300E7BB1B /* SearchViewController.m */,
 				B58081ED1C23C8360073EEEB /* StoreVC.h */,
 				B58081EE1C23C8360073EEEB /* StoreVC.m */,
 				2550299C1C181C4F001B46A8 /* StoreViewController.h */,
@@ -868,6 +873,7 @@
 				B572F0051C102234006228A9 /* MerchantCell.m in Sources */,
 				B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */,
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
+				256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */,
 				4C5FACCE1C0BED0700027064 /* AFHTTPRequestOperation.m in Sources */,
 				4C5FACF51C0BED1500027064 /* MASConstraintMaker.m in Sources */,
 				B519B5FA1C1AC6140005E2AE /* merchantsOneTableViewCell.m in Sources */,

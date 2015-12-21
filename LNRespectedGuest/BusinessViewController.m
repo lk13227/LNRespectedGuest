@@ -11,19 +11,15 @@
 //#import "StoreViewController.h"
 #import "StoreVC.h"
 
-@interface BusinessViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,UISearchDisplayDelegate>
-{
-    NSArray *data;
-    NSArray *filterData;
-    UISearchDisplayController *searchDisplayController;
-}
+#import "SearchViewController.h"
+
+@interface BusinessViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)UIScrollView *scrollView;
 @property(nonatomic,strong)UIPageControl *pagecontrol;
-
-//搜索条
-@property(nonatomic,strong)UISearchBar *searchBar;
+@property(nonatomic,strong)UIBarButtonItem *searchBtn;
+@property(nonatomic,strong)SearchViewController *searchVC;
 @end
 
 @implementation BusinessViewController
@@ -122,29 +118,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.searchBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchClick:)];
+    self.navigationItem.rightBarButtonItem = self.searchBtn;
+    
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 216, self.view.frame.size.width, self.view.frame.size.height-216) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
-    
-    //搜索条
-    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(25, 20, self.view.frame.size.width-50, 40)];
-    self.searchBar.placeholder = @"搜索";
-    self.searchBar.backgroundColor = [UIColor greenColor];
-    self.searchBar.barTintColor = [UIColor colorWithRed:245 green:78 blue:188 alpha:1.];
-    //搜索栏上的文字颜色
-    self.searchBar.tintColor = [UIColor blackColor];
-    //    self.navigationController.navigationBar = self.searchBar;
-    //添加searchBar到headerView
-//    self.tableView.tableHeaderView = self.searchBar;
-    [self.navigationController.view addSubview:self.searchBar];
-    // 用 searchbar 初始化 SearchDisplayController
-    // 并把 searchDisplayController 和当前 controller 关联起来
-    searchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBar contentsController:self];
-    // searchResultsDataSource 就是 UITableViewDataSource
-    searchDisplayController.searchResultsDataSource = self;
-    // searchResultsDelegate 就是 UITableViewDelegate
-    searchDisplayController.searchResultsDelegate = self;
     
     
     [self createData];
@@ -154,7 +134,12 @@
  * 如果原 TableView 和 SearchDisplayController 中的 TableView 的 delete 指向同一个对象
  * 需要在回调中区分出当前是哪个 TableView
  */
-
+#pragma mark - 搜索按钮点击事件
+-(void)searchClick:(UINavigationBar *)searchBtn
+{
+    self.searchVC = [[SearchViewController alloc]init];
+    [self.navigationController pushViewController:self.searchVC animated:YES];
+}
 #pragma mark - tableView方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -162,20 +147,12 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.tableView)
+    if (self.dataArray.count == 0)
     {
-        if (self.dataArray.count == 0)
-        {
-            return 100;
-        }
-        else
-            return self.dataArray.count;
+        return 100;
     }
-    else{
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains [cd] %@",searchDisplayController.searchBar.text];
-        filterData =  [[NSArray alloc] initWithArray:[data filteredArrayUsingPredicate:predicate]];
-        return filterData.count;
-    }
+    else
+        return self.dataArray.count;
     
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -186,7 +163,6 @@
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:nil options:nil]firstObject];
     }
-    if (tableView == self.tableView) {
         NSString *guiquan = @"10";
         NSString *str1 = [NSString stringWithFormat:@"商商(%@)",guiquan];
         [cell.GuiQuanBtn setTitle:str1 forState:UIControlStateNormal];
@@ -198,11 +174,6 @@
         NSString *guiren = @"10";
         NSString *str = [NSString stringWithFormat:@"商人(%@)",guiren];
         [cell.GuiRenBtn setTitle:str forState:UIControlStateNormal];
-        
-    }
-    else{
-        cell.textLabel.text = filterData[indexPath.row];
-    }
     
     //cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
