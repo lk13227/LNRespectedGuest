@@ -39,7 +39,7 @@
     self.merchantBusinessVC.title = @"贵人圈";
     self.merchantBusinessVC.tabBarItem.image = [UIImage imageNamed:@"tab_0"];
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];//去掉导航左边返回按钮上的文字
+                                                         forBarMetrics:UIBarMetricsDefault];
     /*添加导航控制器*/
     UINavigationController *merchantBusinessNav = [[UINavigationController alloc]initWithRootViewController:self.merchantBusinessVC];
     merchantBusinessNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
