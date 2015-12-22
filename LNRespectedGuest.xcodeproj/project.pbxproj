@@ -769,6 +769,7 @@
 				TargetAttributes = {
 					4C8B4E191BFAC42B003A6F65 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = F3NE8TM5G3;
 					};
 					4C8B4E381BFAC42B003A6F65 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -1045,6 +1046,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LNRespectedGuest/PrefixHeader.pch";
@@ -1061,6 +1063,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LNRespectedGuest/PrefixHeader.pch";

@@ -15,6 +15,7 @@
 @end
 
 typedef void(^Dismiss)(void);
+
 @interface JHCustomMenu : UIView<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -26,4 +27,5 @@ typedef void(^Dismiss)(void);
 - (instancetype)initWithDataArr:(NSArray *)dataArr origin:(CGPoint)origin width:(CGFloat)width rowHeight:(CGFloat)rowHeight;
 
 - (void)dismissWithCompletion:(void (^)(JHCustomMenu *object))completion;
+
 @end

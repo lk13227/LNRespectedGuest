@@ -12,7 +12,7 @@
 #define RightToView 10.0f
 #define CellLineEdgeInsets UIEdgeInsetsMake(0, 10, 0, 10)
 #define kScreenWidth        [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight        [UIScreen mainScreen].bounds.size.height
+#define kScreenHeight       [UIScreen mainScreen].bounds.size.height
 
 @interface JHCustomMenu()//加一句注释
 @property (nonatomic, assign) CGPoint origin;
