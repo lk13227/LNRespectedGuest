@@ -92,10 +92,14 @@
             button.backgroundColor = [UIColor lightGrayColor];
             button.frame = CGRectMake(index * (Width_Space + Button_Width)+start_x, page * (Hight_sapce + Button_Higth) + start_y, Button_Width, Button_Higth);
             [button setImage:[UIImage imageNamed:@"food.png"] forState:UIControlStateNormal];
+            //button的点击事件
+            [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
             
             UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y+button.frame.size.height+labelOfbutton, label_Width, label_Hight)];
+            label.text = @"饮食";
+            label.textAlignment = NSTextAlignmentCenter;
             [pageView addSubview:button];
-            label.backgroundColor = [UIColor blackColor];
+            label.backgroundColor = [UIColor lightGrayColor];
             [pageView addSubview:label];
         }
         
@@ -224,6 +228,12 @@
         //计算更新页
         self.pagecontrol.currentPage = page;
     }
+}
+
+#pragma mark - button的点击事件
+-(void)buttonClick:(UIButton *)button
+{
+    LKLog(@"跳转新界面");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
