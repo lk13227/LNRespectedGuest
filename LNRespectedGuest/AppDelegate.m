@@ -26,7 +26,7 @@
 @end
 
 @implementation AppDelegate
-
+//刘凯的修改
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
