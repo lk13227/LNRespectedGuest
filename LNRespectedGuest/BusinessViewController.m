@@ -4,7 +4,7 @@
 //
 //  Created by 理念空间科技有限公司 on 15/12/9.
 //  Copyright © 2015年 Yun. All rights reserved.
-//
+//商家
 
 #import "BusinessViewController.h"
 #import "BusinessCell.h"
@@ -13,6 +13,8 @@
 
 #import "SearchViewController.h"
 
+#import "MerchantViewController.h"
+
 @interface BusinessViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
@@ -20,6 +22,7 @@
 @property(nonatomic,strong)UIPageControl *pagecontrol;
 @property(nonatomic,strong)UIBarButtonItem *searchBtn;
 @property(nonatomic,strong)SearchViewController *searchVC;
+@property(nonatomic,strong)MerchantViewController *merchantVC;
 @end
 
 @implementation BusinessViewController
@@ -168,6 +171,51 @@
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:nil options:nil]firstObject];
     }
+    /**
+     *  自定义贵圈按钮
+     */
+    UIButton *quanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    quanButton.backgroundColor = [UIColor colorWithRed:255./255. green:106./255. blue:135./255. alpha:1.0];
+    [quanButton addTarget:self action:@selector(quanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [quanButton setTitle:@"贵圈" forState:UIControlStateNormal];
+    [cell.contentView addSubview:quanButton];
+    [quanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(cell.picImageView.mas_right).offset(10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(55);
+        
+    }];
+    /**
+     *  自定义贵员按钮
+     */
+    UIButton *yuanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    yuanButton.backgroundColor = [UIColor colorWithRed:255./255. green:224./255. blue:103./255. alpha:1.0];
+    [yuanButton addTarget:self action:@selector(yuanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.contentView addSubview:yuanButton];
+    [yuanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(quanButton.mas_right).offset(10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(55);
+        
+    }];
+    /**
+     *  自定义贵人按钮
+     */
+    UIButton *renButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    renButton.backgroundColor = [UIColor colorWithRed:93./255. green:226./255. blue:255./255. alpha:1.0];
+    [renButton addTarget:self action:@selector(renButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
+    [cell.contentView addSubview:renButton];
+    [renButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(yuanButton.mas_right).offset(10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(55);
+        
+    }];
+
         NSString *guiquan = @"10";
         NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
         [cell.GuiQuanBtn setTitle:str1 forState:UIControlStateNormal];
@@ -230,7 +278,23 @@
     }
 }
 
+
 #pragma mark - button的点击事件
+-(void)quanButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
+-(void)yuanButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
+-(void)renButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
 -(void)buttonClick:(UIButton *)button
 {
     LKLog(@"跳转新界面");

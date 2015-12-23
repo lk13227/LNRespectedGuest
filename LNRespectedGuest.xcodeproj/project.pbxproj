@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251956ED1C2A7D6100ACA2A6 /* MerchantPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 251956EB1C2A7D6100ACA2A6 /* MerchantPersonCell.m */; };
+		251956EE1C2A7D6100ACA2A6 /* MerchantPersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 251956EC1C2A7D6100ACA2A6 /* MerchantPersonCell.xib */; };
+		251956F11C2A7D9200ACA2A6 /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251956F01C2A7D9200ACA2A6 /* MerchantViewController.m */; };
 		255029961C17FAF4001B46A8 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255029941C17FAF4001B46A8 /* StoreCell.m */; };
 		255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255029951C17FAF4001B46A8 /* StoreCell.xib */; };
 		2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299A1C1802AA001B46A8 /* BusinessViewController.m */; };
@@ -105,6 +108,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251956EA1C2A7D6100ACA2A6 /* MerchantPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantPersonCell.h; sourceTree = "<group>"; };
+		251956EB1C2A7D6100ACA2A6 /* MerchantPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantPersonCell.m; sourceTree = "<group>"; };
+		251956EC1C2A7D6100ACA2A6 /* MerchantPersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantPersonCell.xib; sourceTree = "<group>"; };
+		251956EF1C2A7D9200ACA2A6 /* MerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantViewController.h; sourceTree = "<group>"; };
+		251956F01C2A7D9200ACA2A6 /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantViewController.m; sourceTree = "<group>"; };
 		255029931C17FAF4001B46A8 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
 		255029941C17FAF4001B46A8 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
 		255029951C17FAF4001B46A8 /* StoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
@@ -427,6 +435,8 @@
 			children = (
 				4C5FAC851C081B8D00027064 /* MerchantBusinessViewController.h */,
 				4C5FAC861C081B8D00027064 /* MerchantBusinessViewController.m */,
+				251956EF1C2A7D9200ACA2A6 /* MerchantViewController.h */,
+				251956F01C2A7D9200ACA2A6 /* MerchantViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -457,6 +467,9 @@
 				B572F0021C102234006228A9 /* MerchantCell.h */,
 				B572F0031C102234006228A9 /* MerchantCell.m */,
 				B572F0041C102234006228A9 /* MerchantCell.xib */,
+				251956EA1C2A7D6100ACA2A6 /* MerchantPersonCell.h */,
+				251956EB1C2A7D6100ACA2A6 /* MerchantPersonCell.m */,
+				251956EC1C2A7D6100ACA2A6 /* MerchantPersonCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -810,6 +823,7 @@
 				B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */,
 				4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */,
 				4C5FACF21C0BED1500027064 /* Info.plist in Resources */,
+				251956EE1C2A7D6100ACA2A6 /* MerchantPersonCell.xib in Resources */,
 				4C8B4E331BFAC42B003A6F65 /* LaunchScreen.storyboard in Resources */,
 				B572F0061C102234006228A9 /* MerchantCell.xib in Resources */,
 				B58082071C23F10E0073EEEB /* StoreThreeOneCell.xib in Resources */,
@@ -871,8 +885,10 @@
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,
 				4C5FACCF1C0BED0700027064 /* AFHTTPRequestOperationManager.m in Sources */,
 				4C5FACA91C0B287200027064 /* HeadView.m in Sources */,
+				251956F11C2A7D9200ACA2A6 /* MerchantViewController.m in Sources */,
 				B572F0051C102234006228A9 /* MerchantCell.m in Sources */,
 				B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */,
+				251956ED1C2A7D6100ACA2A6 /* MerchantPersonCell.m in Sources */,
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
 				256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */,
 				4C5FACCE1C0BED0700027064 /* AFHTTPRequestOperation.m in Sources */,
