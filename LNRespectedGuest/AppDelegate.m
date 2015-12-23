@@ -13,7 +13,8 @@
 #import "MessageViewController.h"
 #import "FindViewController.h"
 #import "PersonViewController.h"
-
+//随便添加了点东西 做测试用
+// 再来最一次测试 
 
 @interface AppDelegate ()<UITabBarControllerDelegate,UIScrollViewDelegate>
 
@@ -42,7 +43,7 @@
                                                          forBarMetrics:UIBarMetricsDefault];
     /*添加导航控制器*/
     UINavigationController *merchantBusinessNav = [[UINavigationController alloc]initWithRootViewController:self.merchantBusinessVC];
-    merchantBusinessNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    merchantBusinessNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色123456
     [merchantBusinessNav.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:19],
        NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
