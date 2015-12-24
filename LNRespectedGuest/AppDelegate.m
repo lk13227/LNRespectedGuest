@@ -13,8 +13,7 @@
 #import "MessageViewController.h"
 #import "FindViewController.h"
 #import "PersonViewController.h"
-//随便添加了点东西 做测试用
-// 再来最一次测试 xuheng234567890-
+//随便添加了点东西 做测试用 
 
 @interface AppDelegate ()<UITabBarControllerDelegate,UIScrollViewDelegate>
 
@@ -30,6 +29,10 @@
 //刘凯的修改
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //友盟
+    [UMSocialData setAppKey:@"567a5007e0f55aff180021e7"];
+    
     // Override point for customization after application launch.
     /*Bounds属性 拿到控件的宽高*/
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];

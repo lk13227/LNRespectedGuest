@@ -7,7 +7,11 @@
 //
 
 #import "MerchantCell.h"
+#import "MerchantViewController.h"
 
+@interface MerchantViewController ()
+
+@end
 @implementation MerchantCell
 
 - (void)awakeFromNib {
@@ -39,6 +43,7 @@
     LKLog(@"点击了头像");
 }
 - (IBAction)shareClick:(id)sender {
+    
     LKLog(@"点击了分享");
 }
 - (IBAction)commentsClick:(id)sender {
@@ -47,6 +52,7 @@
 - (IBAction)quanBtnClick:(UIButton *)sender {
 }
 - (IBAction)yuanBtnClick:(UIButton *)sender {
+    
 }
 - (IBAction)renBtnClick:(UIButton *)sender {
 }

@@ -4,7 +4,7 @@
 //
 //  Created by 理念空间科技有限公司 on 15/12/9.
 //  Copyright © 2015年 Yun. All rights reserved.
-//
+//商家
 
 #import "BusinessViewController.h"
 #import "BusinessCell.h"
@@ -13,6 +13,8 @@
 
 #import "SearchViewController.h"
 
+#import "MerchantViewController.h"
+
 @interface BusinessViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
@@ -20,6 +22,7 @@
 @property(nonatomic,strong)UIPageControl *pagecontrol;
 @property(nonatomic,strong)UIBarButtonItem *searchBtn;
 @property(nonatomic,strong)SearchViewController *searchVC;
+@property(nonatomic,strong)MerchantViewController *merchantVC;
 @end
 
 @implementation BusinessViewController
@@ -168,17 +171,69 @@
     {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:nil options:nil]firstObject];
     }
-        NSString *guiquan = @"10";
-        NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
-        [cell.GuiQuanBtn setTitle:str1 forState:UIControlStateNormal];
+    /**
+     *  自定义贵圈按钮
+     */
+    UIButton *quanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    quanButton.backgroundColor = [UIColor colorWithRed:255./255. green:106./255. blue:135./255. alpha:1.0];
+    quanButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    quanButton.layer.cornerRadius = 6.0;//圆角
+    [quanButton addTarget:self action:@selector(quanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [quanButton setTitle:@"贵圈" forState:UIControlStateNormal];
+    [cell.contentView addSubview:quanButton];
+    [quanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(cell.picImageView.mas_right).offset(10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(55);
         
-        NSString *guiyuan = @"10";
-        NSString *str2 = [NSString stringWithFormat:@"商员(%@)",guiyuan];
-        [cell.GuiYuanBtn setTitle:str2 forState:UIControlStateNormal];
+    }];
+    /**
+     *  自定义贵员按钮
+     */
+    UIButton *yuanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    yuanButton.backgroundColor = [UIColor colorWithRed:255./255. green:224./255. blue:103./255. alpha:1.0];
+    yuanButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    yuanButton.layer.cornerRadius = 6.0;//圆角
+    [yuanButton addTarget:self action:@selector(yuanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+     [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
+    [cell.contentView addSubview:yuanButton];
+    [yuanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(quanButton.mas_right).offset(10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(55);
         
-        NSString *guiren = @"10";
-        NSString *str = [NSString stringWithFormat:@"商人(%@)",guiren];
-        [cell.GuiRenBtn setTitle:str forState:UIControlStateNormal];
+    }];
+    /**
+     *  自定义贵人按钮
+     */
+    UIButton *renButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    renButton.backgroundColor = [UIColor colorWithRed:93./255. green:226./255. blue:255./255. alpha:1.0];
+    renButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    renButton.layer.cornerRadius = 6.0;//圆角
+    [renButton addTarget:self action:@selector(renButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [renButton setTitle:@"贵人" forState:UIControlStateNormal];
+    [cell.contentView addSubview:renButton];
+    [renButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(yuanButton.mas_right).offset(10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(55);
+        
+    }];
+
+//        NSString *guiquan = @"10";
+//        NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
+//        [ setTitle:str1 forState:UIControlStateNormal];
+//        
+//        NSString *guiyuan = @"10";
+//        NSString *str2 = [NSString stringWithFormat:@"商员(%@)",guiyuan];
+//        [cell.GuiYuanBtn setTitle:str2 forState:UIControlStateNormal];
+//        
+//        NSString *guiren = @"10";
+//        NSString *str = [NSString stringWithFormat:@"商人(%@)",guiren];
+//        [cell.GuiRenBtn setTitle:str forState:UIControlStateNormal];
     
     //cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
@@ -230,7 +285,23 @@
     }
 }
 
+
 #pragma mark - button的点击事件
+-(void)quanButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
+-(void)yuanButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
+-(void)renButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
 -(void)buttonClick:(UIButton *)button
 {
     LKLog(@"跳转新界面");
