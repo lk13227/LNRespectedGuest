@@ -4,9 +4,11 @@
 //
 //  Created by 理念空间科技有限公司 on 15/12/21.
 //  Copyright © 2015年 Yun. All rights reserved.
-//
+//搜索
 
 #import "SearchViewController.h"
+
+#import "StoreVC.h"
 
 @interface SearchViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
 
@@ -110,6 +112,9 @@
     }
 
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60;
+}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellName = @"Cell";
@@ -119,6 +124,11 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
         
     }
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.frame = CGRectMake(100, 50, 50, 50);
+//    button.backgroundColor = [UIColor redColor];
+//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.contentView addSubview:button];
     //判断
     if(tableView != self.tableView)
     {
@@ -131,6 +141,13 @@
     }
     return cell;
 }
+//#pragma mark - 
+//-(void)btnClick
+//{
+//    LKLog(@"hehe");
+//    StoreVC *VC = [[StoreVC alloc] init];
+//    [self.navigationController pushViewController:VC animated:YES];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

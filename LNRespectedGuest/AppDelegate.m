@@ -13,8 +13,7 @@
 #import "MessageViewController.h"
 #import "FindViewController.h"
 #import "PersonViewController.h"
-//随便添加了点东西 做测试用
-// 再来最一次测试 
+//随便添加了点东西 做测试用 
 
 @interface AppDelegate ()<UITabBarControllerDelegate,UIScrollViewDelegate>
 

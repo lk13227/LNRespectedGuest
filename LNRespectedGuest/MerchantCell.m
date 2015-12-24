@@ -7,7 +7,11 @@
 //
 
 #import "MerchantCell.h"
+#import "MerchantViewController.h"
 
+@interface MerchantViewController ()
+
+@end
 @implementation MerchantCell
 
 - (void)awakeFromNib {
@@ -48,6 +52,7 @@
 - (IBAction)quanBtnClick:(UIButton *)sender {
 }
 - (IBAction)yuanBtnClick:(UIButton *)sender {
+    
 }
 - (IBAction)renBtnClick:(UIButton *)sender {
 }
