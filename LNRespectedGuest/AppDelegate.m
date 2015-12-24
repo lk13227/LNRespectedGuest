@@ -30,6 +30,10 @@
 //刘凯的修改
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //友盟
+    [UMSocialData setAppKey:@"567a5007e0f55aff180021e7"];
+    
     // Override point for customization after application launch.
     /*Bounds属性 拿到控件的宽高*/
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
