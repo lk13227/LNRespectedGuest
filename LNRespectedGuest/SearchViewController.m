@@ -113,7 +113,7 @@
 
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 60;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -124,11 +124,11 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
         
     }
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 50, 50, 50);
-    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [cell.contentView addSubview:button];
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    button.frame = CGRectMake(100, 50, 50, 50);
+//    button.backgroundColor = [UIColor redColor];
+//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.contentView addSubview:button];
     //判断
     if(tableView != self.tableView)
     {
@@ -141,13 +141,13 @@
     }
     return cell;
 }
-#pragma mark - 
--(void)btnClick
-{
-    LKLog(@"hehe");
-    StoreVC *VC = [[StoreVC alloc] init];
-    [self.navigationController pushViewController:VC animated:YES];
-}
+//#pragma mark - 
+//-(void)btnClick
+//{
+//    LKLog(@"hehe");
+//    StoreVC *VC = [[StoreVC alloc] init];
+//    [self.navigationController pushViewController:VC animated:YES];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
