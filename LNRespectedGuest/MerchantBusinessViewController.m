@@ -43,13 +43,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
-    
+    self.navigationController.navigationBar.translucent = NO;
     self.rightBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(rightBarBtnClick:)];
     self.navigationItem.rightBarButtonItem = self.rightBarBtn;
-//    self.navigationController.navigationBar.translucent = NO;
+    
+//    self.navigationController.navigationBar.translucent = NO;showSchoolList
 //    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"schoolListItem.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSchoolList:)];
-//    
-//    self.navigationItem.rightBarButtonItem = rightItem;
+//    self.navigationItem.rightBarButtonItem = rightBarBtn;
 }
 -(void)initView
 {
@@ -123,7 +123,7 @@
 
 #pragma mark - 创建滑动视图
 - (void)createScrollView{
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGTH)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGTH)];
 //    self.scrollView.backgroundColor = [UIColor redColor];
     // 是否支持滑动最顶端
     [_scrollView setShowsHorizontalScrollIndicator:NO];
@@ -152,25 +152,24 @@
 }
 
 
-//右上角+号
-//- (void)showSchoolList:(UIBarButtonItem *)barButtonItem
-//{
-//    __weak __typeof(self) weakSelf = self;
-//    if (!self.menu) {
-//        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
-//        _menu.delegate = self;
-//        _menu.dismiss = ^() {
-//            weakSelf.menu = nil;
-//        };
-//        _menu.arrImgName = @[@"item_school.png", @"item_battle.png", @"item_list.png", @"item_chat.png", @"item_share.png"];
-//        [self.view addSubview:_menu];
-//    } else {
-//        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
-//            weakSelf.menu = nil;
-//        }];
-//    }
-//}
-#pragma mark - 导航栏加号按钮tableView的点击方法
+#pragma mark - 导航栏右侧按钮
+- (void)rightBarBtnClick:(UIBarButtonItem *)barButtonItem
+{
+    __weak __typeof(self) weakSelf = self;
+    if (!self.menu) {
+        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"发动态", @"发消息", @"查找"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
+        _menu.delegate = self;
+        _menu.dismiss = ^() {
+            weakSelf.menu = nil;
+        };
+        _menu.arrImgName = @[ @"item_battle.png", @"item_list.png", @"item_chat.png"];
+        [self.view addSubview:_menu];
+    } else {
+        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
+            weakSelf.menu = nil;
+        }];
+    }
+}
 - (void)jhCustomMenu:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select: %ld", indexPath.row);
@@ -314,11 +313,11 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-#pragma mark - rightBarBtn方法
--(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
-{
-    LKLog(@"呵呵");
-}
+//#pragma mark - rightBarBtn方法
+//-(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
+//{
+//    LKLog(@"呵呵");
+//}
 #pragma mark - scrollView代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
