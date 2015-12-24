@@ -71,6 +71,9 @@
 		B519B6001C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */; };
 		B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */; };
 		B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */; };
+		B549012F1C2BD395006CC62D /* ApplyForLinkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B549012E1C2BD395006CC62D /* ApplyForLinkVC.m */; };
+		B54901341C2BD577006CC62D /* AppForLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B54901321C2BD577006CC62D /* AppForLinkCell.m */; };
+		B54901351C2BD577006CC62D /* AppForLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54901331C2BD577006CC62D /* AppForLinkCell.xib */; };
 		B552BCEE1C1E5AE300A2DB40 /* merchantsThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */; };
 		B552BCF21C1E5FF500A2DB40 /* merchantsThreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B552BCF11C1E5FF500A2DB40 /* merchantsThreeModel.m */; };
 		B552BD2B1C1EC33500A2DB40 /* microblog.plist in Resources */ = {isa = PBXBuildFile; fileRef = B552BD2A1C1EC33500A2DB40 /* microblog.plist */; };
@@ -242,6 +245,11 @@
 		B519B6011C1AC63F0005E2AE /* merchantsThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeTableViewCell.h; sourceTree = "<group>"; };
 		B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeTableViewCell.m; sourceTree = "<group>"; };
 		B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsThreeTableViewCell.xib; sourceTree = "<group>"; };
+		B549012D1C2BD395006CC62D /* ApplyForLinkVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyForLinkVC.h; sourceTree = "<group>"; };
+		B549012E1C2BD395006CC62D /* ApplyForLinkVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyForLinkVC.m; sourceTree = "<group>"; };
+		B54901311C2BD577006CC62D /* AppForLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppForLinkCell.h; sourceTree = "<group>"; };
+		B54901321C2BD577006CC62D /* AppForLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppForLinkCell.m; sourceTree = "<group>"; };
+		B54901331C2BD577006CC62D /* AppForLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppForLinkCell.xib; sourceTree = "<group>"; };
 		B552BCEC1C1E5AE300A2DB40 /* merchantsThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeCell.h; sourceTree = "<group>"; };
 		B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeCell.m; sourceTree = "<group>"; };
 		B552BCF01C1E5FF500A2DB40 /* merchantsThreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeModel.h; sourceTree = "<group>"; };
@@ -368,6 +376,7 @@
 		4C5FAC1A1C041E4F00027064 /* Person(我) */ = {
 			isa = PBXGroup;
 			children = (
+				B549012C1C2BD34E006CC62D /* ApplyForLink(申请链接) */,
 				4C5FAC1E1C041F4B00027064 /* Register(注册) */,
 				4C5FAC1D1C041F3400027064 /* Login(登陆) */,
 				B56C47CC1C152F77005C15E7 /* MyAccount(我的账户) */,
@@ -705,6 +714,26 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		B549012C1C2BD34E006CC62D /* ApplyForLink(申请链接) */ = {
+			isa = PBXGroup;
+			children = (
+				B54901301C2BD557006CC62D /* cell */,
+				B549012D1C2BD395006CC62D /* ApplyForLinkVC.h */,
+				B549012E1C2BD395006CC62D /* ApplyForLinkVC.m */,
+			);
+			name = "ApplyForLink(申请链接)";
+			sourceTree = "<group>";
+		};
+		B54901301C2BD557006CC62D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B54901311C2BD577006CC62D /* AppForLinkCell.h */,
+				B54901321C2BD577006CC62D /* AppForLinkCell.m */,
+				B54901331C2BD577006CC62D /* AppForLinkCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		B552BCEF1C1E5FC700A2DB40 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -930,6 +959,7 @@
 				258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */,
 				B5F63DD81C2A8838004F3D01 /* UMSCommentDetailController.xib in Resources */,
 				B58082021C23EE2D0073EEEB /* StoreTwoTwoCell.xib in Resources */,
+				B54901351C2BD577006CC62D /* AppForLinkCell.xib in Resources */,
 				B552BD2B1C1EC33500A2DB40 /* microblog.plist in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
 				B5F63DDE1C2A8838004F3D01 /* UMSnsAccountViewController.xib in Resources */,
@@ -971,6 +1001,8 @@
 				B519B5FF1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m in Sources */,
 				4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */,
 				4C5FAC801C0819E700027064 /* FindViewController.m in Sources */,
+				B549012F1C2BD395006CC62D /* ApplyForLinkVC.m in Sources */,
+				B54901341C2BD577006CC62D /* AppForLinkCell.m in Sources */,
 				4C5FACD31C0BED0700027064 /* AFURLConnectionOperation.m in Sources */,
 				258416B21C1518B7005C2E30 /* MessageCell.m in Sources */,
 				4C5FACFB1C0BED1500027064 /* View+MASAdditions.m in Sources */,

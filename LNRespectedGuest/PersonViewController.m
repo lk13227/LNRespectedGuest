@@ -12,6 +12,8 @@
 #import "accountViewController.h"
 #import "SetViewController.h"
 
+#import "ApplyForLinkVC.h"
+
 @interface PersonViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)NSMutableArray *dataArray;
@@ -217,6 +219,12 @@ static NSString *cellOne = @"cell";
 {
     if (indexPath.row == 0) {
         accountViewController *VC = [[accountViewController alloc] init];
+        VC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
+        [self.navigationController pushViewController:VC animated:YES];
+    }
+    
+    if (indexPath.row == 4) {
+        ApplyForLinkVC *VC = [[ApplyForLinkVC alloc] init];
         VC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
         [self.navigationController pushViewController:VC animated:YES];
     }
