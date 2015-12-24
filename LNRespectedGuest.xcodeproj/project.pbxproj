@@ -15,6 +15,12 @@
 		2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299A1C1802AA001B46A8 /* BusinessViewController.m */; };
 		2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299D1C181C4F001B46A8 /* StoreViewController.m */; };
 		255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */; };
+		25611A4D1C2BD38900C4418C /* ShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25611A4C1C2BD38900C4418C /* ShopsViewController.m */; };
+		25611A621C2BDBE700C4418C /* MerchantManFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25611A601C2BDBE700C4418C /* MerchantManFirstCell.m */; };
+		25611A631C2BDBE700C4418C /* MerchantManFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25611A611C2BDBE700C4418C /* MerchantManFirstCell.xib */; };
+		25611A671C2BDBFA00C4418C /* MerchantManSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25611A651C2BDBFA00C4418C /* MerchantManSecondCell.m */; };
+		25611A681C2BDBFA00C4418C /* MerchantManSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25611A661C2BDBFA00C4418C /* MerchantManSecondCell.xib */; };
+		25611A6B1C2BE3A000C4418C /* MerchantManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25611A6A1C2BE3A000C4418C /* MerchantManViewController.m */; };
 		256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256834B61C27D8E300E7BB1B /* SearchViewController.m */; };
 		256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256A51D81C1AC6E8001F20EF /* SetViewController.m */; };
 		258416B21C1518B7005C2E30 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 258416B01C1518B7005C2E30 /* MessageCell.m */; };
@@ -137,6 +143,16 @@
 		2550299D1C181C4F001B46A8 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
+		25611A4B1C2BD38900C4418C /* ShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopsViewController.h; sourceTree = "<group>"; };
+		25611A4C1C2BD38900C4418C /* ShopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopsViewController.m; sourceTree = "<group>"; };
+		25611A5F1C2BDBE700C4418C /* MerchantManFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManFirstCell.h; sourceTree = "<group>"; };
+		25611A601C2BDBE700C4418C /* MerchantManFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManFirstCell.m; sourceTree = "<group>"; };
+		25611A611C2BDBE700C4418C /* MerchantManFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManFirstCell.xib; sourceTree = "<group>"; };
+		25611A641C2BDBFA00C4418C /* MerchantManSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManSecondCell.h; sourceTree = "<group>"; };
+		25611A651C2BDBFA00C4418C /* MerchantManSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManSecondCell.m; sourceTree = "<group>"; };
+		25611A661C2BDBFA00C4418C /* MerchantManSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManSecondCell.xib; sourceTree = "<group>"; };
+		25611A691C2BE3A000C4418C /* MerchantManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManViewController.h; sourceTree = "<group>"; };
+		25611A6A1C2BE3A000C4418C /* MerchantManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManViewController.m; sourceTree = "<group>"; };
 		256834B51C27D8E300E7BB1B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		256834B61C27D8E300E7BB1B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		256A51D71C1AC6E8001F20EF /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
@@ -431,7 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				B58082081C23F3E60073EEEB /* OrderConfirmation(订单确认) */,
-				B519B5F51C1AC4F90005E2AE /* merchants(商家) */,
+				B519B5F51C1AC4F90005E2AE /* search(搜索) */,
 				255029981C18013D001B46A8 /* Cell */,
 				4C5FAC7C1C08196E00027064 /* ViewController */,
 			);
@@ -484,6 +500,8 @@
 				4C5FAC861C081B8D00027064 /* MerchantBusinessViewController.m */,
 				251956EF1C2A7D9200ACA2A6 /* MerchantViewController.h */,
 				251956F01C2A7D9200ACA2A6 /* MerchantViewController.m */,
+				25611A691C2BE3A000C4418C /* MerchantManViewController.h */,
+				25611A6A1C2BE3A000C4418C /* MerchantManViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -517,6 +535,12 @@
 				251956EA1C2A7D6100ACA2A6 /* MerchantPersonCell.h */,
 				251956EB1C2A7D6100ACA2A6 /* MerchantPersonCell.m */,
 				251956EC1C2A7D6100ACA2A6 /* MerchantPersonCell.xib */,
+				25611A5F1C2BDBE700C4418C /* MerchantManFirstCell.h */,
+				25611A601C2BDBE700C4418C /* MerchantManFirstCell.m */,
+				25611A611C2BDBE700C4418C /* MerchantManFirstCell.xib */,
+				25611A641C2BDBFA00C4418C /* MerchantManSecondCell.h */,
+				25611A651C2BDBFA00C4418C /* MerchantManSecondCell.m */,
+				25611A661C2BDBFA00C4418C /* MerchantManSecondCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -678,7 +702,7 @@
 			path = LNRespectedGuestUITests;
 			sourceTree = "<group>";
 		};
-		B519B5F51C1AC4F90005E2AE /* merchants(商家) */ = {
+		B519B5F51C1AC4F90005E2AE /* search(搜索) */ = {
 			isa = PBXGroup;
 			children = (
 				255029991C1802AA001B46A8 /* BusinessViewController.h */,
@@ -689,11 +713,13 @@
 				B58081EE1C23C8360073EEEB /* StoreVC.m */,
 				2550299C1C181C4F001B46A8 /* StoreViewController.h */,
 				2550299D1C181C4F001B46A8 /* StoreViewController.m */,
+				25611A4B1C2BD38900C4418C /* ShopsViewController.h */,
+				25611A4C1C2BD38900C4418C /* ShopsViewController.m */,
 				B552BCEF1C1E5FC700A2DB40 /* model */,
 				B58081F01C23CA5F0073EEEB /* New cell */,
 				B519B5F61C1AC5E40005E2AE /* cell */,
 			);
-			name = "merchants(商家)";
+			name = "search(搜索)";
 			sourceTree = "<group>";
 		};
 		B519B5F61C1AC5E40005E2AE /* cell */ = {
@@ -952,6 +978,7 @@
 				4C5FACF21C0BED1500027064 /* Info.plist in Resources */,
 				251956EE1C2A7D6100ACA2A6 /* MerchantPersonCell.xib in Resources */,
 				4C8B4E331BFAC42B003A6F65 /* LaunchScreen.storyboard in Resources */,
+				25611A631C2BDBE700C4418C /* MerchantManFirstCell.xib in Resources */,
 				B572F0061C102234006228A9 /* MerchantCell.xib in Resources */,
 				B5F63DDB1C2A8838004F3D01 /* UMShareEditViewController.xib in Resources */,
 				B58082071C23F10E0073EEEB /* StoreThreeOneCell.xib in Resources */,
@@ -961,6 +988,7 @@
 				B58082021C23EE2D0073EEEB /* StoreTwoTwoCell.xib in Resources */,
 				B54901351C2BD577006CC62D /* AppForLinkCell.xib in Resources */,
 				B552BD2B1C1EC33500A2DB40 /* microblog.plist in Resources */,
+				25611A681C2BDBFA00C4418C /* MerchantManSecondCell.xib in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
 				B5F63DDE1C2A8838004F3D01 /* UMSnsAccountViewController.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /*  Image.xcassets in Resources */,
@@ -1004,6 +1032,7 @@
 				B549012F1C2BD395006CC62D /* ApplyForLinkVC.m in Sources */,
 				B54901341C2BD577006CC62D /* AppForLinkCell.m in Sources */,
 				4C5FACD31C0BED0700027064 /* AFURLConnectionOperation.m in Sources */,
+				25611A621C2BDBE700C4418C /* MerchantManFirstCell.m in Sources */,
 				258416B21C1518B7005C2E30 /* MessageCell.m in Sources */,
 				4C5FACFB1C0BED1500027064 /* View+MASAdditions.m in Sources */,
 				4C5FACD21C0BED0700027064 /* AFSecurityPolicy.m in Sources */,
@@ -1026,6 +1055,7 @@
 				B572F0051C102234006228A9 /* MerchantCell.m in Sources */,
 				B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */,
 				251956ED1C2A7D6100ACA2A6 /* MerchantPersonCell.m in Sources */,
+				25611A671C2BDBFA00C4418C /* MerchantManSecondCell.m in Sources */,
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
 				256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */,
 				4C5FACCE1C0BED0700027064 /* AFHTTPRequestOperation.m in Sources */,
@@ -1040,6 +1070,7 @@
 				255029961C17FAF4001B46A8 /* StoreCell.m in Sources */,
 				4C5FACF81C0BED1500027064 /* MASViewConstraint.m in Sources */,
 				255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */,
+				25611A4D1C2BD38900C4418C /* ShopsViewController.m in Sources */,
 				4C5FACF71C0BED1500027064 /* MASViewAttribute.m in Sources */,
 				B580820B1C23F5F20073EEEB /* OrderConfirmationVC.m in Sources */,
 				4C6FBA7F1C0D542500FACAFF /* JHCustomMenu.m in Sources */,
@@ -1050,6 +1081,7 @@
 				B58081F81C23DA4D0073EEEB /* StoreOneOneCell.m in Sources */,
 				4C5FACD51C0BED0700027064 /* AFURLResponseSerialization.m in Sources */,
 				B58081FC1C23E07B0073EEEB /* StoreOneTwoCell.m in Sources */,
+				25611A6B1C2BE3A000C4418C /* MerchantManViewController.m in Sources */,
 				256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */,
 				4C5FACD41C0BED0700027064 /* AFURLRequestSerialization.m in Sources */,
 				4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */,
