@@ -36,3 +36,5 @@
 #import "Masonry.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
+
+#import "UMSocial.h"

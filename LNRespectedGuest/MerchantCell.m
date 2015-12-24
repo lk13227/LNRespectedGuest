@@ -39,6 +39,7 @@
     LKLog(@"点击了头像");
 }
 - (IBAction)shareClick:(id)sender {
+    
     LKLog(@"点击了分享");
 }
 - (IBAction)commentsClick:(id)sender {
