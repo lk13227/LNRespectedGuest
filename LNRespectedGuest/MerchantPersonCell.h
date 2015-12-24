@@ -15,8 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *discountLabel;//折扣
 @property (weak, nonatomic) IBOutlet UILabel *discountNumLabel;//折扣数目
 @property (weak, nonatomic) IBOutlet UILabel *integralLabel;//积分
-@property (weak, nonatomic) IBOutlet UIButton *collectionBtn;//收藏
-@property (weak, nonatomic) IBOutlet UIButton *shareBtn;//分享
-@property (weak, nonatomic) IBOutlet UIButton *useBtn;//立即使用
+//@property (weak, nonatomic) IBOutlet UIButton *collectionBtn;//收藏
+//@property (weak, nonatomic) IBOutlet UIButton *shareBtn;//分享
+//@property (weak, nonatomic) IBOutlet UIButton *useBtn;//立即使用
 
 @end

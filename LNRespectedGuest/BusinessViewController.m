@@ -176,6 +176,8 @@
      */
     UIButton *quanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     quanButton.backgroundColor = [UIColor colorWithRed:255./255. green:106./255. blue:135./255. alpha:1.0];
+    quanButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    quanButton.layer.cornerRadius = 6.0;//圆角
     [quanButton addTarget:self action:@selector(quanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [quanButton setTitle:@"贵圈" forState:UIControlStateNormal];
     [cell.contentView addSubview:quanButton];
@@ -191,7 +193,10 @@
      */
     UIButton *yuanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     yuanButton.backgroundColor = [UIColor colorWithRed:255./255. green:224./255. blue:103./255. alpha:1.0];
+    yuanButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    yuanButton.layer.cornerRadius = 6.0;//圆角
     [yuanButton addTarget:self action:@selector(yuanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+     [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
     [cell.contentView addSubview:yuanButton];
     [yuanButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(quanButton.mas_right).offset(10);
@@ -205,8 +210,10 @@
      */
     UIButton *renButton = [UIButton buttonWithType:UIButtonTypeCustom];
     renButton.backgroundColor = [UIColor colorWithRed:93./255. green:226./255. blue:255./255. alpha:1.0];
+    renButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    renButton.layer.cornerRadius = 6.0;//圆角
     [renButton addTarget:self action:@selector(renButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
+    [renButton setTitle:@"贵人" forState:UIControlStateNormal];
     [cell.contentView addSubview:renButton];
     [renButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(yuanButton.mas_right).offset(10);
@@ -216,17 +223,17 @@
         
     }];
 
-        NSString *guiquan = @"10";
-        NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
-        [cell.GuiQuanBtn setTitle:str1 forState:UIControlStateNormal];
-        
-        NSString *guiyuan = @"10";
-        NSString *str2 = [NSString stringWithFormat:@"商员(%@)",guiyuan];
-        [cell.GuiYuanBtn setTitle:str2 forState:UIControlStateNormal];
-        
-        NSString *guiren = @"10";
-        NSString *str = [NSString stringWithFormat:@"商人(%@)",guiren];
-        [cell.GuiRenBtn setTitle:str forState:UIControlStateNormal];
+//        NSString *guiquan = @"10";
+//        NSString *str1 = [NSString stringWithFormat:@"商圈(%@)",guiquan];
+//        [ setTitle:str1 forState:UIControlStateNormal];
+//        
+//        NSString *guiyuan = @"10";
+//        NSString *str2 = [NSString stringWithFormat:@"商员(%@)",guiyuan];
+//        [cell.GuiYuanBtn setTitle:str2 forState:UIControlStateNormal];
+//        
+//        NSString *guiren = @"10";
+//        NSString *str = [NSString stringWithFormat:@"商人(%@)",guiren];
+//        [cell.GuiRenBtn setTitle:str forState:UIControlStateNormal];
     
     //cell.textLabel.text = self.dataArray[indexPath.row];
     return cell;
