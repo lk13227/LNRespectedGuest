@@ -10,8 +10,9 @@
 
 #import "StoreOneOneCell.h"
 #import "StoreOneTwoCell.h"
-#import "StoreTwoTwoCell.h"
+//#import "StoreTwoTwoCell.h"
 #import "StoreThreeOneCell.h"
+#import "MerchantManSecondCell.h"
 
 @interface StoreVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -30,7 +31,7 @@
     
     [[self navigationController] setNavigationBarHidden:YES animated:NO];//隐藏导航栏
     
-    self.threeTitleArr = @[@"附近商家",@"商家入驻"];
+    self.threeTitleArr = @[@"优秀员工",@"好友链接"];
     self.oneTwoTitleArr = @[@"贵圈",@"贵员",@"贵人"];
     self.oneTwoOtherArr = @[@"10",@"10",@"10"];
     
@@ -49,7 +50,8 @@
     [self.view addSubview:self.tableView];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"StoreOneTwoCell" bundle:nil] forCellReuseIdentifier:@"storeOneTwo"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"StoreTwoTwoCell" bundle:nil] forCellReuseIdentifier:@"storetwotwo"];
+    //[self.tableView registerNib:[UINib nibWithNibName:@"StoreTwoTwoCell" bundle:nil] forCellReuseIdentifier:@"storetwotwo"];//merchantManSecond
+    [self.tableView registerNib:[UINib nibWithNibName:@"MerchantManSecondCell" bundle:nil] forCellReuseIdentifier:@"merchantManSecond"];
     [self.tableView registerNib:[UINib nibWithNibName:@"StoreThreeOneCell" bundle:nil] forCellReuseIdentifier:@"storethreeone"];
 }
 
@@ -95,6 +97,9 @@
     }
     if (indexPath.section == 0 && indexPath.row == 1) {
         return 100;
+    }
+    if ((indexPath.section == 1 && indexPath.row == 3) || (indexPath.section == 1 && indexPath.row == 4) || (indexPath.section == 1 && indexPath.row == 5) || (indexPath.section == 1 && indexPath.row == 6) || (indexPath.section == 1 && indexPath.row == 7)) {
+        return 70;
     }
     
     return 44;
@@ -146,10 +151,27 @@
     //第二组 第二部分
     if ((indexPath.section == 1 && indexPath.row == 3) || (indexPath.section == 1 && indexPath.row == 4) || (indexPath.section == 1 && indexPath.row == 5) || (indexPath.section == 1 && indexPath.row == 6) || (indexPath.section == 1 && indexPath.row == 7)) {
         
-        StoreTwoTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storetwotwo" forIndexPath:indexPath];
+        MerchantManSecondCell *cell = [tableView dequeueReusableCellWithIdentifier:@"merchantManSecond" forIndexPath:indexPath];
         if (!cell) {
-            cell = [[StoreTwoTwoCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"storetwotwo"];
+            cell = [[MerchantManSecondCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"merchantManSecond"];
         }
+        
+        /**
+         *  自定义按钮(抢)
+         */
+        UIButton *collectionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        collectionBtn.titleLabel.font = [UIFont systemFontOfSize:13.0];
+        [collectionBtn setTitleColor:[UIColor colorWithRed:212./255. green:95./255. blue:114./255. alpha:1.0]forState:UIControlStateNormal];
+        collectionBtn.layer.cornerRadius = 6.0;//切圆角
+        [collectionBtn setTitle:@"抢" forState:UIControlStateNormal];
+        [collectionBtn addTarget:self action:@selector(collectionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:collectionBtn];
+        [collectionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(cell.discountNumLabel.mas_bottom).offset(5);
+            make.right.mas_equalTo(cell.contentView.mas_right).offset(-10);
+            make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-30);
+            make.width.offset(30);
+        }];
         
         return cell;
     }
@@ -179,7 +201,11 @@
 
 
 
-
+#pragma mark - button的点击事件
+-(void)collectionBtnClick:(UIButton *)btn
+{
+    LKLog(@"您点击了抢按钮");
+}
 
 /**
  *  返回按钮
