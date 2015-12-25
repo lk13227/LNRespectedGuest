@@ -314,17 +314,17 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - rightBarBtn方法
--(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
-{
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:nil
-                                      shareText:@"你要分享的文字"
-                                     shareImage:[UIImage imageNamed:@"123.jpg"]
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatSession,UMShareToWechatTimeline,nil]
-                                       delegate:nil];
-    LKLog(@"呵呵");
-}
+//#pragma mark - rightBarBtn方法
+//-(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
+//{
+//    [UMSocialSnsService presentSnsIconSheetView:self
+//                                         appKey:nil
+//                                      shareText:@"你要分享的文字"
+//                                     shareImage:[UIImage imageNamed:@"123.jpg"]
+//                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatSession,UMShareToWechatTimeline,nil]
+//                                       delegate:nil];
+//    LKLog(@"呵呵");
+//}
 
 #pragma mark - scrollView代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
