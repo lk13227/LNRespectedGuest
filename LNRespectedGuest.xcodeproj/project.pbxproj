@@ -923,7 +923,7 @@
 				TargetAttributes = {
 					4C8B4E191BFAC42B003A6F65 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = F3NE8TM5G3;
+						DevelopmentTeam = K2VFE3828G;
 					};
 					4C8B4E381BFAC42B003A6F65 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -1233,6 +1233,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LNRespectedGuest/PrefixHeader.pch";
@@ -1245,6 +1246,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LN.LNRespectedGuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1254,6 +1256,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LNRespectedGuest/PrefixHeader.pch";
@@ -1266,6 +1269,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LN.LNRespectedGuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
