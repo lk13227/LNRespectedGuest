@@ -4,16 +4,19 @@
 //
 //  Created by 理念空间科技有限公司 on 15/12/9.
 //  Copyright © 2015年 Yun. All rights reserved.
-//商家
+//搜索
 
 #import "BusinessViewController.h"
 #import "BusinessCell.h"
 //#import "StoreViewController.h"
 #import "StoreVC.h"
-
+//导航栏右侧点击进入的搜索页面
 #import "SearchViewController.h"
-
+#import "ShopsViewController.h"
+//贵员（人）按钮跳转页面
 #import "MerchantViewController.h"
+//贵圈按钮跳转页面
+#import "MerchantManViewController.h"
 
 @interface BusinessViewController ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
@@ -23,6 +26,8 @@
 @property(nonatomic,strong)UIBarButtonItem *searchBtn;
 @property(nonatomic,strong)SearchViewController *searchVC;
 @property(nonatomic,strong)MerchantViewController *merchantVC;
+@property(nonatomic,strong)ShopsViewController *shopsVC;
+@property(nonatomic,strong)MerchantManViewController *merchantManVC;
 @end
 
 @implementation BusinessViewController
@@ -289,8 +294,8 @@
 #pragma mark - button的点击事件
 -(void)quanButtonClick:(UIButton *)button
 {
-    self.merchantVC = [[MerchantViewController alloc]init];
-    [self.navigationController pushViewController:self.merchantVC animated:YES];
+    self.merchantManVC = [[MerchantManViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantManVC animated:YES];
 }
 -(void)yuanButtonClick:(UIButton *)button
 {
@@ -305,6 +310,9 @@
 -(void)buttonClick:(UIButton *)button
 {
     LKLog(@"跳转新界面");
+    self.shopsVC = [[ShopsViewController alloc]init];
+    [self.navigationController pushViewController:self.shopsVC animated:YES];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
