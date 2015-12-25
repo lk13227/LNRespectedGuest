@@ -47,7 +47,7 @@ static NSString *cellOne = @"cell";
     
     [self createUI];
     
-    self.titleArr = @[@"我的账户",@"我的交易",@"链接管理",@"分享链接",@"申请链接"];
+    self.titleArr = @[@"我的账户",@"我的链接",@"申请贵员链接"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MyTableViewCell" bundle:nil] forCellReuseIdentifier:@"mycell"];
     
@@ -136,7 +136,22 @@ static NSString *cellOne = @"cell";
         make.left.mas_equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
         make.top.mas_equalTo(imageView.mas_bottom).offset(+15);
-        make.height.offset(300);
+        make.height.offset(200);
+    }];
+    
+    //申请商圈
+    UIButton *circleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [circleBtn setTitle:@"申请商圈" forState:UIControlStateNormal];
+    [circleBtn setTintColor:[UIColor whiteColor]];
+    circleBtn.backgroundColor = [UIColor colorWithRed:77.0/255 green:181.0/255 blue:185.0/255 alpha:1.0];
+    [circleBtn addTarget:self action:@selector(circleClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:circleBtn];
+    circleBtn.layer.cornerRadius = 8.0;//圆角
+    [circleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(+50);
+        make.right.mas_equalTo(self.view.mas_right).offset(-50);
+        make.top.mas_equalTo(self.tableView.mas_bottom).offset(+30);
+        make.height.offset(40);
     }];
     
     //退出登录
@@ -150,7 +165,7 @@ static NSString *cellOne = @"cell";
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left).offset(+50);
         make.right.mas_equalTo(self.view.mas_right).offset(-50);
-        make.top.mas_equalTo(self.tableView.mas_bottom).offset(+30);
+        make.top.mas_equalTo(circleBtn.mas_bottom).offset(+15);
         make.height.offset(40);
     }];
 
@@ -184,13 +199,17 @@ static NSString *cellOne = @"cell";
 }
 #pragma mark 退出登录
 - (void)exitClick:(UIButton *)btn{
-    NSLog(@"退出登录");
+    LKLog(@"退出登录");
+}
+#pragma mark - 申请商圈
+- (void)circleClick:(UIButton *)btn{
+    LKLog(@"申请商圈");
 }
 
 #pragma mark - 黄金三问
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 3;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
@@ -205,7 +224,7 @@ static NSString *cellOne = @"cell";
     
     cell.titleText.text = self.titleArr[indexPath.row];
     cell.iconImage.image = [UIImage imageNamed:@"tab_1"];
-    if (indexPath.row != 4) {
+    if (indexPath.row != 2) {
         cell.backVIew.backgroundColor = [UIColor whiteColor];
     }
     
@@ -223,7 +242,7 @@ static NSString *cellOne = @"cell";
         [self.navigationController pushViewController:VC animated:YES];
     }
     
-    if (indexPath.row == 4) {
+    if (indexPath.row == 2) {
         ApplyForLinkVC *VC = [[ApplyForLinkVC alloc] init];
         VC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
         [self.navigationController pushViewController:VC animated:YES];

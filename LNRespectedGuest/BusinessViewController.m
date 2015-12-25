@@ -51,8 +51,6 @@
     [self.view addSubview:self.scrollView];
     //调用方法
     [self createPageView];
-    //    [self createFirstView];
-    //    [self createSecondView];
 }
 //创建底部的分页控制器
 -(void)createPageControl
