@@ -9,11 +9,13 @@
 #import "ShopsViewController.h"
 #import "BusinessCell.h"
 #import "MerchantViewController.h"
+#import "MerchantManViewController.h"
 
 @interface ShopsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)MerchantViewController *merchantVC;
+@property(nonatomic,strong)MerchantManViewController *merchantManVC;
 
 @end
 
@@ -132,8 +134,8 @@
 #pragma mark - button的点击事件
 -(void)quanButtonClick:(UIButton *)button
 {
-    self.merchantVC = [[MerchantViewController alloc]init];
-    [self.navigationController pushViewController:self.merchantVC animated:YES];
+    self.merchantManVC = [[MerchantManViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantManVC animated:YES];
 }
 -(void)yuanButtonClick:(UIButton *)button
 {

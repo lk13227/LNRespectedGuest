@@ -14,6 +14,7 @@
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)DisclaimerViewController *disclaimerVC;
+@property(nonatomic,strong)UISwitch *mySwitch;
 
 @end
 
@@ -71,10 +72,31 @@
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
     }
+    
     //cell右边的小箭头
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = self.dataArray[indexPath.row][@"content"];
     cell.imageView.image = [UIImage imageNamed:self.dataArray[indexPath.row][@"pic"]];
+    
+    if (indexPath.row == 2)
+    {
+        //创建一个开发的对象
+        self.mySwitch = [[UISwitch alloc]init];
+        //设置开关的中心点坐标
+        self.mySwitch.center = CGPointMake(cell.contentView.frame.size.width-20, 70);
+        //设置开关的属性
+        self.mySwitch.on = YES;
+        //        //设置打开的颜色
+        //        self.mySwitch.tintColor = [UIColor redColor];
+        //        //设置关闭的颜色
+        //        self.mySwitch.onTintColor = [UIColor lightGrayColor];
+        //        //设置开关按钮的颜色
+        //        self.mySwitch.thumbTintColor = [UIColor greenColor];
+        //事件的通知
+        [self.mySwitch addTarget:self action:@selector(switchValueChangedCallBack:) forControlEvents:UIControlEventValueChanged];
+        [self.tableView addSubview:self.mySwitch];
+    }
+    
     return cell;
 }
 #pragma mark - cell的点击事件
@@ -87,6 +109,20 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];//反选效果
 }
+#pragma mark - 开关的调用方法
+-(void)switchValueChangedCallBack:(UISwitch *)mySwitch
+{
+    //判断打开
+    if (mySwitch.on)
+    {
+        LKLog(@"打开勿扰开关");
+    }
+    else
+    {
+        LKLog(@"关闭勿扰开关");
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

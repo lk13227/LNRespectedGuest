@@ -9,10 +9,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="KGk-i7-Jjw" customClass="MerchantPersonCell">
-            <rect key="frame" x="0.0" y="0.0" width="301" height="98"/>
+            <rect key="frame" x="0.0" y="0.0" width="301" height="99"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="301" height="97"/>
+                <rect key="frame" x="0.0" y="0.0" width="301" height="98"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-bc-jVH">
@@ -69,7 +69,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLd-WM-qbw">
-                        <rect key="frame" x="191" y="64" width="100" height="25"/>
+                        <rect key="frame" x="191" y="65" width="100" height="25"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="RUF-FT-sfV"/>
@@ -105,7 +105,7 @@
                 <outlet property="subLabel" destination="HYx-RV-WXd" id="XJW-da-aeh"/>
                 <outlet property="titLabel" destination="XDm-xi-71Y" id="v9D-GJ-oYE"/>
             </connections>
-            <point key="canvasLocation" x="297.5" y="485"/>
+            <point key="canvasLocation" x="186.5" y="387.5"/>
         </tableViewCell>
     </objects>
 </document>
