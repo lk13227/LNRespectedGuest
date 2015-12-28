@@ -14,9 +14,7 @@
 		2550419B1C2CEF2000C913F7 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041871C2CEF2000C913F7 /* MerchantCell.m */; };
 		2550419C1C2CEF2000C913F7 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255041881C2CEF2000C913F7 /* MerchantCell.xib */; };
 		2550419D1C2CEF2000C913F7 /* MerchantManFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */; };
-		2550419E1C2CEF2000C913F7 /* MerchantManFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2550418B1C2CEF2000C913F7 /* MerchantManFirstCell.xib */; };
 		2550419F1C2CEF2000C913F7 /* MerchantManSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */; };
-		255041A01C2CEF2000C913F7 /* MerchantManSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2550418E1C2CEF2000C913F7 /* MerchantManSecondCell.xib */; };
 		255041A11C2CEF2000C913F7 /* MerchantPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041901C2CEF2000C913F7 /* MerchantPersonCell.m */; };
 		255041A21C2CEF2000C913F7 /* MerchantPersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */; };
 		255041A31C2CEF2000C913F7 /* JHCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041931C2CEF2000C913F7 /* JHCustomMenu.m */; };
@@ -58,12 +56,8 @@
 		4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4C6FBA761C0D3E8500FACAFF /* .gitignore */; };
 		4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C6FBA771C0D3E8500FACAFF /* .travis.yml */; };
 		4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FBA791C0D3E8500FACAFF /* MBProgressHUD.m */; };
-<<<<<<< HEAD
-=======
-		4C6FBA7F1C0D542500FACAFF /* JHCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FBA7E1C0D542500FACAFF /* JHCustomMenu.m */; };
 		4C8A7B121C2CEBE60061F112 /* MyLinkViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */; };
 		4C8A7B131C2CEBE60061F112 /* MyLinkViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */; };
->>>>>>> cad8daf8196f0391ac0ebfe9342330046596f51f
 		4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E1E1BFAC42B003A6F65 /* main.m */; };
 		4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E211BFAC42B003A6F65 /* AppDelegate.m */; };
 		4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E231BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld */; };
@@ -108,6 +102,8 @@
 		B58082071C23F10E0073EEEB /* StoreThreeOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58082051C23F10E0073EEEB /* StoreThreeOneCell.xib */; };
 		B580820B1C23F5F20073EEEB /* OrderConfirmationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B580820A1C23F5F20073EEEB /* OrderConfirmationVC.m */; };
 		B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */; };
+		B5E9199E1C30E13B008FE085 /* MerchantManFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */; };
+		B5E9199F1C30E13B008FE085 /* MerchantManSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */; };
 		B5F63DD61C2A8838004F3D01 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5F63DBC1C2A8838004F3D01 /* UMSocialLocalizable.strings */; };
 		B5F63DD71C2A8838004F3D01 /* libUMSocial_Sdk_4.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F63DCA1C2A8838004F3D01 /* libUMSocial_Sdk_4.4.a */; };
 		B5F63DD81C2A8838004F3D01 /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F63DCC1C2A8838004F3D01 /* UMSCommentDetailController.xib */; };
@@ -152,10 +148,8 @@
 		255041881C2CEF2000C913F7 /* MerchantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
 		255041891C2CEF2000C913F7 /* MerchantManFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManFirstCell.h; sourceTree = "<group>"; };
 		2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManFirstCell.m; sourceTree = "<group>"; };
-		2550418B1C2CEF2000C913F7 /* MerchantManFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManFirstCell.xib; sourceTree = "<group>"; };
 		2550418C1C2CEF2000C913F7 /* MerchantManSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManSecondCell.h; sourceTree = "<group>"; };
 		2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManSecondCell.m; sourceTree = "<group>"; };
-		2550418E1C2CEF2000C913F7 /* MerchantManSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManSecondCell.xib; sourceTree = "<group>"; };
 		2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantPersonCell.h; sourceTree = "<group>"; };
 		255041901C2CEF2000C913F7 /* MerchantPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantPersonCell.m; sourceTree = "<group>"; };
 		255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantPersonCell.xib; sourceTree = "<group>"; };
@@ -239,14 +233,9 @@
 		4C6FBA771C0D3E8500FACAFF /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4C6FBA781C0D3E8500FACAFF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		4C6FBA791C0D3E8500FACAFF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
-		4C6FBA7D1C0D542500FACAFF /* JHCustomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCustomMenu.h; sourceTree = "<group>"; };
-		4C6FBA7E1C0D542500FACAFF /* JHCustomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCustomMenu.m; sourceTree = "<group>"; };
 		4C8A7B0F1C2CEBE60061F112 /* MyLinkViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinkViewCell.h; sourceTree = "<group>"; };
 		4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinkViewCell.m; sourceTree = "<group>"; };
 		4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLinkViewCell.xib; sourceTree = "<group>"; };
->>>>>>> cad8daf8196f0391ac0ebfe9342330046596f51f
 		4C8B4E1A1BFAC42B003A6F65 /* LNRespectedGuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNRespectedGuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8B4E1E1BFAC42B003A6F65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C8B4E201BFAC42B003A6F65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -322,6 +311,8 @@
 		B580820A1C23F5F20073EEEB /* OrderConfirmationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationVC.m; sourceTree = "<group>"; };
 		B588F29F1C1FDACA00C51D90 /* merchantsThreeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeFrame.h; sourceTree = "<group>"; };
 		B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeFrame.m; sourceTree = "<group>"; };
+		B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManFirstCell.xib; sourceTree = "<group>"; };
+		B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManSecondCell.xib; sourceTree = "<group>"; };
 		B5F63DBD1C2A8838004F3D01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		B5F63DBF1C2A8838004F3D01 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		B5F63DC01C2A8838004F3D01 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -407,10 +398,10 @@
 				255041881C2CEF2000C913F7 /* MerchantCell.xib */,
 				255041891C2CEF2000C913F7 /* MerchantManFirstCell.h */,
 				2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */,
-				2550418B1C2CEF2000C913F7 /* MerchantManFirstCell.xib */,
+				B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */,
 				2550418C1C2CEF2000C913F7 /* MerchantManSecondCell.h */,
 				2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */,
-				2550418E1C2CEF2000C913F7 /* MerchantManSecondCell.xib */,
+				B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */,
 				2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */,
 				255041901C2CEF2000C913F7 /* MerchantPersonCell.m */,
 				255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */,
@@ -1030,14 +1021,13 @@
 				258416B31C1518B7005C2E30 /* MessageCell.xib in Resources */,
 				B5F63DD81C2A8838004F3D01 /* UMSCommentDetailController.xib in Resources */,
 				B58082021C23EE2D0073EEEB /* StoreTwoTwoCell.xib in Resources */,
-				2550419E1C2CEF2000C913F7 /* MerchantManFirstCell.xib in Resources */,
 				B54901351C2BD577006CC62D /* AppForLinkCell.xib in Resources */,
 				B552BD2B1C1EC33500A2DB40 /* microblog.plist in Resources */,
 				4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */,
 				255041A21C2CEF2000C913F7 /* MerchantPersonCell.xib in Resources */,
 				B5F63DDE1C2A8838004F3D01 /* UMSnsAccountViewController.xib in Resources */,
+				B5E9199F1C30E13B008FE085 /* MerchantManSecondCell.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /*  Image.xcassets in Resources */,
-				255041A01C2CEF2000C913F7 /* MerchantManSecondCell.xib in Resources */,
 				255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */,
 				4CA127411C2FD886004683ED /* DiscountViewCell.xib in Resources */,
 				B5F63DDD1C2A8838004F3D01 /* UMSLoginViewController.xib in Resources */,
@@ -1049,6 +1039,7 @@
 				B5F63DE01C2A8838004F3D01 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				B5F63DD91C2A8838004F3D01 /* UMSCommentInputController.xib in Resources */,
 				4C5FAC981C098AE300027064 /* BusinessCell.xib in Resources */,
+				B5E9199E1C30E13B008FE085 /* MerchantManFirstCell.xib in Resources */,
 				B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */,
 				B58081FD1C23E07B0073EEEB /* StoreOneTwoCell.xib in Resources */,
 			);
