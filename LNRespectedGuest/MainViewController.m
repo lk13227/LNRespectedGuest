@@ -48,7 +48,7 @@
             button.backgroundColor = [UIColor whiteColor];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         }else{
-            button.backgroundColor = [UIColor greenColor];
+            button.backgroundColor = [UIColor colorWithRed:77./ 255. green:182. / 255. blue:192. / 255.  alpha:1];
             [button setTintColor:[UIColor whiteColor]];
         }
         [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -61,16 +61,14 @@
     NSInteger sender = button.tag;
     for (int i = 0 ; i < 3 ; i ++ ) {
         button = (UIButton *)[self.view viewWithTag:1000 + i];
-        button.backgroundColor = [UIColor greenColor];
+        button.backgroundColor = [UIColor colorWithRed:77./ 255. green:182. / 255. blue:192. / 255.  alpha:1];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
     }
     button = (UIButton *)[self.view viewWithTag:sender];
     button.backgroundColor = [UIColor whiteColor];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    /**
-     *  通过button改变scrollView的偏移量
-     */
+   
     [_scrollView setContentOffset:CGPointMake(KWIDTH*(button.tag - 1000), 0) animated:YES];
 
 
@@ -168,13 +166,11 @@
             button.backgroundColor = [UIColor whiteColor];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         }else{
-            button.backgroundColor = [UIColor greenColor];
+            button.backgroundColor = [UIColor colorWithRed:77./ 255. green:182. / 255. blue:192. / 255.  alpha:1];
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

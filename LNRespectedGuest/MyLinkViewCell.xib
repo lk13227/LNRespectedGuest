@@ -71,40 +71,52 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-Tp-UBS">
-                        <rect key="frame" x="115" y="75" width="50" height="30"/>
-                        <color key="backgroundColor" red="0.16270593589999999" green="0.90923769560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="115" y="85" width="50" height="25"/>
+                        <color key="backgroundColor" red="0.26850386888594679" green="0.70238381410256412" blue="0.69580778177790437" alpha="0.90307112068965523" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="PMa-TD-6zN"/>
+                            <constraint firstAttribute="height" constant="25" id="PMa-TD-6zN"/>
                             <constraint firstAttribute="width" constant="50" id="xE0-5e-bCk"/>
                         </constraints>
-                        <state key="normal" title="使用">
+                        <state key="normal" title="分享">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds " value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jA-hM-x9d">
-                        <rect key="frame" x="175" y="75" width="70" height="30"/>
-                        <color key="backgroundColor" red="0.097998557750000007" green="0.85374037459999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="175" y="85" width="82" height="25"/>
+                        <color key="backgroundColor" red="0.2685038689" green="0.70238381409999995" blue="0.69580778180000002" alpha="0.90307112069999995" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="MbE-LG-wDF"/>
-                            <constraint firstAttribute="height" constant="30" id="zL3-ma-7Zo"/>
+                            <constraint firstAttribute="width" constant="82" id="MbE-LG-wDF"/>
+                            <constraint firstAttribute="height" constant="25" id="zL3-ma-7Zo"/>
                         </constraints>
                         <state key="normal" title="立即使用">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds " value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="贵人积分：100分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Un-qhp">
-                        <rect key="frame" x="255" y="75" width="120" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="贵人积分:100分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Un-qhp">
+                        <rect key="frame" x="267" y="85" width="105" height="22"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="3BM-S6-SCa"/>
-                            <constraint firstAttribute="width" constant="120" id="6TI-lh-wlW"/>
+                            <constraint firstAttribute="height" constant="22" id="3BM-S6-SCa"/>
+                            <constraint firstAttribute="width" constant="105" id="6TI-lh-wlW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.097872485250000002" green="0.83817022210000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.2685038689" green="0.70238381409999995" blue="0.69580778180000002" alpha="0.90307112069999995" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1jA-hM-x9d" firstAttribute="top" secondItem="g20-Eu-LW9" secondAttribute="bottom" constant="5" id="3tt-G5-9pz"/>
+                    <constraint firstItem="1jA-hM-x9d" firstAttribute="top" secondItem="g20-Eu-LW9" secondAttribute="bottom" constant="15" id="3tt-G5-9pz"/>
                     <constraint firstItem="1jA-hM-x9d" firstAttribute="leading" secondItem="TOU-Tp-UBS" secondAttribute="trailing" constant="10" id="7mh-Xa-StK"/>
                     <constraint firstItem="QcU-78-ChG" firstAttribute="leading" secondItem="WEx-Pb-jwM" secondAttribute="trailing" constant="1" id="GX1-Jv-c6U"/>
                     <constraint firstItem="WEx-Pb-jwM" firstAttribute="top" secondItem="XSC-cZ-XwU" secondAttribute="top" constant="5" id="Lzl-s6-pxF"/>
@@ -113,14 +125,14 @@
                     <constraint firstItem="avV-6t-C6U" firstAttribute="leading" secondItem="XSC-cZ-XwU" secondAttribute="leading" constant="5" id="QuE-Lv-N8p"/>
                     <constraint firstItem="Qa5-E5-eAa" firstAttribute="leading" secondItem="avV-6t-C6U" secondAttribute="trailing" constant="10" id="Rqi-m7-jtm"/>
                     <constraint firstItem="WEx-Pb-jwM" firstAttribute="leading" secondItem="Qa5-E5-eAa" secondAttribute="trailing" constant="50" id="YF3-qS-88G"/>
-                    <constraint firstItem="Qqu-Un-qhp" firstAttribute="top" secondItem="g20-Eu-LW9" secondAttribute="bottom" constant="5" id="Zd5-nd-0d9"/>
+                    <constraint firstItem="Qqu-Un-qhp" firstAttribute="top" secondItem="g20-Eu-LW9" secondAttribute="bottom" constant="15" id="Zd5-nd-0d9"/>
                     <constraint firstItem="Bbt-4Z-EEJ" firstAttribute="leading" secondItem="avV-6t-C6U" secondAttribute="trailing" constant="10" id="bqr-eV-n0x"/>
                     <constraint firstItem="avV-6t-C6U" firstAttribute="top" secondItem="XSC-cZ-XwU" secondAttribute="top" constant="5" id="d6M-iC-IIZ"/>
                     <constraint firstItem="Bbt-4Z-EEJ" firstAttribute="top" secondItem="Qa5-E5-eAa" secondAttribute="bottom" constant="5" id="hY1-3N-Ab2"/>
                     <constraint firstItem="Qa5-E5-eAa" firstAttribute="top" secondItem="XSC-cZ-XwU" secondAttribute="top" constant="5" id="lFf-gP-jhl"/>
                     <constraint firstItem="g20-Eu-LW9" firstAttribute="top" secondItem="Qa5-E5-eAa" secondAttribute="bottom" constant="5" id="rCg-Vk-ZMh"/>
                     <constraint firstItem="TOU-Tp-UBS" firstAttribute="leading" secondItem="avV-6t-C6U" secondAttribute="trailing" constant="10" id="utk-LK-0qP"/>
-                    <constraint firstItem="TOU-Tp-UBS" firstAttribute="top" secondItem="Bbt-4Z-EEJ" secondAttribute="bottom" constant="5" id="x8K-a1-v6G"/>
+                    <constraint firstItem="TOU-Tp-UBS" firstAttribute="top" secondItem="Bbt-4Z-EEJ" secondAttribute="bottom" constant="15" id="x8K-a1-v6G"/>
                     <constraint firstItem="Qqu-Un-qhp" firstAttribute="leading" secondItem="1jA-hM-x9d" secondAttribute="trailing" constant="10" id="xeI-3G-Q7g"/>
                     <constraint firstAttribute="trailing" secondItem="g20-Eu-LW9" secondAttribute="trailing" constant="5" id="ymt-zB-SHd"/>
                 </constraints>
