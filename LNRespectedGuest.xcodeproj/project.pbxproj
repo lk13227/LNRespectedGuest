@@ -56,6 +56,8 @@
 		4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C6FBA771C0D3E8500FACAFF /* .travis.yml */; };
 		4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FBA791C0D3E8500FACAFF /* MBProgressHUD.m */; };
 		4C6FBA7F1C0D542500FACAFF /* JHCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FBA7E1C0D542500FACAFF /* JHCustomMenu.m */; };
+		4C8A7B121C2CEBE60061F112 /* MyLinkViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */; };
+		4C8A7B131C2CEBE60061F112 /* MyLinkViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */; };
 		4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E1E1BFAC42B003A6F65 /* main.m */; };
 		4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E211BFAC42B003A6F65 /* AppDelegate.m */; };
 		4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E231BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld */; };
@@ -66,10 +68,15 @@
 		4C8B4E491BFAC42B003A6F65 /* LNRespectedGuestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E481BFAC42B003A6F65 /* LNRespectedGuestUITests.m */; };
 		4C8B4E5E1BFAC7AC003A6F65 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */; };
 		4C8B4ED11BFAE67D003A6F65 /*  Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8B4ED01BFAE67D003A6F65 /*  Image.xcassets */; };
+		4CA127401C2FD886004683ED /* DiscountViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1273E1C2FD886004683ED /* DiscountViewCell.m */; };
+		4CA127411C2FD886004683ED /* DiscountViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1273F1C2FD886004683ED /* DiscountViewCell.xib */; };
+		4CA127441C2FDC57004683ED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA127431C2FDC57004683ED /* MainViewController.m */; };
 		4CD9C1851C02C30900523846 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1831C02C30900523846 /* MyTableViewCell.m */; };
 		4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9C1841C02C30900523846 /* MyTableViewCell.xib */; };
 		4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1881C02CB5700523846 /* LoginViewController.m */; };
 		4CD9C18C1C02DD7400523846 /* registeredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C18B1C02DD7400523846 /* registeredViewController.m */; };
+		4CF8F7851C2E915000F70BF9 /* IntegralViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */; };
+		4CF8F7861C2E915000F70BF9 /* IntegralViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */; };
 		B5041C3A1C1811DD003715F6 /* NSString+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B5041C391C1811DD003715F6 /* NSString+Unicode.m */; };
 		B519B5FA1C1AC6140005E2AE /* merchantsOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */; };
 		B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */; };
@@ -225,6 +232,9 @@
 		4C6FBA791C0D3E8500FACAFF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4C6FBA7D1C0D542500FACAFF /* JHCustomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCustomMenu.h; sourceTree = "<group>"; };
 		4C6FBA7E1C0D542500FACAFF /* JHCustomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCustomMenu.m; sourceTree = "<group>"; };
+		4C8A7B0F1C2CEBE60061F112 /* MyLinkViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinkViewCell.h; sourceTree = "<group>"; };
+		4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinkViewCell.m; sourceTree = "<group>"; };
+		4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLinkViewCell.xib; sourceTree = "<group>"; };
 		4C8B4E1A1BFAC42B003A6F65 /* LNRespectedGuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNRespectedGuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8B4E1E1BFAC42B003A6F65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C8B4E201BFAC42B003A6F65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -243,6 +253,11 @@
 		4C8B4E5C1BFAC7AC003A6F65 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		4C8B4ED01BFAE67D003A6F65 /*  Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = " Image.xcassets"; sourceTree = "<group>"; };
+		4CA1273D1C2FD886004683ED /* DiscountViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountViewCell.h; sourceTree = "<group>"; };
+		4CA1273E1C2FD886004683ED /* DiscountViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountViewCell.m; sourceTree = "<group>"; };
+		4CA1273F1C2FD886004683ED /* DiscountViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountViewCell.xib; sourceTree = "<group>"; };
+		4CA127421C2FDC57004683ED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4CA127431C2FDC57004683ED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4CD9C1821C02C30900523846 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		4CD9C1831C02C30900523846 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		4CD9C1841C02C30900523846 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
@@ -250,6 +265,9 @@
 		4CD9C1881C02CB5700523846 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4CD9C18A1C02DD7400523846 /* registeredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registeredViewController.h; sourceTree = "<group>"; };
 		4CD9C18B1C02DD7400523846 /* registeredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registeredViewController.m; sourceTree = "<group>"; };
+		4CF8F7821C2E915000F70BF9 /* IntegralViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralViewCell.h; sourceTree = "<group>"; };
+		4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralViewCell.m; sourceTree = "<group>"; };
+		4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralViewCell.xib; sourceTree = "<group>"; };
 		B5041C381C1811DD003715F6 /* NSString+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Unicode.h"; sourceTree = "<group>"; };
 		B5041C391C1811DD003715F6 /* NSString+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Unicode.m"; sourceTree = "<group>"; };
 		B519B5F71C1AC6140005E2AE /* merchantsOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsOneTableViewCell.h; sourceTree = "<group>"; };
@@ -392,6 +410,7 @@
 		4C5FAC1A1C041E4F00027064 /* Person(我) */ = {
 			isa = PBXGroup;
 			children = (
+				4C8A7B0B1C2CE9E60061F112 /* MyLink(链接管理) */,
 				B549012C1C2BD34E006CC62D /* ApplyForLink(申请链接) */,
 				4C5FAC1E1C041F4B00027064 /* Register(注册) */,
 				4C5FAC1D1C041F3400027064 /* Login(登陆) */,
@@ -634,6 +653,16 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		4C8A7B0B1C2CE9E60061F112 /* MyLink(链接管理) */ = {
+			isa = PBXGroup;
+			children = (
+				4CA127451C2FE032004683ED /* Cell */,
+				4CA127421C2FDC57004683ED /* MainViewController.h */,
+				4CA127431C2FDC57004683ED /* MainViewController.m */,
+			);
+			name = "MyLink(链接管理)";
+			sourceTree = "<group>";
+		};
 		4C8B4E111BFAC42B003A6F65 = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +729,22 @@
 				4C8B4E4A1BFAC42B003A6F65 /* Info.plist */,
 			);
 			path = LNRespectedGuestUITests;
+			sourceTree = "<group>";
+		};
+		4CA127451C2FE032004683ED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A7B0F1C2CEBE60061F112 /* MyLinkViewCell.h */,
+				4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */,
+				4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */,
+				4CF8F7821C2E915000F70BF9 /* IntegralViewCell.h */,
+				4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */,
+				4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */,
+				4CA1273D1C2FD886004683ED /* DiscountViewCell.h */,
+				4CA1273E1C2FD886004683ED /* DiscountViewCell.m */,
+				4CA1273F1C2FD886004683ED /* DiscountViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		B519B5F51C1AC4F90005E2AE /* search(搜索) */ = {
@@ -969,6 +1014,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF8F7861C2E915000F70BF9 /* IntegralViewCell.xib in Resources */,
 				B5F63DDA1C2A8838004F3D01 /* UMSCommentInputControlleriPad.xib in Resources */,
 				B519B6001C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib in Resources */,
 				B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */,
@@ -993,8 +1039,10 @@
 				B5F63DDE1C2A8838004F3D01 /* UMSnsAccountViewController.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /*  Image.xcassets in Resources */,
 				255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */,
+				4CA127411C2FD886004683ED /* DiscountViewCell.xib in Resources */,
 				B5F63DDD1C2A8838004F3D01 /* UMSLoginViewController.xib in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
+				4C8A7B131C2CEBE60061F112 /* MyLinkViewCell.xib in Resources */,
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,
 				4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */,
 				B5F63DE01C2A8838004F3D01 /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -1027,6 +1075,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B519B5FF1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m in Sources */,
+				4CA127401C2FD886004683ED /* DiscountViewCell.m in Sources */,
 				4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */,
 				4C5FAC801C0819E700027064 /* FindViewController.m in Sources */,
 				B549012F1C2BD395006CC62D /* ApplyForLinkVC.m in Sources */,
@@ -1079,6 +1128,7 @@
 				2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */,
 				4C5FACD11C0BED0700027064 /* AFNetworkReachabilityManager.m in Sources */,
 				B58081F81C23DA4D0073EEEB /* StoreOneOneCell.m in Sources */,
+				4CF8F7851C2E915000F70BF9 /* IntegralViewCell.m in Sources */,
 				4C5FACD51C0BED0700027064 /* AFURLResponseSerialization.m in Sources */,
 				B58081FC1C23E07B0073EEEB /* StoreOneTwoCell.m in Sources */,
 				25611A6B1C2BE3A000C4418C /* MerchantManViewController.m in Sources */,
@@ -1088,7 +1138,9 @@
 				4C647A5A1BFDB2330007203F /* PersonViewController.m in Sources */,
 				4C8B4E5E1BFAC7AC003A6F65 /* MessageViewController.m in Sources */,
 				B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */,
+				4CA127441C2FDC57004683ED /* MainViewController.m in Sources */,
 				4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */,
+				4C8A7B121C2CEBE60061F112 /* MyLinkViewCell.m in Sources */,
 				4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */,
 				B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */,
 			);

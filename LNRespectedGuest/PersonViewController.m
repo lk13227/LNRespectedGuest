@@ -13,6 +13,7 @@
 #import "SetViewController.h"
 
 #import "ApplyForLinkVC.h"
+#import "MainViewController.h"
 
 @interface PersonViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -222,7 +223,11 @@ static NSString *cellOne = @"cell";
         VC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
         [self.navigationController pushViewController:VC animated:YES];
     }
-    
+    if (indexPath.row == 2) {
+        MainViewController *myLinkVC = [[MainViewController alloc]init];
+        myLinkVC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
+        [self.navigationController pushViewController:myLinkVC animated:YES];
+    }
     if (indexPath.row == 4) {
         ApplyForLinkVC *VC = [[ApplyForLinkVC alloc] init];
         VC.hidesBottomBarWhenPushed = YES;//跳转的时候隐藏底部的tabbar
