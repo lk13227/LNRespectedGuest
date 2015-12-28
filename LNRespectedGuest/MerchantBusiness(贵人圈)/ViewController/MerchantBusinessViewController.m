@@ -314,7 +314,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-//#pragma mark - rightBarBtn方法
+#pragma mark - rightBarBtn方法
+
 //-(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
 //{
 //    [UMSocialSnsService presentSnsIconSheetView:self
