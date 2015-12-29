@@ -7,17 +7,18 @@
 //
 
 #import "MainViewController.h"
-#import "MyLinkViewCell.h"
-#import "IntegralViewCell.h"
-#import "DiscountViewCell.h"
+//#import "MyLinkViewCell.h"
+#import "MerchantPersonCell.h"
+//#import "DiscountViewCell.h"
 
 #define KWIDTH [UIScreen mainScreen].bounds.size.width
 #define KHEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface MainViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UIScrollView *scrollView;
-@property (nonatomic ,strong) UITableView* tableView;
-@property (nonatomic ,strong) NSArray* array;
+@property (nonatomic ,strong) UITableView *tableView;
+@property (nonatomic ,strong) NSMutableArray *dataArray;
+@property(nonatomic,strong)NSArray *array;
 
 @property(nonatomic,strong)UIView *myLinkView;
 @property(nonatomic,strong)UITableView *myLinkTable;
@@ -48,7 +49,7 @@
             button.backgroundColor = [UIColor whiteColor];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         }else{
-            button.backgroundColor = [UIColor greenColor];
+            button.backgroundColor = [UIColor colorWithRed:40./255. green:169./255. blue:179./255. alpha:1.0];
             [button setTintColor:[UIColor whiteColor]];
         }
         [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -61,7 +62,7 @@
     NSInteger sender = button.tag;
     for (int i = 0 ; i < 3 ; i ++ ) {
         button = (UIButton *)[self.view viewWithTag:1000 + i];
-        button.backgroundColor = [UIColor greenColor];
+        button.backgroundColor = [UIColor colorWithRed:40./255. green:169./255. blue:179./255. alpha:1.0];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
     }
@@ -103,46 +104,96 @@
  */
 -(void)creatTableView{
     for (int i = 0; i<3; i++) {
+        //分割线--灰色
+        UIView *linView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 1)];
+        linView.backgroundColor = [UIColor lightGrayColor];
         UIView *myView = [[UIView alloc] initWithFrame:CGRectMake(KWIDTH*i, 0, self.view.frame.size.width, self.view.frame.size.height - 35 - 64)];
        UITableView *tableView = [[UITableView alloc] initWithFrame:myView.bounds style:UITableViewStylePlain];
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.tag = 2000+i;
         [myView addSubview:tableView];
+        [myView addSubview:linView];
         [self.scrollView addSubview:myView];
     }
 }
 
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+#pragma mark - tableView的代理方法
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 20;
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.dataArray.count == 0)
+    {
+        return 100;
+    }
+    else
+    {
+        return self.dataArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (tableView.tag == 2000) {
-        MyLinkViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"ShiJian"];
+    static NSString *cellName = @"Cell";
+    if (tableView.tag == 2000 || tableView.tag == 2001 || tableView.tag == 2002)
+    {
+        MerchantPersonCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
         if (!cell) {
-            cell = [[MyLinkViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ShiJian"];
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"MerchantPersonCell" owner:nil options:nil]firstObject];
         }
+        /**
+         *  自定义按钮
+         */
+        
+        UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        shareBtn.titleLabel.font = [UIFont systemFontOfSize:13.0];
+        shareBtn.backgroundColor = [UIColor colorWithRed:40./255. green:169./255. blue:179./255. alpha:1.0];
+        shareBtn.layer.cornerRadius = 6.0;//切圆角
+        [shareBtn setTitle:@"分享" forState:UIControlStateNormal];
+        [shareBtn addTarget:self action:@selector(shareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:shareBtn];
+        [shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(cell.subLabel.mas_bottom).offset(5);
+            make.left.mas_equalTo(cell.picImageView.mas_right).offset(10);
+            make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-10);
+            make.width.offset(60);
+        }];
+        
+        UIButton *useBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        useBtn.titleLabel.font = [UIFont systemFontOfSize:13.0];
+        useBtn.backgroundColor = [UIColor colorWithRed:40./255. green:169./255. blue:179./255. alpha:1.0];
+        useBtn.layer.cornerRadius = 6.0;//切圆角
+        [useBtn setTitle:@"立即使用" forState:UIControlStateNormal];
+        [useBtn addTarget:self action:@selector(useBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:useBtn];
+        [useBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(cell.subLabel.mas_bottom).offset(5);
+            make.left.mas_equalTo(shareBtn.mas_right).offset(10);
+            make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-10);
+            make.width.offset(100);
+        }];
+
         return cell;
     }
-    if (tableView.tag == 2001) {
-        IntegralViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JiFen"];
-        if (!cell) {
-            cell = [[IntegralViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"JiFen"];
-        }
-        return cell;
-    }
-    if (tableView.tag == 2002) {
-        DiscountViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"ZheKou"];
-        if (!cell) {
-            cell = [[DiscountViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ZheKou"];
-        }
-        return cell;
-    }
+//    if (tableView.tag == 2001) {
+//        MerchantPersonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MerchantPersonCell"];
+//        if (!cell) {
+//            cell = [[MerchantPersonCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MerchantPersonCell"];
+//        }
+//        return cell;
+//    }
+//    if (tableView.tag == 2002) {
+//        DiscountViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"ZheKou"];
+//        if (!cell) {
+//            cell = [[DiscountViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ZheKou"];
+//        }
+//        return cell;
+//    }
     return nil;
 }
 /**
@@ -150,8 +201,19 @@
  */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 120;
+    return 98;
 }
+
+#pragma mark - button的点击事件
+-(void)shareBtnClick:(UIButton *)btn
+{
+    LKLog(@"您点击了分享按钮");
+}
+-(void)useBtnClick:(UIButton *)btn
+{
+    LKLog(@"您点击了立即使用按钮");
+}
+
 #pragma mark - scrollView代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -168,7 +230,7 @@
             button.backgroundColor = [UIColor whiteColor];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         }else{
-            button.backgroundColor = [UIColor greenColor];
+            button.backgroundColor = [UIColor colorWithRed:40./255. green:169./255. blue:179./255. alpha:1.0];
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }

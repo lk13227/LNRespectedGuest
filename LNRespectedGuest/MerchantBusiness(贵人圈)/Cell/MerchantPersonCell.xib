@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rXw-bc-jVH">
                         <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="TZw-Zf-93I"/>
@@ -25,6 +26,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDm-xi-71Y">
                         <rect key="frame" x="60" y="8" width="120" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="Fup-lG-nSq"/>
                             <constraint firstAttribute="width" constant="120" id="kyy-gG-rot"/>
@@ -35,6 +37,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-mg-d71">
                         <rect key="frame" x="256" y="8" width="25" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="AnD-Nx-hgO"/>
                             <constraint firstAttribute="height" constant="25" id="pAB-aA-mEY"/>
@@ -45,6 +48,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYx-RV-WXd">
                         <rect key="frame" x="60" y="38" width="200" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="M1J-Ck-XsD"/>
                             <constraint firstAttribute="height" constant="25" id="xe3-9v-VeU"/>
@@ -55,6 +59,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFU-eP-Vyq">
                         <rect key="frame" x="201" y="8" width="50" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="YJe-Ji-TxZ"/>
                             <constraint firstAttribute="height" constant="25" id="hTb-Eu-K48"/>
@@ -65,6 +70,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLd-WM-qbw">
                         <rect key="frame" x="191" y="65" width="100" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="RUF-FT-sfV"/>
                             <constraint firstAttribute="height" constant="25" id="sYq-4x-iwi"/>
@@ -74,6 +80,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ElB-mg-d71" secondAttribute="trailing" constant="20" id="2CU-uv-9nd"/>
                     <constraint firstAttribute="trailing" secondItem="RLd-WM-qbw" secondAttribute="trailing" constant="10" id="7wC-17-7Ng"/>
@@ -89,6 +96,7 @@
                     <constraint firstItem="XDm-xi-71Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tcH-CH-Vu1"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="discountLabel" destination="zFU-eP-Vyq" id="qg8-NB-ixN"/>
                 <outlet property="discountNumLabel" destination="ElB-mg-d71" id="1jb-L6-LFY"/>

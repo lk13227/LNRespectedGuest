@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,6 +16,7 @@
                 <subviews>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjC-Tp-UIO">
                         <rect key="frame" x="80" y="44" width="51" height="31"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="8ib-NP-P2g"/>
                             <constraint firstAttribute="width" constant="49" id="P3h-qs-7xW"/>
@@ -23,12 +24,14 @@
                     </switch>
                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kop-eE-aIs">
                         <rect key="frame" x="210" y="50" width="118" height="31"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="eop-gk-3Dt"/>
                             <constraint firstAttribute="width" constant="114" id="p89-nT-kbr"/>
                         </constraints>
                     </slider>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="hjC-Tp-UIO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="44" id="1yb-4P-2ds"/>
                     <constraint firstItem="hjC-Tp-UIO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="FAP-fO-cu8"/>
@@ -36,6 +39,7 @@
                     <constraint firstAttribute="trailing" secondItem="Kop-eE-aIs" secondAttribute="trailing" constant="49" id="gsR-Sm-LI3"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <point key="canvasLocation" x="649.5" y="236"/>
         </tableViewCell>
     </objects>
