@@ -13,7 +13,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self = [[NSBundle mainBundle] loadNibNamed:@"DiscountViewCell"
+        self = [[NSBundle mainBundle] loadNibNamed:@"MyLinkViewCell"
                 
                                              owner:nil                                                               options:nil].firstObject;
     }
