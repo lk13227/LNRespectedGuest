@@ -56,8 +56,6 @@
 		4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4C6FBA761C0D3E8500FACAFF /* .gitignore */; };
 		4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4C6FBA771C0D3E8500FACAFF /* .travis.yml */; };
 		4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6FBA791C0D3E8500FACAFF /* MBProgressHUD.m */; };
-		4C8A7B121C2CEBE60061F112 /* MyLinkViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */; };
-		4C8A7B131C2CEBE60061F112 /* MyLinkViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */; };
 		4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E1E1BFAC42B003A6F65 /* main.m */; };
 		4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E211BFAC42B003A6F65 /* AppDelegate.m */; };
 		4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E231BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld */; };
@@ -233,9 +231,6 @@
 		4C6FBA771C0D3E8500FACAFF /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		4C6FBA781C0D3E8500FACAFF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		4C6FBA791C0D3E8500FACAFF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		4C8A7B0F1C2CEBE60061F112 /* MyLinkViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLinkViewCell.h; sourceTree = "<group>"; };
-		4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLinkViewCell.m; sourceTree = "<group>"; };
-		4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLinkViewCell.xib; sourceTree = "<group>"; };
 		4C8B4E1A1BFAC42B003A6F65 /* LNRespectedGuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNRespectedGuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8B4E1E1BFAC42B003A6F65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C8B4E201BFAC42B003A6F65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -726,9 +721,6 @@
 		4CA127451C2FE032004683ED /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				4C8A7B0F1C2CEBE60061F112 /* MyLinkViewCell.h */,
-				4C8A7B101C2CEBE60061F112 /* MyLinkViewCell.m */,
-				4C8A7B111C2CEBE60061F112 /* MyLinkViewCell.xib */,
 				4CF8F7821C2E915000F70BF9 /* IntegralViewCell.h */,
 				4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */,
 				4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */,
@@ -1032,7 +1024,6 @@
 				4CA127411C2FD886004683ED /* DiscountViewCell.xib in Resources */,
 				B5F63DDD1C2A8838004F3D01 /* UMSLoginViewController.xib in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
-				4C8A7B131C2CEBE60061F112 /* MyLinkViewCell.xib in Resources */,
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,
 				2550419C1C2CEF2000C913F7 /* MerchantCell.xib in Resources */,
 				4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */,
@@ -1132,7 +1123,6 @@
 				B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */,
 				4CA127441C2FDC57004683ED /* MainViewController.m in Sources */,
 				4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */,
-				4C8A7B121C2CEBE60061F112 /* MyLinkViewCell.m in Sources */,
 				4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */,
 				B56C47CF1C152FE2005C15E7 /* ChangeThePasswordViewController.m in Sources */,
 			);
