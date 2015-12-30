@@ -79,7 +79,10 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOU-Tp-UBS">
                         <rect key="frame" x="115" y="75" width="50" height="30"/>
+<<<<<<< HEAD
                         <animations/>
+=======
+>>>>>>> parent of 4a7483a... 调整了一下xib上的内容
                         <color key="backgroundColor" red="0.16270593589999999" green="0.90923769560000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="PMa-TD-6zN"/>
@@ -91,7 +94,10 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jA-hM-x9d">
                         <rect key="frame" x="175" y="75" width="70" height="30"/>
+<<<<<<< HEAD
                         <animations/>
+=======
+>>>>>>> parent of 4a7483a... 调整了一下xib上的内容
                         <color key="backgroundColor" red="0.097998557750000007" green="0.85374037459999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="MbE-LG-wDF"/>
@@ -103,7 +109,10 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="贵人积分：100分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqu-Un-qhp">
                         <rect key="frame" x="255" y="75" width="120" height="30"/>
+<<<<<<< HEAD
                         <animations/>
+=======
+>>>>>>> parent of 4a7483a... 调整了一下xib上的内容
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="3BM-S6-SCa"/>
                             <constraint firstAttribute="width" constant="120" id="6TI-lh-wlW"/>
