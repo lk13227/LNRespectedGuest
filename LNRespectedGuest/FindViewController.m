@@ -233,9 +233,6 @@
     self.dataArray = [[NSMutableArray alloc]init];
     [self.dataArray addObject:@{@"content":@"搜索",@"pic":@"tab_0"}];
     [self.dataArray addObject:@{@"content":@"扫一扫",@"pic":@"tab_0"}];
-    [self.dataArray addObject:@{@"content":@"好友更新",@"pic":@"tab_0"}];
-    [self.dataArray addObject:@{@"content":@"谁要贵员",@"pic":@"tab_0"}];
-    [self.dataArray addObject:@{@"content":@"谁要贵圈",@"pic":@"tab_0"}];
     //载入数据
     [self.tableView reloadData];
 }
