@@ -32,6 +32,7 @@
     
     //友盟
     [UMSocialData setAppKey:@"567a5007e0f55aff180021e7"];
+    [UMSocialWechatHandler setWXAppId:@"wxac0f9ec0c1210f41" appSecret:@"f2d1107770acc7bcf8909244db07b86d" url:@"http://www.liniankeji.com"];
     
     // Override point for customization after application launch.
     /*Bounds属性 拿到控件的宽高*/
@@ -324,6 +325,16 @@
             abort();
         }
     }
+}
+
+#pragma mark - 友盟微信回调
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
 }
 
 @end

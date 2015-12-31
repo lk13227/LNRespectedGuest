@@ -14,7 +14,7 @@
 
 #import "BusinessCell.h"
 
-@interface MerchantBusinessViewController ()<JHCustomMenuDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+@interface MerchantBusinessViewController ()<JHCustomMenuDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,UMSocialUIDelegate,UMSocialDataDelegate>
 
 @property (nonatomic, strong) JHCustomMenu *menu;
 
@@ -153,23 +153,23 @@
 
 
 #pragma mark - 导航栏右侧按钮
-- (void)rightBarBtnClick:(UIBarButtonItem *)barButtonItem
-{
-    __weak __typeof(self) weakSelf = self;
-    if (!self.menu) {
-        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"发动态", @"发消息", @"查找"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
-        _menu.delegate = self;
-        _menu.dismiss = ^() {
-            weakSelf.menu = nil;
-        };
-        _menu.arrImgName = @[ @"item_battle.png", @"item_list.png", @"item_chat.png"];
-        [self.view addSubview:_menu];
-    } else {
-        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
-            weakSelf.menu = nil;
-        }];
-    }
-}
+//- (void)rightBarBtnClick:(UIBarButtonItem *)barButtonItem
+//{
+//    __weak __typeof(self) weakSelf = self;
+//    if (!self.menu) {
+//        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"发动态", @"发消息", @"查找"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
+//        _menu.delegate = self;
+//        _menu.dismiss = ^() {
+//            weakSelf.menu = nil;
+//        };
+//        _menu.arrImgName = @[ @"item_battle.png", @"item_list.png", @"item_chat.png"];
+//        [self.view addSubview:_menu];
+//    } else {
+//        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
+//            weakSelf.menu = nil;
+//        }];
+//    }
+//}
 - (void)jhCustomMenu:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select: %ld", indexPath.row);
@@ -314,18 +314,28 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - rightBarBtn方法
+#pragma mark - rightBarBtn友盟分享
 
-//-(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
-//{
-//    [UMSocialSnsService presentSnsIconSheetView:self
-//                                         appKey:nil
-//                                      shareText:@"你要分享的文字"
-//                                     shareImage:[UIImage imageNamed:@"123.jpg"]
-//                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatSession,UMShareToWechatTimeline,nil]
-//                                       delegate:nil];
-//    LKLog(@"呵呵");
-//}
+-(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
+{
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:nil
+                                      shareText:@"友盟社会化分享让您快速实现分享等社会化功能，www.umeng.com/social"
+                                     shareImage:[UIImage imageNamed:@"123.jpg"]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToSina]
+                                       delegate:self];
+    LKLog(@"呵呵");
+}
+//实现回调方法（可选）：
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        //得到分享到的微博平台名
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
+}
 
 #pragma mark - scrollView代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
