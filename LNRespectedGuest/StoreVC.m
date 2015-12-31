@@ -14,6 +14,8 @@
 #import "StoreThreeOneCell.h"
 #import "MerchantManSecondCell.h"
 
+#import "MoreViewController.h"
+
 @interface StoreVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic ,strong) UITableView *tableView;
@@ -29,10 +31,12 @@
 
 @implementation StoreVC
 
+- (void)viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];//隐藏导航栏
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[self navigationController] setNavigationBarHidden:YES animated:NO];//隐藏导航栏
     
     self.threeTitleArr = @[@"优秀员工",@"好友链接"];
     self.oneTwoTitleArr = @[@"贵圈",@"贵员",@"贵人"];
@@ -230,7 +234,9 @@
     LKLog(@"%ld %ld",indexPath.section,indexPath.row);
     
     if (indexPath.section == 4) {
-        
+        MoreViewController *moreVC = [[MoreViewController alloc]init];
+        moreVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:moreVC animated:YES];
     }
     
 }

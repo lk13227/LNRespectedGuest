@@ -21,6 +21,7 @@
 		255041A41C2CEF2000C913F7 /* MerchantBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041961C2CEF2000C913F7 /* MerchantBusinessViewController.m */; };
 		255041A51C2CEF2000C913F7 /* MerchantManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041981C2CEF2000C913F7 /* MerchantManViewController.m */; };
 		255041A61C2CEF2000C913F7 /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550419A1C2CEF2000C913F7 /* MerchantViewController.m */; };
+		255290C91C33DDC600510831 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255290C81C33DDC600510831 /* MoreViewController.m */; };
 		255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */; };
 		25611A4D1C2BD38900C4418C /* ShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25611A4C1C2BD38900C4418C /* ShopsViewController.m */; };
 		256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256834B61C27D8E300E7BB1B /* SearchViewController.m */; };
@@ -159,6 +160,8 @@
 		255041981C2CEF2000C913F7 /* MerchantManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManViewController.m; sourceTree = "<group>"; };
 		255041991C2CEF2000C913F7 /* MerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantViewController.h; sourceTree = "<group>"; };
 		2550419A1C2CEF2000C913F7 /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantViewController.m; sourceTree = "<group>"; };
+		255290C71C33DDC600510831 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		255290C81C33DDC600510831 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		25611A4B1C2BD38900C4418C /* ShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopsViewController.h; sourceTree = "<group>"; };
@@ -744,6 +747,8 @@
 				2550299D1C181C4F001B46A8 /* StoreViewController.m */,
 				25611A4B1C2BD38900C4418C /* ShopsViewController.h */,
 				25611A4C1C2BD38900C4418C /* ShopsViewController.m */,
+				255290C71C33DDC600510831 /* MoreViewController.h */,
+				255290C81C33DDC600510831 /* MoreViewController.m */,
 				B552BCEF1C1E5FC700A2DB40 /* model */,
 				B58081F01C23CA5F0073EEEB /* New cell */,
 				B519B5F61C1AC5E40005E2AE /* cell */,
@@ -1082,6 +1087,7 @@
 				4C5FACF41C0BED1500027064 /* MASConstraint.m in Sources */,
 				255041A31C2CEF2000C913F7 /* JHCustomMenu.m in Sources */,
 				255041A61C2CEF2000C913F7 /* MerchantViewController.m in Sources */,
+				255290C91C33DDC600510831 /* MoreViewController.m in Sources */,
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,
 				4C5FACCF1C0BED0700027064 /* AFHTTPRequestOperationManager.m in Sources */,
 				4C5FACA91C0B287200027064 /* HeadView.m in Sources */,
