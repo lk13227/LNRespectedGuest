@@ -101,6 +101,7 @@
 		B57F55F41C35051A0005E676 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B57F55F31C35051A0005E676 /* libsqlite3.tbd */; };
 		B57F55F61C35052D0005E676 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B57F55F51C35052D0005E676 /* libstdc++.tbd */; };
 		B57F55F81C35053C0005E676 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B57F55F71C35053C0005E676 /* libz.tbd */; };
+		B57F55FC1C3520400005E676 /* ScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B57F55FB1C3520400005E676 /* ScanVC.m */; };
 		B58081EF1C23C8360073EEEB /* StoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B58081EE1C23C8360073EEEB /* StoreVC.m */; };
 		B58081F81C23DA4D0073EEEB /* StoreOneOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B58081F71C23DA4D0073EEEB /* StoreOneOneCell.m */; };
 		B58081FC1C23E07B0073EEEB /* StoreOneTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B58081FA1C23E07B0073EEEB /* StoreOneTwoCell.m */; };
@@ -318,6 +319,8 @@
 		B57F55F31C35051A0005E676 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B57F55F51C35052D0005E676 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		B57F55F71C35053C0005E676 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B57F55FA1C3520400005E676 /* ScanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanVC.h; sourceTree = "<group>"; };
+		B57F55FB1C3520400005E676 /* ScanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanVC.m; sourceTree = "<group>"; };
 		B58081ED1C23C8360073EEEB /* StoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreVC.h; sourceTree = "<group>"; };
 		B58081EE1C23C8360073EEEB /* StoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreVC.m; sourceTree = "<group>"; };
 		B58081F61C23DA4D0073EEEB /* StoreOneOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreOneOneCell.h; sourceTree = "<group>"; };
@@ -542,6 +545,7 @@
 		4C5FAC7B1C08193C00027064 /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				B57F55F91C35200D0005E676 /* scan(扫一扫) */,
 				B58082081C23F3E60073EEEB /* OrderConfirmation(订单确认) */,
 				B519B5F51C1AC4F90005E2AE /* search(搜索) */,
 				255029981C18013D001B46A8 /* Cell */,
@@ -891,6 +895,15 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		B57F55F91C35200D0005E676 /* scan(扫一扫) */ = {
+			isa = PBXGroup;
+			children = (
+				B57F55FA1C3520400005E676 /* ScanVC.h */,
+				B57F55FB1C3520400005E676 /* ScanVC.m */,
+			);
+			name = "scan(扫一扫)";
+			sourceTree = "<group>";
+		};
 		B58081F01C23CA5F0073EEEB /* New cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1041,7 +1054,7 @@
 				TargetAttributes = {
 					4C8B4E191BFAC42B003A6F65 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = F3NE8TM5G3;
+						DevelopmentTeam = K2VFE3828G;
 					};
 					4C8B4E381BFAC42B003A6F65 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -1191,6 +1204,7 @@
 				B580820B1C23F5F20073EEEB /* OrderConfirmationVC.m in Sources */,
 				2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */,
 				B58081EF1C23C8360073EEEB /* StoreVC.m in Sources */,
+				B57F55FC1C3520400005E676 /* ScanVC.m in Sources */,
 				2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */,
 				4C5FACD11C0BED0700027064 /* AFNetworkReachabilityManager.m in Sources */,
 				B58081F81C23DA4D0073EEEB /* StoreOneOneCell.m in Sources */,
