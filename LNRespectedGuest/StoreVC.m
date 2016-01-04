@@ -14,6 +14,8 @@
 #import "StoreThreeOneCell.h"
 #import "MerchantManSecondCell.h"
 
+#import "MoreViewController.h"
+
 @interface StoreVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic ,strong) UITableView *tableView;
@@ -21,19 +23,27 @@
 @property (nonatomic,strong)NSArray *oneTwoTitleArr;
 @property (nonatomic,strong)NSArray *oneTwoOtherArr;
 @property (nonatomic,strong)NSArray *threeTitleArr;
+@property (nonatomic,strong)NSArray *FourOneTitleArr;
+@property (nonatomic,strong)NSArray *FourTwoTitleArr;
+@property (nonatomic,strong)NSArray *FiveTitleArr;
 
 @end
 
 @implementation StoreVC
 
+- (void)viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];//隐藏导航栏
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[self navigationController] setNavigationBarHidden:YES animated:NO];//隐藏导航栏
     
     self.threeTitleArr = @[@"优秀员工",@"好友链接"];
     self.oneTwoTitleArr = @[@"贵圈",@"贵员",@"贵人"];
     self.oneTwoOtherArr = @[@"10",@"10",@"10"];
+    self.FourOneTitleArr = @[@"一级推荐N次",@"二级推荐N次",@"三级推荐N次"];
+    self.FourTwoTitleArr = @[@"不推荐N次",@"不推荐N次",@"不推荐N次"];
+    self.FiveTitleArr = @[@"更多"];
     
     
     [self createTableView];
@@ -69,7 +79,7 @@
     return view;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (section == 2) {
+    if (section == 4) {
         return 0;
     }
     return 20;
@@ -85,10 +95,16 @@
     if (section == 2) {
         return 2;
     }
+    if (section == 3) {
+        return 3;
+    }
+    if (section == 4) {
+        return 1;
+    }
     return 0;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{//组
-    return 3;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -187,12 +203,42 @@
         return cell;
     }
     
+    //第四部分
+    if (indexPath.section == 3) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fourCell"];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"fourCell"];
+        }
+        cell.textLabel.text = self.FourOneTitleArr[indexPath.row];
+        cell.detailTextLabel.text = self.FourTwoTitleArr[indexPath.row];
+        
+        return cell;
+    }
+    
+    //第五部分
+    if (indexPath.section == 4) {
+        StoreThreeOneCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storethreeone" forIndexPath:indexPath];
+        if (!cell) {
+            cell = [[StoreThreeOneCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"storethreeone"];
+        }
+        cell.titleLabel.text = self.FiveTitleArr[indexPath.row];
+        
+        return cell;
+    }
+    
     return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     LKLog(@"%ld %ld",indexPath.section,indexPath.row);
+    
+    if (indexPath.section == 4) {
+        MoreViewController *moreVC = [[MoreViewController alloc]init];
+        moreVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:moreVC animated:YES];
+    }
+    
 }
 
 

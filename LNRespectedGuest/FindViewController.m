@@ -11,6 +11,8 @@
 
 #import "OrderConfirmationVC.h"
 
+#import "ScanVC.h"//扫一扫
+
 @interface FindViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *tableView;
@@ -279,12 +281,17 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {//商家
+    if (indexPath.row == 0) {//搜索
         LKLog(@"商家");
     BusinessViewController *businessVC = [[BusinessViewController alloc]init];
-        businessVC.hidesBottomBarWhenPushed = YES;
+    businessVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:businessVC animated:YES];
     
+    }
+    
+    if (indexPath.row == 1) {//扫一扫
+        ScanVC *VC = [[ScanVC alloc] init];
+        [self.navigationController pushViewController:VC animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

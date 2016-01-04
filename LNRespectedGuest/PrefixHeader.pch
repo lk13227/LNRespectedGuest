@@ -38,3 +38,4 @@
 #import "MBProgressHUD.h"
 
 #import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
