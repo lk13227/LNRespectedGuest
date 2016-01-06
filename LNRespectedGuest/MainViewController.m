@@ -37,7 +37,7 @@
     [self createScrollView];
     [self creatTableView];
     
-    self.title = @"链接管理";
+    self.title = @"我的链接";
     self.array = [[NSArray alloc]initWithObjects:@"时间",@"积分",@"折扣",nil];
     
     for (int i = 0; i < 3; i++) {

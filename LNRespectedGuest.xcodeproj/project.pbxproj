@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		255029961C17FAF4001B46A8 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255029941C17FAF4001B46A8 /* StoreCell.m */; };
-		255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255029951C17FAF4001B46A8 /* StoreCell.xib */; };
 		2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299A1C1802AA001B46A8 /* BusinessViewController.m */; };
-		2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550299D1C181C4F001B46A8 /* StoreViewController.m */; };
-		2550419B1C2CEF2000C913F7 /* MerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041871C2CEF2000C913F7 /* MerchantCell.m */; };
-		2550419C1C2CEF2000C913F7 /* MerchantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255041881C2CEF2000C913F7 /* MerchantCell.xib */; };
 		2550419D1C2CEF2000C913F7 /* MerchantManFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */; };
 		2550419F1C2CEF2000C913F7 /* MerchantManSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */; };
 		255041A11C2CEF2000C913F7 /* MerchantPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041901C2CEF2000C913F7 /* MerchantPersonCell.m */; };
@@ -67,22 +62,12 @@
 		4C8B4E491BFAC42B003A6F65 /* LNRespectedGuestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E481BFAC42B003A6F65 /* LNRespectedGuestUITests.m */; };
 		4C8B4E5E1BFAC7AC003A6F65 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */; };
 		4C8B4ED11BFAE67D003A6F65 /*  Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8B4ED01BFAE67D003A6F65 /*  Image.xcassets */; };
-		4CA127401C2FD886004683ED /* DiscountViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA1273E1C2FD886004683ED /* DiscountViewCell.m */; };
-		4CA127411C2FD886004683ED /* DiscountViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA1273F1C2FD886004683ED /* DiscountViewCell.xib */; };
 		4CA127441C2FDC57004683ED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA127431C2FDC57004683ED /* MainViewController.m */; };
 		4CD9C1851C02C30900523846 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1831C02C30900523846 /* MyTableViewCell.m */; };
 		4CD9C1861C02C30900523846 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9C1841C02C30900523846 /* MyTableViewCell.xib */; };
 		4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C1881C02CB5700523846 /* LoginViewController.m */; };
 		4CD9C18C1C02DD7400523846 /* registeredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD9C18B1C02DD7400523846 /* registeredViewController.m */; };
-		4CF8F7851C2E915000F70BF9 /* IntegralViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */; };
-		4CF8F7861C2E915000F70BF9 /* IntegralViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */; };
 		B5041C3A1C1811DD003715F6 /* NSString+Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B5041C391C1811DD003715F6 /* NSString+Unicode.m */; };
-		B519B5FA1C1AC6140005E2AE /* merchantsOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */; };
-		B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */; };
-		B519B5FF1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B5FD1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m */; };
-		B519B6001C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */; };
-		B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */; };
-		B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */; };
 		B549012F1C2BD395006CC62D /* ApplyForLinkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B549012E1C2BD395006CC62D /* ApplyForLinkVC.m */; };
 		B54901341C2BD577006CC62D /* AppForLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B54901321C2BD577006CC62D /* AppForLinkCell.m */; };
 		B54901351C2BD577006CC62D /* AppForLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54901331C2BD577006CC62D /* AppForLinkCell.xib */; };
@@ -146,31 +131,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		255029931C17FAF4001B46A8 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
-		255029941C17FAF4001B46A8 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
-		255029951C17FAF4001B46A8 /* StoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
 		255029991C1802AA001B46A8 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessViewController.h; sourceTree = "<group>"; };
 		2550299A1C1802AA001B46A8 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
-		2550299C1C181C4F001B46A8 /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
-		2550299D1C181C4F001B46A8 /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
-		255041861C2CEF2000C913F7 /* MerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantCell.h; sourceTree = "<group>"; };
-		255041871C2CEF2000C913F7 /* MerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantCell.m; sourceTree = "<group>"; };
-		255041881C2CEF2000C913F7 /* MerchantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantCell.xib; sourceTree = "<group>"; };
-		255041891C2CEF2000C913F7 /* MerchantManFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManFirstCell.h; sourceTree = "<group>"; };
-		2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManFirstCell.m; sourceTree = "<group>"; };
-		2550418C1C2CEF2000C913F7 /* MerchantManSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManSecondCell.h; sourceTree = "<group>"; };
-		2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManSecondCell.m; sourceTree = "<group>"; };
-		2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantPersonCell.h; sourceTree = "<group>"; };
-		255041901C2CEF2000C913F7 /* MerchantPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantPersonCell.m; sourceTree = "<group>"; };
-		255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantPersonCell.xib; sourceTree = "<group>"; };
-		255041921C2CEF2000C913F7 /* JHCustomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCustomMenu.h; sourceTree = "<group>"; };
-		255041931C2CEF2000C913F7 /* JHCustomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCustomMenu.m; sourceTree = "<group>"; };
+		255041891C2CEF2000C913F7 /* MerchantManFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantManFirstCell.h; path = Cell/MerchantManFirstCell.h; sourceTree = "<group>"; };
+		2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantManFirstCell.m; path = Cell/MerchantManFirstCell.m; sourceTree = "<group>"; };
+		2550418C1C2CEF2000C913F7 /* MerchantManSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantManSecondCell.h; path = Cell/MerchantManSecondCell.h; sourceTree = "<group>"; };
+		2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantManSecondCell.m; path = Cell/MerchantManSecondCell.m; sourceTree = "<group>"; };
+		2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantPersonCell.h; path = Cell/MerchantPersonCell.h; sourceTree = "<group>"; };
+		255041901C2CEF2000C913F7 /* MerchantPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantPersonCell.m; path = Cell/MerchantPersonCell.m; sourceTree = "<group>"; };
+		255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MerchantPersonCell.xib; path = Cell/MerchantPersonCell.xib; sourceTree = "<group>"; };
+		255041921C2CEF2000C913F7 /* JHCustomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHCustomMenu.h; path = ../JHCustomMenu.h; sourceTree = "<group>"; };
+		255041931C2CEF2000C913F7 /* JHCustomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHCustomMenu.m; path = ../JHCustomMenu.m; sourceTree = "<group>"; };
 		255041951C2CEF2000C913F7 /* MerchantBusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantBusinessViewController.h; sourceTree = "<group>"; };
 		255041961C2CEF2000C913F7 /* MerchantBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantBusinessViewController.m; sourceTree = "<group>"; };
-		255041971C2CEF2000C913F7 /* MerchantManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantManViewController.h; sourceTree = "<group>"; };
-		255041981C2CEF2000C913F7 /* MerchantManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantManViewController.m; sourceTree = "<group>"; };
-		255041991C2CEF2000C913F7 /* MerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantViewController.h; sourceTree = "<group>"; };
-		2550419A1C2CEF2000C913F7 /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantViewController.m; sourceTree = "<group>"; };
+		255041971C2CEF2000C913F7 /* MerchantManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantManViewController.h; path = ViewController/MerchantManViewController.h; sourceTree = "<group>"; };
+		255041981C2CEF2000C913F7 /* MerchantManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantManViewController.m; path = ViewController/MerchantManViewController.m; sourceTree = "<group>"; };
+		255041991C2CEF2000C913F7 /* MerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantViewController.h; path = ViewController/MerchantViewController.h; sourceTree = "<group>"; };
+		2550419A1C2CEF2000C913F7 /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantViewController.m; path = ViewController/MerchantViewController.m; sourceTree = "<group>"; };
 		255290C71C33DDC600510831 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		255290C81C33DDC600510831 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
@@ -263,9 +240,6 @@
 		4C8B4E5C1BFAC7AC003A6F65 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		4C8B4E5D1BFAC7AC003A6F65 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		4C8B4ED01BFAE67D003A6F65 /*  Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = " Image.xcassets"; sourceTree = "<group>"; };
-		4CA1273D1C2FD886004683ED /* DiscountViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountViewCell.h; sourceTree = "<group>"; };
-		4CA1273E1C2FD886004683ED /* DiscountViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountViewCell.m; sourceTree = "<group>"; };
-		4CA1273F1C2FD886004683ED /* DiscountViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscountViewCell.xib; sourceTree = "<group>"; };
 		4CA127421C2FDC57004683ED /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		4CA127431C2FDC57004683ED /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4CD9C1821C02C30900523846 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
@@ -275,20 +249,8 @@
 		4CD9C1881C02CB5700523846 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4CD9C18A1C02DD7400523846 /* registeredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registeredViewController.h; sourceTree = "<group>"; };
 		4CD9C18B1C02DD7400523846 /* registeredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registeredViewController.m; sourceTree = "<group>"; };
-		4CF8F7821C2E915000F70BF9 /* IntegralViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralViewCell.h; sourceTree = "<group>"; };
-		4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralViewCell.m; sourceTree = "<group>"; };
-		4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralViewCell.xib; sourceTree = "<group>"; };
 		B5041C381C1811DD003715F6 /* NSString+Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Unicode.h"; sourceTree = "<group>"; };
 		B5041C391C1811DD003715F6 /* NSString+Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Unicode.m"; sourceTree = "<group>"; };
-		B519B5F71C1AC6140005E2AE /* merchantsOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsOneTableViewCell.h; sourceTree = "<group>"; };
-		B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsOneTableViewCell.m; sourceTree = "<group>"; };
-		B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsOneTableViewCell.xib; sourceTree = "<group>"; };
-		B519B5FC1C1AC62C0005E2AE /* merchantsTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsTwoTableViewCell.h; sourceTree = "<group>"; };
-		B519B5FD1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsTwoTableViewCell.m; sourceTree = "<group>"; };
-		B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsTwoTableViewCell.xib; sourceTree = "<group>"; };
-		B519B6011C1AC63F0005E2AE /* merchantsThreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeTableViewCell.h; sourceTree = "<group>"; };
-		B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeTableViewCell.m; sourceTree = "<group>"; };
-		B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = merchantsThreeTableViewCell.xib; sourceTree = "<group>"; };
 		B549012D1C2BD395006CC62D /* ApplyForLinkVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyForLinkVC.h; sourceTree = "<group>"; };
 		B549012E1C2BD395006CC62D /* ApplyForLinkVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyForLinkVC.m; sourceTree = "<group>"; };
 		B54901311C2BD577006CC62D /* AppForLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppForLinkCell.h; sourceTree = "<group>"; };
@@ -338,8 +300,8 @@
 		B580820A1C23F5F20073EEEB /* OrderConfirmationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationVC.m; sourceTree = "<group>"; };
 		B588F29F1C1FDACA00C51D90 /* merchantsThreeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeFrame.h; sourceTree = "<group>"; };
 		B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeFrame.m; sourceTree = "<group>"; };
-		B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManFirstCell.xib; sourceTree = "<group>"; };
-		B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MerchantManSecondCell.xib; sourceTree = "<group>"; };
+		B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MerchantManFirstCell.xib; path = Cell/MerchantManFirstCell.xib; sourceTree = "<group>"; };
+		B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MerchantManSecondCell.xib; path = Cell/MerchantManSecondCell.xib; sourceTree = "<group>"; };
 		B5F63DBD1C2A8838004F3D01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		B5F63DBF1C2A8838004F3D01 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		B5F63DC01C2A8838004F3D01 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -409,9 +371,6 @@
 				4C5FAC941C098AE300027064 /* BusinessCell.h */,
 				4C5FAC951C098AE300027064 /* BusinessCell.m */,
 				4C5FAC961C098AE300027064 /* BusinessCell.xib */,
-				255029931C17FAF4001B46A8 /* StoreCell.h */,
-				255029941C17FAF4001B46A8 /* StoreCell.m */,
-				255029951C17FAF4001B46A8 /* StoreCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -420,8 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				255041851C2CEF2000C913F7 /* Cell */,
-				255041921C2CEF2000C913F7 /* JHCustomMenu.h */,
-				255041931C2CEF2000C913F7 /* JHCustomMenu.m */,
 				B552BCEF1C1E5FC700A2DB40 /* model */,
 				255041941C2CEF2000C913F7 /* ViewController */,
 			);
@@ -431,18 +388,6 @@
 		255041851C2CEF2000C913F7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				255041861C2CEF2000C913F7 /* MerchantCell.h */,
-				255041871C2CEF2000C913F7 /* MerchantCell.m */,
-				255041881C2CEF2000C913F7 /* MerchantCell.xib */,
-				255041891C2CEF2000C913F7 /* MerchantManFirstCell.h */,
-				2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */,
-				B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */,
-				2550418C1C2CEF2000C913F7 /* MerchantManSecondCell.h */,
-				2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */,
-				B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */,
-				2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */,
-				255041901C2CEF2000C913F7 /* MerchantPersonCell.m */,
-				255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */,
 				B552BCEC1C1E5AE300A2DB40 /* merchantsThreeCell.h */,
 				B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */,
 			);
@@ -452,12 +397,10 @@
 		255041941C2CEF2000C913F7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				255041921C2CEF2000C913F7 /* JHCustomMenu.h */,
+				255041931C2CEF2000C913F7 /* JHCustomMenu.m */,
 				255041951C2CEF2000C913F7 /* MerchantBusinessViewController.h */,
 				255041961C2CEF2000C913F7 /* MerchantBusinessViewController.m */,
-				255041971C2CEF2000C913F7 /* MerchantManViewController.h */,
-				255041981C2CEF2000C913F7 /* MerchantManViewController.m */,
-				255041991C2CEF2000C913F7 /* MerchantViewController.h */,
-				2550419A1C2CEF2000C913F7 /* MerchantViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -690,7 +633,6 @@
 		4C8A7B0B1C2CE9E60061F112 /* MyLink(链接管理) */ = {
 			isa = PBXGroup;
 			children = (
-				4CA127451C2FE032004683ED /* Cell */,
 				4CA127421C2FDC57004683ED /* MainViewController.h */,
 				4CA127431C2FDC57004683ED /* MainViewController.m */,
 			);
@@ -725,6 +667,7 @@
 				4C8B4E201BFAC42B003A6F65 /* AppDelegate.h */,
 				4C8B4E211BFAC42B003A6F65 /* AppDelegate.m */,
 				4C5FAC811C081A0E00027064 /* Friends(通讯录) */,
+				B55E82D91C3D0B9900E50DD1 /* merchant(商，员，人) */,
 				255041841C2CEF2000C913F7 /* MerchantBusiness(贵人圈) */,
 				4C5FAC171C041E2200027064 /* Message(消息) */,
 				4C5FAC7B1C08193C00027064 /* Find(发现) */,
@@ -764,19 +707,6 @@
 			path = LNRespectedGuestUITests;
 			sourceTree = "<group>";
 		};
-		4CA127451C2FE032004683ED /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				4CF8F7821C2E915000F70BF9 /* IntegralViewCell.h */,
-				4CF8F7831C2E915000F70BF9 /* IntegralViewCell.m */,
-				4CF8F7841C2E915000F70BF9 /* IntegralViewCell.xib */,
-				4CA1273D1C2FD886004683ED /* DiscountViewCell.h */,
-				4CA1273E1C2FD886004683ED /* DiscountViewCell.m */,
-				4CA1273F1C2FD886004683ED /* DiscountViewCell.xib */,
-			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
 		B519B5F51C1AC4F90005E2AE /* search(搜索) */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,13 +716,10 @@
 				256834B61C27D8E300E7BB1B /* SearchViewController.m */,
 				B58081ED1C23C8360073EEEB /* StoreVC.h */,
 				B58081EE1C23C8360073EEEB /* StoreVC.m */,
-				2550299C1C181C4F001B46A8 /* StoreViewController.h */,
-				2550299D1C181C4F001B46A8 /* StoreViewController.m */,
 				25611A4B1C2BD38900C4418C /* ShopsViewController.h */,
 				25611A4C1C2BD38900C4418C /* ShopsViewController.m */,
 				255290C71C33DDC600510831 /* MoreViewController.h */,
 				255290C81C33DDC600510831 /* MoreViewController.m */,
-				B58081F01C23CA5F0073EEEB /* New cell */,
 				B519B5F61C1AC5E40005E2AE /* cell */,
 			);
 			name = "search(搜索)";
@@ -801,15 +728,17 @@
 		B519B5F61C1AC5E40005E2AE /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				B519B5F71C1AC6140005E2AE /* merchantsOneTableViewCell.h */,
-				B519B5F81C1AC6140005E2AE /* merchantsOneTableViewCell.m */,
-				B519B5F91C1AC6140005E2AE /* merchantsOneTableViewCell.xib */,
-				B519B5FC1C1AC62C0005E2AE /* merchantsTwoTableViewCell.h */,
-				B519B5FD1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m */,
-				B519B5FE1C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib */,
-				B519B6011C1AC63F0005E2AE /* merchantsThreeTableViewCell.h */,
-				B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */,
-				B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */,
+				B58081F61C23DA4D0073EEEB /* StoreOneOneCell.h */,
+				B58081F71C23DA4D0073EEEB /* StoreOneOneCell.m */,
+				B58081F91C23E07B0073EEEB /* StoreOneTwoCell.h */,
+				B58081FA1C23E07B0073EEEB /* StoreOneTwoCell.m */,
+				B58081FB1C23E07B0073EEEB /* StoreOneTwoCell.xib */,
+				B58081FE1C23EE2D0073EEEB /* StoreTwoTwoCell.h */,
+				B58081FF1C23EE2D0073EEEB /* StoreTwoTwoCell.m */,
+				B58082001C23EE2D0073EEEB /* StoreTwoTwoCell.xib */,
+				B58082031C23F10E0073EEEB /* StoreThreeOneCell.h */,
+				B58082041C23F10E0073EEEB /* StoreThreeOneCell.m */,
+				B58082051C23F10E0073EEEB /* StoreThreeOneCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -844,6 +773,43 @@
 			);
 			name = model;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		B55E82D91C3D0B9900E50DD1 /* merchant(商，员，人) */ = {
+			isa = PBXGroup;
+			children = (
+				B55E82DB1C3D0BEC00E50DD1 /* cell */,
+				B55E82DA1C3D0BE200E50DD1 /* Controller */,
+			);
+			name = "merchant(商，员，人)";
+			path = "MerchantBusiness(贵人圈)";
+			sourceTree = "<group>";
+		};
+		B55E82DA1C3D0BE200E50DD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				255041971C2CEF2000C913F7 /* MerchantManViewController.h */,
+				255041981C2CEF2000C913F7 /* MerchantManViewController.m */,
+				255041991C2CEF2000C913F7 /* MerchantViewController.h */,
+				2550419A1C2CEF2000C913F7 /* MerchantViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B55E82DB1C3D0BEC00E50DD1 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				255041891C2CEF2000C913F7 /* MerchantManFirstCell.h */,
+				2550418A1C2CEF2000C913F7 /* MerchantManFirstCell.m */,
+				B5E9199C1C30E13B008FE085 /* MerchantManFirstCell.xib */,
+				2550418C1C2CEF2000C913F7 /* MerchantManSecondCell.h */,
+				2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */,
+				B5E9199D1C30E13B008FE085 /* MerchantManSecondCell.xib */,
+				2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */,
+				255041901C2CEF2000C913F7 /* MerchantPersonCell.m */,
+				255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		B56C47CC1C152F77005C15E7 /* MyAccount(我的账户) */ = {
@@ -903,24 +869,6 @@
 				B57F55FB1C3520400005E676 /* ScanVC.m */,
 			);
 			name = "scan(扫一扫)";
-			sourceTree = "<group>";
-		};
-		B58081F01C23CA5F0073EEEB /* New cell */ = {
-			isa = PBXGroup;
-			children = (
-				B58081F61C23DA4D0073EEEB /* StoreOneOneCell.h */,
-				B58081F71C23DA4D0073EEEB /* StoreOneOneCell.m */,
-				B58081F91C23E07B0073EEEB /* StoreOneTwoCell.h */,
-				B58081FA1C23E07B0073EEEB /* StoreOneTwoCell.m */,
-				B58081FB1C23E07B0073EEEB /* StoreOneTwoCell.xib */,
-				B58081FE1C23EE2D0073EEEB /* StoreTwoTwoCell.h */,
-				B58081FF1C23EE2D0073EEEB /* StoreTwoTwoCell.m */,
-				B58082001C23EE2D0073EEEB /* StoreTwoTwoCell.xib */,
-				B58082031C23F10E0073EEEB /* StoreThreeOneCell.h */,
-				B58082041C23F10E0073EEEB /* StoreThreeOneCell.m */,
-				B58082051C23F10E0073EEEB /* StoreThreeOneCell.xib */,
-			);
-			name = "New cell";
 			sourceTree = "<group>";
 		};
 		B58082081C23F3E60073EEEB /* OrderConfirmation(订单确认) */ = {
@@ -1093,10 +1041,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF8F7861C2E915000F70BF9 /* IntegralViewCell.xib in Resources */,
 				B5F63DDA1C2A8838004F3D01 /* UMSCommentInputControlleriPad.xib in Resources */,
-				B519B6001C1AC62C0005E2AE /* merchantsTwoTableViewCell.xib in Resources */,
-				B519B5FB1C1AC6140005E2AE /* merchantsOneTableViewCell.xib in Resources */,
 				B5F63DDF1C2A8838004F3D01 /* UMSShareListController.xib in Resources */,
 				B5F63DD61C2A8838004F3D01 /* UMSocialLocalizable.strings in Resources */,
 				4C6FBA7B1C0D3E8500FACAFF /* .travis.yml in Resources */,
@@ -1115,18 +1060,14 @@
 				B5F63DDE1C2A8838004F3D01 /* UMSnsAccountViewController.xib in Resources */,
 				B5E9199F1C30E13B008FE085 /* MerchantManSecondCell.xib in Resources */,
 				4C8B4ED11BFAE67D003A6F65 /*  Image.xcassets in Resources */,
-				255029971C17FAF4001B46A8 /* StoreCell.xib in Resources */,
-				4CA127411C2FD886004683ED /* DiscountViewCell.xib in Resources */,
 				B5F63DDD1C2A8838004F3D01 /* UMSLoginViewController.xib in Resources */,
 				4C8B4E301BFAC42B003A6F65 /* Assets.xcassets in Resources */,
 				4C8B4E2E1BFAC42B003A6F65 /* Main.storyboard in Resources */,
-				2550419C1C2CEF2000C913F7 /* MerchantCell.xib in Resources */,
 				4C6FBA7A1C0D3E8500FACAFF /* .gitignore in Resources */,
 				B5F63DE01C2A8838004F3D01 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				B5F63DD91C2A8838004F3D01 /* UMSCommentInputController.xib in Resources */,
 				4C5FAC981C098AE300027064 /* BusinessCell.xib in Resources */,
 				B5E9199E1C30E13B008FE085 /* MerchantManFirstCell.xib in Resources */,
-				B519B6051C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib in Resources */,
 				B58081FD1C23E07B0073EEEB /* StoreOneTwoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1152,8 +1093,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B519B5FF1C1AC62C0005E2AE /* merchantsTwoTableViewCell.m in Sources */,
-				4CA127401C2FD886004683ED /* DiscountViewCell.m in Sources */,
 				4C5FAC8A1C081C5700027064 /* FriendsViewController.m in Sources */,
 				4C5FAC801C0819E700027064 /* FindViewController.m in Sources */,
 				255041A51C2CEF2000C913F7 /* MerchantManViewController.m in Sources */,
@@ -1181,7 +1120,6 @@
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,
 				4C5FACCF1C0BED0700027064 /* AFHTTPRequestOperationManager.m in Sources */,
 				4C5FACA91C0B287200027064 /* HeadView.m in Sources */,
-				2550419B1C2CEF2000C913F7 /* MerchantCell.m in Sources */,
 				B588F2A11C1FDACA00C51D90 /* merchantsThreeFrame.m in Sources */,
 				4C6FBA7C1C0D3E8500FACAFF /* MBProgressHUD.m in Sources */,
 				256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */,
@@ -1189,7 +1127,6 @@
 				2550419F1C2CEF2000C913F7 /* MerchantManSecondCell.m in Sources */,
 				2550419D1C2CEF2000C913F7 /* MerchantManFirstCell.m in Sources */,
 				4C5FACF51C0BED1500027064 /* MASConstraintMaker.m in Sources */,
-				B519B5FA1C1AC6140005E2AE /* merchantsOneTableViewCell.m in Sources */,
 				B58082011C23EE2D0073EEEB /* StoreTwoTwoCell.m in Sources */,
 				4C5FACF61C0BED1500027064 /* MASLayoutConstraint.m in Sources */,
 				4C5FACD61C0BED0700027064 /* AFURLSessionManager.m in Sources */,
@@ -1197,7 +1134,6 @@
 				B552BCEE1C1E5AE300A2DB40 /* merchantsThreeCell.m in Sources */,
 				255041A41C2CEF2000C913F7 /* MerchantBusinessViewController.m in Sources */,
 				4C5FAC971C098AE300027064 /* BusinessCell.m in Sources */,
-				255029961C17FAF4001B46A8 /* StoreCell.m in Sources */,
 				4C5FACF81C0BED1500027064 /* MASViewConstraint.m in Sources */,
 				255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */,
 				25611A4D1C2BD38900C4418C /* ShopsViewController.m in Sources */,
@@ -1206,10 +1142,8 @@
 				2550299B1C1802AA001B46A8 /* BusinessViewController.m in Sources */,
 				B58081EF1C23C8360073EEEB /* StoreVC.m in Sources */,
 				B57F55FC1C3520400005E676 /* ScanVC.m in Sources */,
-				2550299E1C181C4F001B46A8 /* StoreViewController.m in Sources */,
 				4C5FACD11C0BED0700027064 /* AFNetworkReachabilityManager.m in Sources */,
 				B58081F81C23DA4D0073EEEB /* StoreOneOneCell.m in Sources */,
-				4CF8F7851C2E915000F70BF9 /* IntegralViewCell.m in Sources */,
 				4C5FACD51C0BED0700027064 /* AFURLResponseSerialization.m in Sources */,
 				B58081FC1C23E07B0073EEEB /* StoreOneTwoCell.m in Sources */,
 				256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */,
@@ -1217,7 +1151,6 @@
 				4C8B4E221BFAC42B003A6F65 /* AppDelegate.m in Sources */,
 				4C647A5A1BFDB2330007203F /* PersonViewController.m in Sources */,
 				4C8B4E5E1BFAC7AC003A6F65 /* MessageViewController.m in Sources */,
-				B519B6041C1AC63F0005E2AE /* merchantsThreeTableViewCell.m in Sources */,
 				4CA127441C2FDC57004683ED /* MainViewController.m in Sources */,
 				4CD9C1891C02CB5700523846 /* LoginViewController.m in Sources */,
 				4C8B4E1F1BFAC42B003A6F65 /* main.m in Sources */,

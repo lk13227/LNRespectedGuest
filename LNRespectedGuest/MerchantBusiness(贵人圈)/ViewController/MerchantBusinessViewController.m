@@ -9,9 +9,6 @@
 #import "MerchantBusinessViewController.h"
 #import "JHCustomMenu.h"
 
-//#import "MerchantView.h"
-//#import "MerchantCell.h"
-
 #import "merchantsThreeCell.h"
 #import "merchantsThreeModel.h"
 #import "merchantsThreeFrame.h"
@@ -57,9 +54,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    self.tabBarController.tabBar.hidden = NO;
-//    self.navigationController.navigationBarHidden = NO;
-    
 }
 
 
@@ -69,28 +63,17 @@
     self.navigationController.navigationBar.translucent = NO;
     self.rightBarBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(rightBarBtnClick:)];
     self.navigationItem.rightBarButtonItem = self.rightBarBtn;
-    
-//    self.navigationController.navigationBar.translucent = NO;showSchoolList
-//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"schoolListItem.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSchoolList:)];
-//    self.navigationItem.rightBarButtonItem = rightBarBtn;
 }
 -(void)initView
 {
-    //[self initsegmentedControl];
     [self createTitleBtn];
     [self createScrollView];
-    
-//    [self createBusinessView];
-//    [self createMerchantView];
-    //self.businessView.alpha = 0.01;
-    
 }
 
 #pragma mark - 创建导航栏上两个按钮
 - (void)createTitleBtn{
     //顶部view3456789
     UIView *view = [[UIView alloc] init];
-//    view.backgroundColor = [UIColor redColor];
     view.frame = CGRectMake(0, 0, 200, 40);
     [self.navigationItem setTitleView:view];//导航栏中间添加view
     
@@ -207,8 +190,6 @@
     self.merchantTable.dataSource = self;
     [self.scrollView addSubview:self.merchantView];
     [self.merchantView addSubview:self.merchantTable];
-    
-//    [self.merchantTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
 }
 
 #pragma mark -创建贵圈视图
@@ -222,8 +203,6 @@
     
     [self.scrollView addSubview:self.businessView];
     [self.businessView addSubview:self.businessTable];
-    
-//    [self.businessTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
 }
 
 #pragma mark -tableView
@@ -256,20 +235,6 @@
         if (!cell) {
             cell = [[merchantsThreeCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"shangquan"];
         }
-//        NSString *guiquan = @"10";
-//        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
-//        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
-//        
-//        NSString *guiyuan = @"10";
-//        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
-//        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
-//        
-//        NSString *guiren = @"10";
-//        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
-//        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
-        
-//        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
-//        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
         merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
         cell.threeModelFrame = frame;
@@ -301,25 +266,6 @@
         if (!cell) {
             cell = [[merchantsThreeCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiquan"];
         }
-//        if (indexPath.row==1) {
-//            cell.contentImage.image = nil;
-//        }else{
-//            cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
-//        }
-//        NSString *guiquan = @"10";
-//        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
-//        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
-//        
-//        NSString *guiyuan = @"10";
-//        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
-//        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
-//        
-//        NSString *guiren = @"10";
-//        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
-//        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
-        
-//        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
-//        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
         merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
         cell.threeModelFrame = frame;
@@ -359,10 +305,6 @@
     }
     
     if (tableView == self.merchantTable) {
-//        MerchantCell *cell = (MerchantCell*)[self tableView:self.merchantTable cellForRowAtIndexPath:indexPath];
-//        if (cell.contentImage.image != nil) {
-//            return 340.0;
-//        }
         //计算行高
         merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
         
