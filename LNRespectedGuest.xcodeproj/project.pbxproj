@@ -294,8 +294,8 @@
 		B54901311C2BD577006CC62D /* AppForLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppForLinkCell.h; sourceTree = "<group>"; };
 		B54901321C2BD577006CC62D /* AppForLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppForLinkCell.m; sourceTree = "<group>"; };
 		B54901331C2BD577006CC62D /* AppForLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppForLinkCell.xib; sourceTree = "<group>"; };
-		B552BCEC1C1E5AE300A2DB40 /* merchantsThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeCell.h; sourceTree = "<group>"; };
-		B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeCell.m; sourceTree = "<group>"; };
+		B552BCEC1C1E5AE300A2DB40 /* merchantsThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = merchantsThreeCell.h; path = ../../merchantsThreeCell.h; sourceTree = "<group>"; };
+		B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = merchantsThreeCell.m; path = ../../merchantsThreeCell.m; sourceTree = "<group>"; };
 		B552BCF01C1E5FF500A2DB40 /* merchantsThreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = merchantsThreeModel.h; sourceTree = "<group>"; };
 		B552BCF11C1E5FF500A2DB40 /* merchantsThreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = merchantsThreeModel.m; sourceTree = "<group>"; };
 		B552BD2A1C1EC33500A2DB40 /* microblog.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = microblog.plist; sourceTree = "<group>"; };
@@ -422,6 +422,7 @@
 				255041851C2CEF2000C913F7 /* Cell */,
 				255041921C2CEF2000C913F7 /* JHCustomMenu.h */,
 				255041931C2CEF2000C913F7 /* JHCustomMenu.m */,
+				B552BCEF1C1E5FC700A2DB40 /* model */,
 				255041941C2CEF2000C913F7 /* ViewController */,
 			);
 			path = "MerchantBusiness(贵人圈)";
@@ -442,6 +443,8 @@
 				2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */,
 				255041901C2CEF2000C913F7 /* MerchantPersonCell.m */,
 				255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */,
+				B552BCEC1C1E5AE300A2DB40 /* merchantsThreeCell.h */,
+				B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -789,7 +792,6 @@
 				25611A4C1C2BD38900C4418C /* ShopsViewController.m */,
 				255290C71C33DDC600510831 /* MoreViewController.h */,
 				255290C81C33DDC600510831 /* MoreViewController.m */,
-				B552BCEF1C1E5FC700A2DB40 /* model */,
 				B58081F01C23CA5F0073EEEB /* New cell */,
 				B519B5F61C1AC5E40005E2AE /* cell */,
 			);
@@ -808,8 +810,6 @@
 				B519B6011C1AC63F0005E2AE /* merchantsThreeTableViewCell.h */,
 				B519B6021C1AC63F0005E2AE /* merchantsThreeTableViewCell.m */,
 				B519B6031C1AC63F0005E2AE /* merchantsThreeTableViewCell.xib */,
-				B552BCEC1C1E5AE300A2DB40 /* merchantsThreeCell.h */,
-				B552BCED1C1E5AE300A2DB40 /* merchantsThreeCell.m */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -843,6 +843,7 @@
 				B588F2A01C1FDACA00C51D90 /* merchantsThreeFrame.m */,
 			);
 			name = model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B56C47CC1C152F77005C15E7 /* MyAccount(我的账户) */ = {

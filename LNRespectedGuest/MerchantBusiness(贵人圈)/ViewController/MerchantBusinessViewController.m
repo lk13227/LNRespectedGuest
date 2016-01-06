@@ -10,7 +10,11 @@
 #import "JHCustomMenu.h"
 
 //#import "MerchantView.h"
-#import "MerchantCell.h"
+//#import "MerchantCell.h"
+
+#import "merchantsThreeCell.h"
+#import "merchantsThreeModel.h"
+#import "merchantsThreeFrame.h"
 
 #import "BusinessCell.h"
 
@@ -27,9 +31,28 @@
 @property (nonatomic,strong)UIView *titleLine;
 @property(nonatomic,strong)UIBarButtonItem *rightBarBtn;
 
+@property (nonatomic,strong)NSArray *threeModelFrames;
+
 @end
 
 @implementation MerchantBusinessViewController
+
+- (NSArray *)threeModelFrames{
+    if (!_threeModelFrames) {
+        //加载数据模型
+        NSArray *threeModels = [merchantsThreeModel threeModelList];
+        NSMutableArray *frames = [NSMutableArray array];
+        for (merchantsThreeModel *model in threeModels) {
+            //创建frame模型对象
+            merchantsThreeFrame *frame = [[merchantsThreeFrame alloc] init];
+            frame.threeModel = model;
+            //添加到临时数组
+            [frames addObject:frame];
+        }
+        _threeModelFrames = frames;
+    }
+    return _threeModelFrames;
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -153,23 +176,23 @@
 
 
 #pragma mark - 导航栏右侧按钮
-//- (void)rightBarBtnClick:(UIBarButtonItem *)barButtonItem
-//{
-//    __weak __typeof(self) weakSelf = self;
-//    if (!self.menu) {
-//        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"发动态", @"发消息", @"查找"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
-//        _menu.delegate = self;
-//        _menu.dismiss = ^() {
-//            weakSelf.menu = nil;
-//        };
-//        _menu.arrImgName = @[ @"item_battle.png", @"item_list.png", @"item_chat.png"];
-//        [self.view addSubview:_menu];
-//    } else {
-//        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
-//            weakSelf.menu = nil;
-//        }];
-//    }
-//}
+- (void)rightBarBtnClick:(UIBarButtonItem *)barButtonItem
+{
+    __weak __typeof(self) weakSelf = self;
+    if (!self.menu) {
+        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"发动态", @"发消息", @"查找"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
+        _menu.delegate = self;
+        _menu.dismiss = ^() {
+            weakSelf.menu = nil;
+        };
+        _menu.arrImgName = @[ @"item_battle.png", @"item_list.png", @"item_chat.png"];
+        [self.view addSubview:_menu];
+    } else {
+        [_menu dismissWithCompletion:^(JHCustomMenu *object) {
+            weakSelf.menu = nil;
+        }];
+    }
+}
 - (void)jhCustomMenu:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"select: %ld", indexPath.row);
@@ -185,7 +208,7 @@
     [self.scrollView addSubview:self.merchantView];
     [self.merchantView addSubview:self.merchantTable];
     
-    [self.merchantTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
+//    [self.merchantTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
 }
 
 #pragma mark -创建贵圈视图
@@ -200,7 +223,7 @@
     [self.scrollView addSubview:self.businessView];
     [self.businessView addSubview:self.businessTable];
     
-    [self.businessTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
+//    [self.businessTable registerNib:[UINib nibWithNibName:@"MerchantCell" bundle:nil] forCellReuseIdentifier:@"guiren"];
 }
 
 #pragma mark -tableView
@@ -217,10 +240,10 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.businessTable) {
-        return 10;
+        return self.threeModelFrames.count;
     }
     if (tableView == self.merchantTable) {
-        return 5;
+        return self.threeModelFrames.count;
     }
     return 10;
 }
@@ -228,52 +251,97 @@
 {
     
     if (tableView == self.businessTable) {
-        MerchantCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guiren" forIndexPath:indexPath];
+        merchantsThreeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"shangquan"];
         /*判断*/
         if (!cell) {
-            cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiren"];
+            cell = [[merchantsThreeCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"shangquan"];
         }
-        NSString *guiquan = @"10";
-        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
-        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
+//        NSString *guiquan = @"10";
+//        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
+//        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
+//        
+//        NSString *guiyuan = @"10";
+//        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
+//        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
+//        
+//        NSString *guiren = @"10";
+//        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
+//        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
         
-        NSString *guiyuan = @"10";
-        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
-        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
+//        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
+//        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
-        NSString *guiren = @"10";
-        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
-        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
+        merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
+        cell.threeModelFrame = frame;
         
-        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
-        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
+        /**
+         *  分享按钮
+         */
+        UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        //shareBtn.backgroundColor = [UIColor colorWithRed:64.0/255 green:169.0/255 blue:179.0/255 alpha:1.0];
+        shareBtn.titleLabel.font = [UIFont systemFontOfSize:12.];//button上字体的大小
+        shareBtn.layer.cornerRadius = 6.0;//圆角
+        [shareBtn addTarget:self action:@selector(shareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [shareBtn setTitle:@"分享" forState:UIControlStateNormal];
+        [shareBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [cell.contentView addSubview:shareBtn];
+        [shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(cell.contentView.mas_right).offset(-50);
+//            make.left.mas_equalTo(cell.contentView.mas_left).offset(200);
+            make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-8);
+            make.height.offset(30);
+            make.width.offset(60);
+        }];
+        
         return cell;
     }
     
     if (tableView == self.merchantTable) {
-        MerchantCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guiren" forIndexPath:indexPath];
+        merchantsThreeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guiquan"];
         if (!cell) {
-            cell = [[MerchantCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiren"];
+            cell = [[merchantsThreeCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"guiquan"];
         }
 //        if (indexPath.row==1) {
 //            cell.contentImage.image = nil;
 //        }else{
 //            cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
 //        }
-        NSString *guiquan = @"10";
-        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
-        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
+//        NSString *guiquan = @"10";
+//        NSString *str1 = [NSString stringWithFormat:@"贵商:(%@)",guiquan];
+//        [cell.quanBtn setTitle:str1 forState:UIControlStateNormal];
+//        
+//        NSString *guiyuan = @"10";
+//        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
+//        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
+//        
+//        NSString *guiren = @"10";
+//        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
+//        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
         
-        NSString *guiyuan = @"10";
-        NSString *str2 = [NSString stringWithFormat:@"贵员:(%@)",guiyuan];
-        [cell.yuanBtn setTitle:str2 forState:UIControlStateNormal];
+//        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
+//        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
         
-        NSString *guiren = @"10";
-        NSString *str3 = [NSString stringWithFormat:@"贵人:(%@)",guiren];
-        [cell.renBtn setTitle:str3 forState:UIControlStateNormal];
+        merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
+        cell.threeModelFrame = frame;
         
-        cell.contentImage.image = [UIImage imageNamed:@"scrollView0.jpg"];
-        [cell.iconBtn setBackgroundImage:[UIImage imageNamed:@"123.jpg"] forState:UIControlStateNormal];
+        /**
+         *  分享按钮
+         */
+        UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        //shareBtn.backgroundColor = [UIColor colorWithRed:64.0/255 green:169.0/255 blue:179.0/255 alpha:1.0];
+        shareBtn.titleLabel.font = [UIFont systemFontOfSize:12.];//button上字体的大小
+        shareBtn.layer.cornerRadius = 6.0;//圆角
+        [shareBtn addTarget:self action:@selector(shareBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [shareBtn setTitle:@"分享" forState:UIControlStateNormal];
+        [shareBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [cell.contentView addSubview:shareBtn];
+        [shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(cell.contentView.mas_right).offset(-50);
+            //            make.left.mas_equalTo(cell.contentView.mas_left).offset(200);
+            make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-8);
+            make.height.offset(30);
+            make.width.offset(60);
+        }];
         
         return cell;
     }
@@ -284,7 +352,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.businessTable) {
-        return 340.0;
+        //计算行高
+        merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
+        
+        return frame.rowHeight+40;
     }
     
     if (tableView == self.merchantTable) {
@@ -292,7 +363,10 @@
 //        if (cell.contentImage.image != nil) {
 //            return 340.0;
 //        }
-        return 340.0;
+        //计算行高
+        merchantsThreeFrame *frame = self.threeModelFrames[indexPath.row];
+        
+        return frame.rowHeight+40;
     }
     
     return 0;
@@ -314,28 +388,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - rightBarBtn友盟分享
 
--(void)rightBarBtnClick:(UIBarButtonItem *)rightBarBtn
-{
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:nil
-                                      shareText:@"友盟社会化分享让您快速实现分享等社会化功能，www.umeng.com/social"
-                                     shareImage:[UIImage imageNamed:@"123.jpg"]
-                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToSina]
-                                       delegate:self];
-    LKLog(@"呵呵");
-}
-//实现回调方法（可选）：
--(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
-{
-    //根据`responseCode`得到发送结果,如果分享成功
-    if(response.responseCode == UMSResponseCodeSuccess)
-    {
-        //得到分享到的微博平台名
-        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
-    }
-}
 
 #pragma mark - scrollView代理方法
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -369,6 +422,26 @@
     }
 }
 
+
+#pragma mark - 分享
+- (void)shareBtnClick:(UIButton *)btn{
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:nil
+                                      shareText:@"说说现在的想法..."
+                                     shareImage:nil
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToWechatFavorite,UMShareToSina]
+                                       delegate:self];
+}
+//实现回调方法（可选）：
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        //得到分享到的微博平台名
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
+}
 @end
 
 //-(void)initsegmentedControl
