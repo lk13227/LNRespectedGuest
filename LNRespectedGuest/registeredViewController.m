@@ -347,8 +347,8 @@
     [self.mgr startUpdatingLocation];
     
     //测试位置
-    NSString *latiude = @"40.06";
-    NSString *longitude = @"116.39";
+    NSString *latiude = @"23.00";
+    NSString *longitude = @"114.39";
     if (latiude.length == 0 || longitude.length == 0) {
         return;
     }
