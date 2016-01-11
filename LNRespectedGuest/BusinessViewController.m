@@ -8,7 +8,7 @@
 
 #import "BusinessViewController.h"
 #import "BusinessCell.h"
-//#import "StoreViewController.h"
+
 #import "StoreVC.h"
 //导航栏右侧点击进入的搜索页面
 #import "SearchViewController.h"
@@ -122,6 +122,7 @@
 }
 -(void)initView
 {
+    self.title = @"搜索";
     [self createScrollView];
     [self createPageControl];
 }

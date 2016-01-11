@@ -9,8 +9,19 @@
 #import "LoginViewController.h"
 #import "registeredViewController.h"
 
-@interface LoginViewController ()<UITextFieldDelegate,UIAlertViewDelegate>
+#import "MerchantBusinessViewController.h"//贵人圈
+#import "FriendsViewController.h"//通讯录
+#import "MessageViewController.h"//消息
+#import "FindViewController.h"//发现
+#import "PersonViewController.h"//我
 
+@interface LoginViewController ()<UITextFieldDelegate,UIAlertViewDelegate,UITabBarControllerDelegate>
+
+@property(nonatomic,strong)MerchantBusinessViewController *merchantBusinessVC;
+@property(nonatomic,strong)FriendsViewController *friendsVC;
+@property(nonatomic,strong)MessageViewController *messageVC;
+@property(nonatomic,strong)FindViewController *findVC;
+@property(nonatomic,strong)PersonViewController *personVC;
 
 @property (nonatomic,strong) UITextField *userText;
 @property (nonatomic,strong) UITextField *passwordText;
@@ -180,48 +191,67 @@
 
 #pragma mark loginClick
 - (void)loginBtn:(UIButton *)btn{
-//    [self dismissViewControllerAnimated:YES completion:nil];
     //先来一个蒙板
     MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:HUD];
-    HUD.labelText = @"请等待";//蒙板上的字,就改这个
+    
+    HUD.labelText = @"登录中...";//蒙板上的字,就改这个
     [HUD show:YES];//控制手动打开
-    
-    NSMutableDictionary *registerDic = [NSMutableDictionary dictionary];
-    [registerDic setObject:self.userText.text forKey:@"usertel"];
-    [registerDic setObject:self.passwordText.text forKey:@"password"];
-    
-    NSString *postUrl = @"http://www.chongdonghome.com/gr/index.php/user/login";
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];//使用这个将得到的是JSON
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
-    
-    [manager POST:postUrl parameters:registerDic success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    if (([self.userText.text  isEqual: @"123"]) && ([self.passwordText.text  isEqual: @"123"])) {
         [HUD removeFromSuperview];//删除蒙板
-        LKLog(@"%@",responseObject);
         
-        if ([[responseObject objectForKey:@"result"] isEqualToString:@"success"]) {
-            //注册成功
-            
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
-            alert.alertViewStyle=UIAlertViewStyleDefault;
-            [alert show];
-            
-        }else {
-            //注册失败
-            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:[responseObject objectForKey:@"errMsg"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-            alert.alertViewStyle=UIAlertViewStyleDefault;
-            [alert show];
-            
-        }
+        [self createTabBar];
         
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        LKLog(@"%@",error);
+    } else {
         [HUD removeFromSuperview];//删除蒙板
-    }];
-    
+        UIAlertView *storeAlert = [[UIAlertView alloc] initWithTitle:@"账号123密码123" message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+        [storeAlert show];
+    }
     
 }
+//- (void)loginBtn:(UIButton *)btn{
+////    [self dismissViewControllerAnimated:YES completion:nil];
+//    //先来一个蒙板
+//    MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:self.view];
+//    [self.view addSubview:HUD];
+//    HUD.labelText = @"请等待";//蒙板上的字,就改这个
+//    [HUD show:YES];//控制手动打开
+//    
+//    NSMutableDictionary *registerDic = [NSMutableDictionary dictionary];
+//    [registerDic setObject:self.userText.text forKey:@"usertel"];
+//    [registerDic setObject:self.passwordText.text forKey:@"password"];
+//    
+//    NSString *postUrl = @"http://www.chongdonghome.com/gr/index.php/user/login";
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];//使用这个将得到的是JSON
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json", @"text/plain", @"text/html", nil];
+//    
+//    [manager POST:postUrl parameters:registerDic success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+//        [HUD removeFromSuperview];//删除蒙板
+//        LKLog(@"%@",responseObject);
+//        
+//        if ([[responseObject objectForKey:@"result"] isEqualToString:@"success"]) {
+//            //注册成功
+//            
+//            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//            alert.alertViewStyle=UIAlertViewStyleDefault;
+//            [alert show];
+//            
+//        }else {
+//            //注册失败
+//            UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"提示" message:[responseObject objectForKey:@"errMsg"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//            alert.alertViewStyle=UIAlertViewStyleDefault;
+//            [alert show];
+//            
+//        }
+//        
+//    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+//        LKLog(@"%@",error);
+//        [HUD removeFromSuperview];//删除蒙板
+//    }];
+//    
+//    
+//}
 
 #pragma mark -提示框点击方法
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -317,6 +347,91 @@
  */
 - (void)returnClick{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - 创建tabbar
+- (void)createTabBar{
+
+    /*添加分栏*/
+    self.merchantBusinessVC = [[MerchantBusinessViewController alloc]init];
+    self.merchantBusinessVC.title = @"贵人圈";
+    self.merchantBusinessVC.tabBarItem.image = [UIImage imageNamed:@"tab_0"];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    /*添加导航控制器*/
+    UINavigationController *merchantBusinessNav = [[UINavigationController alloc]initWithRootViewController:self.merchantBusinessVC];
+    merchantBusinessNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色123456
+    [merchantBusinessNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
+    [merchantBusinessNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
+
+    /*导航栏风格--背景*/
+    //businessNav.navigationBar.barStyle = UIBarStyleDefault;
+
+    /*导航栏透明*/
+    merchantBusinessNav.navigationBar.translucent = YES;
+
+    self.friendsVC = [[FriendsViewController alloc]init];
+    self.friendsVC.title = @"联系人";
+    //self.merchantVC.tabBarItem.image = [[UIImage imageNamed:@"tab_1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.friendsVC.tabBarItem.image = [UIImage imageNamed:@"tab_1"];
+     //self.merchantVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    UINavigationController *friendsNav = [[UINavigationController alloc]initWithRootViewController:self.friendsVC];
+    friendsNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [friendsNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
+    [friendsNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
+    /*导航栏透明*/
+    friendsNav.navigationBar.translucent = YES;
+
+    self.messageVC = [[MessageViewController  alloc]init];
+    self.messageVC.title = @"消息";
+    self.messageVC.tabBarItem.image = [UIImage imageNamed:@"tab_2"];
+    UINavigationController *messageNav = [[UINavigationController alloc]initWithRootViewController:self.messageVC];
+    messageNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [messageNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
+    [messageNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
+    /*导航栏透明*/
+    messageNav.navigationBar.translucent = YES;
+
+    self.findVC = [[FindViewController alloc]init];
+    self.findVC.title = @"发现";
+    self.findVC.tabBarItem.image = [UIImage imageNamed:@"tab_3"];
+    UINavigationController *findNav = [[UINavigationController alloc]initWithRootViewController:self.findVC];
+    findNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [findNav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
+    [findNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
+    /*导航栏透明*/
+    findNav.navigationBar.translucent = YES;
+
+    self.personVC = [[PersonViewController alloc]init];
+    self.personVC.title = @"我";
+    self.personVC.tabBarItem.image = [UIImage imageNamed:@"tab_3"];
+    UINavigationController *personNav = [[UINavigationController alloc]initWithRootViewController:self.personVC];
+    personNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
+    [personNav.navigationBar setTitleTextAttributes:
+  @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+    NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
+    [personNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
+    /*导航栏透明*/
+    personNav.navigationBar.translucent = YES;
+
+    /*创建一个导航分栏控制器的对象*/
+    UITabBarController *tbc = [[UITabBarController alloc]init];
+    [tbc.tabBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"]];
+    
+    /*把创建好的分栏添加给分栏控制器*/
+    tbc.viewControllers = @[merchantBusinessNav,friendsNav,messageNav,findNav,personNav];
+    /*设置分栏控制器的委托人属性*/
+    tbc.delegate = self;
+    
+    [self presentViewController:tbc animated:YES completion:nil];//单纯界面跳转
 }
 
 @end

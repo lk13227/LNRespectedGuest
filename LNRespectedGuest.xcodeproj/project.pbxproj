@@ -436,6 +436,7 @@
 		4C5FAC1A1C041E4F00027064 /* Person(我) */ = {
 			isa = PBXGroup;
 			children = (
+				B561F8DA1C3E3DEB00FA297C /* Set(设置) */,
 				4C8A7B0B1C2CE9E60061F112 /* MyLink(链接管理) */,
 				B549012C1C2BD34E006CC62D /* ApplyForLink(申请链接) */,
 				4C5FAC1E1C041F4B00027064 /* Register(注册) */,
@@ -451,10 +452,6 @@
 			children = (
 				4C647A581BFDB2330007203F /* PersonViewController.h */,
 				4C647A591BFDB2330007203F /* PersonViewController.m */,
-				256A51D71C1AC6E8001F20EF /* SetViewController.h */,
-				256A51D81C1AC6E8001F20EF /* SetViewController.m */,
-				255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */,
-				255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -491,6 +488,9 @@
 		4C5FAC7B1C08193C00027064 /* Find(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				B561F8DD1C3E4AA800FA297C /* Shops(搜索标签跳转) */,
+				B561F8DC1C3E4A3400FA297C /* Store(商家子页) */,
+				B561F8DB1C3E4A1300FA297C /* Search(商家搜索) */,
 				B57F55F91C35200D0005E676 /* scan(扫一扫) */,
 				B58082081C23F3E60073EEEB /* OrderConfirmation(订单确认) */,
 				B519B5F51C1AC4F90005E2AE /* search(搜索) */,
@@ -712,14 +712,6 @@
 			children = (
 				255029991C1802AA001B46A8 /* BusinessViewController.h */,
 				2550299A1C1802AA001B46A8 /* BusinessViewController.m */,
-				256834B51C27D8E300E7BB1B /* SearchViewController.h */,
-				256834B61C27D8E300E7BB1B /* SearchViewController.m */,
-				B58081ED1C23C8360073EEEB /* StoreVC.h */,
-				B58081EE1C23C8360073EEEB /* StoreVC.m */,
-				25611A4B1C2BD38900C4418C /* ShopsViewController.h */,
-				25611A4C1C2BD38900C4418C /* ShopsViewController.m */,
-				255290C71C33DDC600510831 /* MoreViewController.h */,
-				255290C81C33DDC600510831 /* MoreViewController.m */,
 				B519B5F61C1AC5E40005E2AE /* cell */,
 			);
 			name = "search(搜索)";
@@ -810,6 +802,46 @@
 				255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		B561F8DA1C3E3DEB00FA297C /* Set(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				256A51D71C1AC6E8001F20EF /* SetViewController.h */,
+				256A51D81C1AC6E8001F20EF /* SetViewController.m */,
+				255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */,
+				255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */,
+			);
+			name = "Set(设置)";
+			sourceTree = "<group>";
+		};
+		B561F8DB1C3E4A1300FA297C /* Search(商家搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				256834B51C27D8E300E7BB1B /* SearchViewController.h */,
+				256834B61C27D8E300E7BB1B /* SearchViewController.m */,
+			);
+			name = "Search(商家搜索)";
+			sourceTree = "<group>";
+		};
+		B561F8DC1C3E4A3400FA297C /* Store(商家子页) */ = {
+			isa = PBXGroup;
+			children = (
+				B58081ED1C23C8360073EEEB /* StoreVC.h */,
+				B58081EE1C23C8360073EEEB /* StoreVC.m */,
+				255290C71C33DDC600510831 /* MoreViewController.h */,
+				255290C81C33DDC600510831 /* MoreViewController.m */,
+			);
+			name = "Store(商家子页)";
+			sourceTree = "<group>";
+		};
+		B561F8DD1C3E4AA800FA297C /* Shops(搜索标签跳转) */ = {
+			isa = PBXGroup;
+			children = (
+				25611A4B1C2BD38900C4418C /* ShopsViewController.h */,
+				25611A4C1C2BD38900C4418C /* ShopsViewController.m */,
+			);
+			name = "Shops(搜索标签跳转)";
 			sourceTree = "<group>";
 		};
 		B56C47CC1C152F77005C15E7 /* MyAccount(我的账户) */ = {

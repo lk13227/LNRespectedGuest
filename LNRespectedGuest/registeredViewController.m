@@ -8,9 +8,11 @@
 
 #import "registeredViewController.h"
 
+#import <CoreLocation/CoreLocation.h>//定位
+
 #define SEC 60
 
-@interface registeredViewController ()<UIAlertViewDelegate>
+@interface registeredViewController ()<UIAlertViewDelegate,CLLocationManagerDelegate>
 
 @property (nonatomic,strong)UITextField *userText;
 @property (nonatomic,strong)UITextField *phoneText;
@@ -18,11 +20,29 @@
 @property (nonatomic,strong)UITextField *confirmText;
 @property (nonatomic,strong)UITextField *verificationText;
 
+@property (nonatomic,strong)UITextField *positioningText;
+
+@property (nonatomic,strong)CLLocationManager *mgr;//定位管理
+
 @end
 
 @implementation registeredViewController{
     UIButton *_verifyBtn;
     UILabel  *_timeLab;
+}
+
+- (CLLocationManager *)mgr{
+    if (_mgr == nil) {
+        //1.创建定位管理者
+        _mgr = [[CLLocationManager alloc] init];
+        _mgr.delegate = self;
+        //2.位置间隔之后重新定位
+        _mgr.distanceFilter = 10;
+        //3.定位的精确度
+        _mgr.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+
+    }
+    return _mgr;
 }
 
 - (void)viewDidLoad {
@@ -257,6 +277,42 @@
         make.height.offset(40);
     }];
     
+    //定位输入框
+    UIView *positioningView = [[UIView alloc] init];
+    [self.view addSubview:positioningView];
+    [positioningView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(+50);
+        make.top.mas_equalTo(validationBtn.mas_bottom).offset(+10);
+        make.right.mas_equalTo(self.view.mas_right).offset(-50);
+        make.height.offset(40);
+    }];
+    [self createLine:positioningView];
+    
+    self.positioningText = [[UITextField alloc] init];
+    self.positioningText.placeholder = @"测试定位";
+    [self.view addSubview:self.positioningText];
+    [self.positioningText mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(positioningView.mas_right);
+        make.top.mas_equalTo(positioningView.mas_top);
+        make.left.mas_equalTo(positioningView.mas_left);
+        make.bottom.mas_equalTo(positioningView.mas_bottom);
+    }];
+    
+    //定位按钮
+    UIButton *positioningBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    positioningBtn.backgroundColor = [UIColor colorWithRed:64.0/255 green:169.0/255 blue:179.0/255 alpha:1.0];
+    [positioningBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [positioningBtn setTitle:@"定位" forState:UIControlStateNormal];
+    positioningBtn.layer.cornerRadius = 8.0;
+    [positioningBtn addTarget:self action:@selector(positioningClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:positioningBtn];
+    [positioningBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view.mas_left).offset(+50);
+        make.right.mas_equalTo(self.view.mas_right).offset(-50);
+        make.top.mas_equalTo(positioningView.mas_bottom).offset(+10);
+        make.height.offset(40);
+    }];
+    
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if (![self.userText isExclusiveTouch]) {
@@ -274,6 +330,75 @@
     if (![self.verificationText isExclusiveTouch]) {
         [self.verificationText resignFirstResponder];
     }
+    if (![self.positioningText isExclusiveTouch]) {//定位textfile
+        [self.positioningText resignFirstResponder];//收起键盘
+    }
+}
+
+#pragma mark - 定位按钮
+- (void)positioningClick{
+//    //1.创建定位管理者
+//    CLLocationManager *mgr = [[CLLocationManager alloc] init];
+//    
+//    //2.成为代理 CLLocationManagerDelegate
+//    mgr.delegate = self;
+    
+    //3.开始定位
+    [self.mgr startUpdatingLocation];
+    
+    //测试位置
+    NSString *latiude = @"40.06";
+    NSString *longitude = @"116.39";
+    if (latiude.length == 0 || longitude.length == 0) {
+        return;
+    }
+    
+    //反地理编码
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:latiude.floatValue longitude:longitude.floatValue];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if(placemarks.count == 0 || error) return ;
+        
+        CLPlacemark *pm = [placemarks firstObject];
+        LKLog(@"%@-----%@",pm.name,pm.locality);
+        self.positioningText.text = pm.locality;
+    }];
+}
+
+/**
+ *  定位到用户位置会调用该方法(非常耗电)
+ *
+ *  @param locations 存放定位的所有位置
+ */
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    //1.获取位置对象
+    CLLocation *cllocation = [locations lastObject];
+    CLLocationCoordinate2D coordinate = cllocation.coordinate;
+    LKLog(@"纬度%f  经度%f",coordinate.latitude, coordinate.longitude);
+    
+    //取出经纬度
+//    NSString *latiude = [NSString stringWithFormat:@"%f",coordinate.latitude];
+//    NSString *longitude = [NSString stringWithFormat:@"%f",coordinate.longitude];
+    NSString *latiude = @"114";
+    NSString *longitude = @"23";
+    if (latiude.length == 0 || longitude.length == 0) {
+        return;
+    }
+    
+    //反地理编码
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:latiude.floatValue longitude:longitude.floatValue];
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if(placemarks.count == 0 || error) return ;
+        
+        CLPlacemark *pm = [placemarks firstObject];
+        LKLog(@"%@-----%@",pm.name,pm.locality);
+        self.positioningText.text = pm.name;
+    }];
+    
+    
+    [manager stopUpdatingLocation];//停止定位
 }
 
 #pragma mark - createLine划线
