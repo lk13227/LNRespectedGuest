@@ -352,86 +352,61 @@
 #pragma mark - 创建tabbar
 - (void)createTabBar{
 
-    /*添加分栏*/
-    self.merchantBusinessVC = [[MerchantBusinessViewController alloc]init];
-    self.merchantBusinessVC.title = @"贵人圈";
-    self.merchantBusinessVC.tabBarItem.image = [UIImage imageNamed:@"tab_0"];
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];
-    /*添加导航控制器*/
-    UINavigationController *merchantBusinessNav = [[UINavigationController alloc]initWithRootViewController:self.merchantBusinessVC];
-    merchantBusinessNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色123456
-    [merchantBusinessNav.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
-    [merchantBusinessNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
-
-    /*导航栏风格--背景*/
-    //businessNav.navigationBar.barStyle = UIBarStyleDefault;
-
-    /*导航栏透明*/
-    merchantBusinessNav.navigationBar.translucent = YES;
-
-    self.friendsVC = [[FriendsViewController alloc]init];
-    self.friendsVC.title = @"联系人";
-    //self.merchantVC.tabBarItem.image = [[UIImage imageNamed:@"tab_1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.friendsVC.tabBarItem.image = [UIImage imageNamed:@"tab_1"];
-     //self.merchantVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
-    UINavigationController *friendsNav = [[UINavigationController alloc]initWithRootViewController:self.friendsVC];
-    friendsNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
-    [friendsNav.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
-    [friendsNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
-    /*导航栏透明*/
-    friendsNav.navigationBar.translucent = YES;
-
-    self.messageVC = [[MessageViewController  alloc]init];
-    self.messageVC.title = @"消息";
-    self.messageVC.tabBarItem.image = [UIImage imageNamed:@"tab_2"];
-    UINavigationController *messageNav = [[UINavigationController alloc]initWithRootViewController:self.messageVC];
-    messageNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
-    [messageNav.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
-    [messageNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
-    /*导航栏透明*/
-    messageNav.navigationBar.translucent = YES;
-
-    self.findVC = [[FindViewController alloc]init];
-    self.findVC.title = @"发现";
-    self.findVC.tabBarItem.image = [UIImage imageNamed:@"tab_3"];
-    UINavigationController *findNav = [[UINavigationController alloc]initWithRootViewController:self.findVC];
-    findNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
-    [findNav.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
-    [findNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
-    /*导航栏透明*/
-    findNav.navigationBar.translucent = YES;
-
-    self.personVC = [[PersonViewController alloc]init];
-    self.personVC.title = @"我";
-    self.personVC.tabBarItem.image = [UIImage imageNamed:@"tab_3"];
-    UINavigationController *personNav = [[UINavigationController alloc]initWithRootViewController:self.personVC];
-    personNav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色
-    [personNav.navigationBar setTitleTextAttributes:
-  @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-    NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
-    [personNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"] forBarMetrics:UIBarMetricsDefault];
-    /*导航栏透明*/
-    personNav.navigationBar.translucent = YES;
-
     /*创建一个导航分栏控制器的对象*/
     UITabBarController *tbc = [[UITabBarController alloc]init];
     [tbc.tabBar setBackgroundImage:[UIImage imageNamed:@"navigationBar_color"]];
-    
-    /*把创建好的分栏添加给分栏控制器*/
-    tbc.viewControllers = @[merchantBusinessNav,friendsNav,messageNav,findNav,personNav];
     /*设置分栏控制器的委托人属性*/
     tbc.delegate = self;
+
+    self.merchantBusinessVC = [[MerchantBusinessViewController alloc]init];
+    UIImage *tabbarImage1 = [UIImage imageNamed:@"tab_0"];
+    UIImage *navImage1 = [UIImage imageNamed:@"navigationBar_color"];
+    [self setOneController:self.merchantBusinessVC andVCTabbarImage:tabbarImage1 andNavigationControllerImage:navImage1 andTabbar:tbc andVCTitle:@"贵人圈"];
+
+    self.friendsVC = [[FriendsViewController alloc]init];
+    UIImage *tabbarImage2 = [UIImage imageNamed:@"tab_1"];
+    UIImage *navImage2 = [UIImage imageNamed:@"navigationBar_color"];
+    [self setOneController:self.friendsVC andVCTabbarImage:tabbarImage2 andNavigationControllerImage:navImage2 andTabbar:tbc andVCTitle:@"联系人"];
+
+    self.messageVC = [[MessageViewController  alloc]init];
+    UIImage *tabbarImage3 = [UIImage imageNamed:@"tab_2"];
+    UIImage *navImage3 = [UIImage imageNamed:@"navigationBar_color"];
+    [self setOneController:self.messageVC andVCTabbarImage:tabbarImage3 andNavigationControllerImage:navImage3 andTabbar:tbc andVCTitle:@"消息"];
+
+    self.findVC = [[FindViewController alloc]init];
+    UIImage *tabbarImage4 = [UIImage imageNamed:@"tab_3"];
+    UIImage *navImage4 = [UIImage imageNamed:@"navigationBar_color"];
+    [self setOneController:self.findVC andVCTabbarImage:tabbarImage4 andNavigationControllerImage:navImage4 andTabbar:tbc andVCTitle:@"发现"];
+
+    self.personVC = [[PersonViewController alloc]init];
+    UIImage *tabbarImage5 = [UIImage imageNamed:@"tab_3"];
+    UIImage *navImage5 = [UIImage imageNamed:@"navigationBar_color"];
+    [self setOneController:self.personVC andVCTabbarImage:tabbarImage5 andNavigationControllerImage:navImage5 andTabbar:tbc andVCTitle:@"我"];
     
     [self presentViewController:tbc animated:YES completion:nil];//单纯界面跳转
+}
+
+- (void)setOneController:(UIViewController *)VC andVCTabbarImage:(UIImage *)tabbarImage andNavigationControllerImage:(UIImage *)NavigationControllerImage andTabbar:(UITabBarController *)tabbar andVCTitle:(NSString *)title{
+    
+    VC.title = title;
+    VC.tabBarItem.image = tabbarImage;
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    /*添加导航控制器*/
+    UINavigationController *Nav = [[UINavigationController alloc]initWithRootViewController:VC];
+    Nav.navigationBar.tintColor = [UIColor whiteColor];//改变导航箭头颜色123456
+    [Nav.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];//改变导航标题颜色
+    [Nav.navigationBar setBackgroundImage:NavigationControllerImage forBarMetrics:UIBarMetricsDefault];
+    
+    /*导航栏风格--背景*/
+    //businessNav.navigationBar.barStyle = UIBarStyleDefault;
+    
+    /*导航栏透明*/
+    Nav.navigationBar.translucent = YES;
+    
+    [tabbar addChildViewController:Nav];
 }
 
 @end

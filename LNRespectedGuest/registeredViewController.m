@@ -361,7 +361,7 @@
         
         CLPlacemark *pm = [placemarks firstObject];
         LKLog(@"%@-----%@",pm.name,pm.locality);
-        self.positioningText.text = pm.locality;
+        self.positioningText.text = pm.name;
     }];
 }
 
