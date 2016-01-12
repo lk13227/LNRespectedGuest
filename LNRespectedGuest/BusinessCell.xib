@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,6 +18,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="123" translatesAutoresizingMaskIntoConstraints="NO" id="8Gi-pC-41N">
                         <rect key="frame" x="13" y="13" width="66" height="66"/>
+                        <animations/>
                         <color key="backgroundColor" red="0.79215686269999996" green="0.59352369530000004" blue="0.72635750359999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="0Xh-im-u0b"/>
@@ -33,6 +34,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金鼎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-nQ-HLS" userLabel="Label1">
                         <rect key="frame" x="89" y="8" width="249" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="Q7Q-Gu-o0A"/>
                         </constraints>
@@ -42,6 +44,7 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近期售123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jb3-pM-dJ1" userLabel="Label2">
                         <rect key="frame" x="277" y="38" width="61" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="3gX-Xb-SFL"/>
                         </constraints>
@@ -51,12 +54,14 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="满20减7，满30减11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ3-S7-c7z" userLabel="Label3">
                         <rect key="frame" x="89" y="68" width="249" height="17"/>
+                        <animations/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="8Gi-pC-41N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="8rF-yP-q6g"/>
                     <constraint firstItem="dwf-nQ-HLS" firstAttribute="leading" secondItem="8Gi-pC-41N" secondAttribute="trailing" constant="10" id="D6Q-XP-ZPV"/>
@@ -95,6 +100,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="detailTitleLabel" destination="HZ3-S7-c7z" id="gst-OE-Xdi"/>
                 <outlet property="picImageView" destination="8Gi-pC-41N" id="hul-Fm-JWI"/>

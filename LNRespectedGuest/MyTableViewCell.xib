@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -17,12 +17,14 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7T-d8-Auy">
                         <rect key="frame" x="8" y="5" width="40" height="40"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="B7T-d8-Auy" secondAttribute="height" multiplier="1:1" id="erU-J3-F7w"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1U-fw-izz">
                         <rect key="frame" x="0.0" y="48" width="380" height="1"/>
+                        <animations/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="xmu-db-xdd"/>
@@ -30,6 +32,7 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHv-Pb-5fk">
                         <rect key="frame" x="0.0" y="0.0" width="380" height="1"/>
+                        <animations/>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="7KI-Lf-D6t"/>
@@ -37,17 +40,20 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozo-Ra-zaI">
                         <rect key="frame" x="63" y="11" width="273" height="30"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2(1)" translatesAutoresizingMaskIntoConstraints="NO" id="YTE-eN-8mP">
                         <rect key="frame" x="340" y="10" width="25" height="29"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="zXM-Ml-bgB"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="n1U-fw-izz" secondAttribute="trailing" constant="180" id="2eG-Py-hwO"/>
                     <constraint firstItem="n1U-fw-izz" firstAttribute="top" secondItem="B7T-d8-Auy" secondAttribute="bottom" constant="4" id="6D5-IT-w5p"/>
@@ -99,6 +105,7 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="backVIew" destination="n1U-fw-izz" id="itD-w0-W4f"/>
                 <outlet property="iconImage" destination="B7T-d8-Auy" id="Jui-Ig-3kR"/>

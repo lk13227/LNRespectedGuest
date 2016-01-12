@@ -28,6 +28,8 @@
 @property(nonatomic,strong)MerchantViewController *merchantVC;
 @property(nonatomic,strong)ShopsViewController *shopsVC;
 @property(nonatomic,strong)MerchantManViewController *merchantManVC;
+@property(nonatomic,strong)UIView *pageView;
+
 @end
 
 @implementation BusinessViewController
@@ -36,16 +38,16 @@
  */
 -(void)createScrollView
 {
-    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, 216)];
+    self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, 196)];
     self.scrollView.backgroundColor = [UIColor whiteColor];
     //是否反弹
     self.scrollView.bounces = NO;
     //是否分页
     self.scrollView.pagingEnabled = YES;
-    //滚动方向
-    self.scrollView.showsHorizontalScrollIndicator = YES;
+    //滚动方向--取消scrollView的进度条
+    self.scrollView.showsHorizontalScrollIndicator = NO;
     //滚动范围
-    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 216);
+    self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 196);
     //代理方法
     self.scrollView.delegate = self;
     [self.view addSubview:self.scrollView];
@@ -55,64 +57,141 @@
 //创建底部的分页控制器
 -(void)createPageControl
 {
-    self.pagecontrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 260, self.view.bounds.size.width, 20)];
-    self.pagecontrol.backgroundColor = [UIColor lightGrayColor];
+    self.pagecontrol = [[UIPageControl alloc]initWithFrame:CGRectMake(0, 245, self.view.bounds.size.width, 10)];
+//    self.pagecontrol.backgroundColor = [UIColor lightGrayColor];
     //设置分页的个数
     self.pagecontrol.numberOfPages = 2;
     //设置当前页
     self.pagecontrol.currentPage = 0;
+    //设置pagecontrol当前页面 点的颜色
+    self.pagecontrol.currentPageIndicatorTintColor = RGBA_lk(43., 199., 171.,1.0);
+    self.pagecontrol.pageIndicatorTintColor = [UIColor lightGrayColor];
     [self.view addSubview:self.pagecontrol];
     
 }
+#pragma mark - 创建button
+//-(void)addBtnImage:(UIImage *)btnImage{
+//    //CGFloat start_x = 20;
+//    CGFloat start_y = 15;
+//    CGFloat Width_Space = 30;
+//    CGFloat Hight_sapce = 25;//40
+//    CGFloat label_Hight = 15;
+//    CGFloat labelOfbutton = 5;
+//    CGFloat Button_Higth = 196/2 - start_y - labelOfbutton - label_Hight - Hight_sapce/2;;
+//    CGFloat Button_Width = 50;
+//    CGFloat label_Width = Button_Width;
+//    CGFloat start_x = (WIDTH - 4*Button_Width - Width_Space*3)/2;
+//    for (NSInteger i = 0; i < 8; i++) {
+//        NSInteger index = i % 4;
+//        NSInteger page = i / 4;
+//        //圆角按钮
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        button.layer.cornerRadius = 25;
+//        button.backgroundColor = [UIColor lightGrayColor];
+//        button.frame = CGRectMake(index * (Width_Space + Button_Width)+start_x, page * (Hight_sapce + Button_Higth) + start_y, Button_Width, Button_Higth);
+////        [button setImage:[UIImage imageNamed:@"food.png"] forState:UIControlStateNormal];
+//        [button setImage:btnImage forState:UIControlStateNormal];
+//        //button的点击事件
+//        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+//        
+//        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y+button.frame.size.height+labelOfbutton, label_Width, label_Hight)];
+////        label.text = @"饮食";
+////        label.text = title;
+//        label.textAlignment = NSTextAlignmentCenter;
+//                [self.pageView addSubview:button];
+//        label.backgroundColor = [UIColor lightGrayColor];
+//                [self.pageView addSubview:label];
+//        if (i == 0)
+//        {
+//            label.text = @"饮食";
+//        }
+//        if (i == 1)
+//        {
+//            label.text = @"酒店";
+//        }
+//    }
+//}
+
+
 #pragma mark-
 -(void)createPageView
 {
     for (NSInteger i = 0; i < 2; i++)
     {
-        UIView *pageView = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, 216)];
+       self.pageView = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, 196)];
         if (i == 0) {
-            //            pageView.backgroundColor = [UIColor redColor];
+            NSArray *array = @[@"饮食",@"电影",@"酒店",@"附近",@"外卖",@"KTV",@"火车",@"优惠"];
+            CGFloat start_y = 15;
+            CGFloat Width_Space = 30;
+            CGFloat Hight_sapce = 25;//40
+            CGFloat label_Hight = 15;
+            CGFloat labelOfbutton = 5;
+            CGFloat Button_Higth = 196/2 - start_y - labelOfbutton - label_Hight - Hight_sapce/2;;
+            CGFloat Button_Width = 50;
+            CGFloat label_Width = Button_Width;
+            CGFloat start_x = (WIDTH - 4*Button_Width - Width_Space*3)/2;
+            for (NSInteger j = 0; j < 8; j++) {
+                NSInteger index = j % 4;
+                NSInteger page = j / 4;
+                //圆角按钮
+                UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+                button.layer.cornerRadius = 25;
+//                button.backgroundColor = [UIColor lightGrayColor];
+                button.frame = CGRectMake(index * (Width_Space + Button_Width)+start_x, page * (Hight_sapce + Button_Higth) + start_y, Button_Width, Button_Higth);
+                    [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"S%ld.png",j]] forState:UIControlStateNormal];
+                //button的点击事件
+                [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+                
+                UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y+button.frame.size.height+labelOfbutton, label_Width, label_Hight)];
+                label.text = array[j] ;
+                label.textAlignment = NSTextAlignmentCenter;
+                [self.pageView addSubview:button];
+//                label.backgroundColor = [UIColor lightGrayColor];
+                [self.pageView addSubview:label];
+            }
+
+
         }
         else
         {
-            //            pageView.backgroundColor = [UIColor yellowColor];
+            NSArray *array = @[@"附近",@"外卖",@"KTV",@"火车",@"优惠",@"饮食",@"电影",@"酒店"];
+            CGFloat start_y = 15;
+            CGFloat Width_Space = 30;
+            CGFloat Hight_sapce = 25;//40
+            CGFloat label_Hight = 15;
+            CGFloat labelOfbutton = 5;
+            CGFloat Button_Higth = 196/2 - start_y - labelOfbutton - label_Hight - Hight_sapce/2;;
+            CGFloat Button_Width = 50;
+            CGFloat label_Width = Button_Width;
+            CGFloat start_x = (WIDTH - 4*Button_Width - Width_Space*3)/2;
+            for (NSInteger j = 0; j < 8; j++) {
+                NSInteger index = j % 4;
+                NSInteger page = j / 4;
+                //圆角按钮
+                UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+                button.layer.cornerRadius = 25;
+                //                button.backgroundColor = [UIColor lightGrayColor];
+                button.frame = CGRectMake(index * (Width_Space + Button_Width)+start_x, page * (Hight_sapce + Button_Higth) + start_y, Button_Width, Button_Higth);
+                [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"S%ld.png",j]] forState:UIControlStateNormal];
+                //button的点击事件
+                [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+                
+                UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y+button.frame.size.height+labelOfbutton, label_Width, label_Hight)];
+                label.text = array[j] ;
+                label.textAlignment = NSTextAlignmentCenter;
+                [self.pageView addSubview:button];
+                //                label.backgroundColor = [UIColor lightGrayColor];
+                [self.pageView addSubview:label];
+            }
+
+
         }
-        [self.scrollView addSubview:pageView];
-        
-        //CGFloat start_x = 20;
-        CGFloat start_y = 25;
-        CGFloat Width_Space = 30;
-        CGFloat Hight_sapce = 25;//40
-        CGFloat label_Hight = 15;
-        CGFloat labelOfbutton = 5;
-        CGFloat Button_Higth = 216/2 - start_y - labelOfbutton - label_Hight - Hight_sapce/2;;
-        CGFloat Button_Width = 50;
-        CGFloat label_Width = Button_Width;
-        CGFloat start_x = (WIDTH - 4*Button_Width - Width_Space*3)/2;
-        for (NSInteger i = 0; i < 8; i++) {
-            NSInteger index = i % 4;
-            NSInteger page = i / 4;
-            //圆角按钮
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.layer.cornerRadius = 25;
-            button.backgroundColor = [UIColor lightGrayColor];
-            button.frame = CGRectMake(index * (Width_Space + Button_Width)+start_x, page * (Hight_sapce + Button_Higth) + start_y, Button_Width, Button_Higth);
-            [button setImage:[UIImage imageNamed:@"food.png"] forState:UIControlStateNormal];
-            //button的点击事件
-            [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-            
-            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(button.frame.origin.x, button.frame.origin.y+button.frame.size.height+labelOfbutton, label_Width, label_Hight)];
-            label.text = @"饮食";
-            label.textAlignment = NSTextAlignmentCenter;
-            [pageView addSubview:button];
-            label.backgroundColor = [UIColor lightGrayColor];
-            [pageView addSubview:label];
-        }
-        
+        [self.scrollView addSubview:self.pageView];
         
     }
     
 }
+
 /**
  *  创建数据源
  */
@@ -133,7 +212,7 @@
     self.searchBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchClick:)];
     self.navigationItem.rightBarButtonItem = self.searchBtn;
     
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 216, self.view.frame.size.width, self.view.frame.size.height-216) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 196, self.view.frame.size.width, self.view.frame.size.height-196) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
