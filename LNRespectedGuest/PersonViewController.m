@@ -15,7 +15,9 @@
 #import "ApplyForLinkVC.h"
 #import "MainViewController.h"
 
-@interface PersonViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface PersonViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+
+@property(nonatomic,strong)UIAlertView *storeAlert;
 
 @property(nonatomic,strong)NSMutableArray *dataArray;
 
@@ -201,6 +203,29 @@ static NSString *cellOne = @"cell";
 #pragma mark 退出登录
 - (void)exitClick:(UIButton *)btn{
     LKLog(@"退出登录");
+    
+    self.storeAlert = [[UIAlertView alloc] initWithTitle:@"是否退出登录" message:nil delegate:nil cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
+    self.storeAlert.delegate = self;
+    [self.storeAlert show];
+}
+#pragma mark - Alert view delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:
+(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            LKLog(@"Cancel button clicked");
+            break;
+        case 1:
+        {
+            LoginViewController *VC = [[LoginViewController alloc] init];
+            [self presentViewController:VC animated:YES completion:nil];
+            LKLog(@"OK button clicked");
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 #pragma mark - 申请商圈
 - (void)circleClick:(UIButton *)btn{

@@ -11,6 +11,8 @@
 #import "MerchantViewController.h"
 #import "MerchantManViewController.h"
 
+#import "StoreVC.h"
+
 @interface ShopsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;
@@ -42,6 +44,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor redColor];
+    
+    self.title = @"饮食";
+    
     //调用
     [self createUI];
     [self createData];
@@ -121,7 +126,6 @@
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
         make.width.offset(55);
-        
     }];
 
     return cell;
@@ -131,6 +135,12 @@
 {
     return 100;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    StoreVC *VC = [[StoreVC alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
+}
+
 #pragma mark - button的点击事件
 -(void)quanButtonClick:(UIButton *)button
 {

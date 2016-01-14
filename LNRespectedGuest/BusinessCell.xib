@@ -32,7 +32,7 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金鼎轩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-nQ-HLS" userLabel="Label1">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金鼎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-nQ-HLS" userLabel="Label1">
                         <rect key="frame" x="89" y="8" width="249" height="25"/>
                         <animations/>
                         <constraints>
@@ -107,7 +107,7 @@
                 <outlet property="subTitleLabel" destination="jb3-pM-dJ1" id="Oz8-SH-MV4"/>
                 <outlet property="titleLabel" destination="dwf-nQ-HLS" id="kME-Vz-HCc"/>
             </connections>
-            <point key="canvasLocation" x="275" y="110"/>
+            <point key="canvasLocation" x="113" y="219"/>
         </tableViewCell>
     </objects>
     <resources>
