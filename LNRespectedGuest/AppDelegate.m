@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <AlipaySDK/AlipaySDK.h>
+
 //#import "MerchantBusinessViewController.h"//贵人圈
 //#import "FriendsViewController.h"//通讯录
 //#import "MessageViewController.h"//消息
@@ -341,6 +343,14 @@
     BOOL result = [UMSocialSnsService handleOpenURL:url];
     if (result == FALSE) {
         //调用其他SDK，例如支付宝SDK等
+        
+        if ([url.host isEqualToString:@"safepay"]) {
+            //跳转支付宝钱包进行支付，处理支付结果
+            [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                NSLog(@"result = %@",resultDic);
+            }];
+        }
+        
     }
     return result;
 }

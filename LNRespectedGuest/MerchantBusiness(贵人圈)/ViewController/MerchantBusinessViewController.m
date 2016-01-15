@@ -15,7 +15,7 @@
 
 #import "BusinessCell.h"
 
-@interface MerchantBusinessViewController ()<JHCustomMenuDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,UMSocialUIDelegate,UMSocialDataDelegate>
+@interface MerchantBusinessViewController ()<JHCustomMenuDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,UMSocialDataDelegate,UMSocialUIDelegate>
 
 @property (nonatomic, strong) JHCustomMenu *menu;
 
