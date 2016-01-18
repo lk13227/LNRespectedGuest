@@ -32,6 +32,8 @@
 
 #define RGBA_lk(r,g,b,a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:a]
 
+//#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 #import "Masonry.h"
 #import "AFNetworking.h"

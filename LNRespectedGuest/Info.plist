@@ -24,9 +24,9 @@
 			<key>CFBundleTypeRole</key>
 			<string>None</string>
 			<key>CFBundleURLIconFile</key>
-			<string>123.jpg</string>
+			<string></string>
 			<key>CFBundleURLName</key>
-			<string>lk</string>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wxac0f9ec0c1210f41</string>
