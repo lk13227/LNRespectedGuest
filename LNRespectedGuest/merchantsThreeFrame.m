@@ -40,8 +40,9 @@
     _vipFrame = CGRectMake(vipX, vipY, vipW, vipH);
 
     //内容
-    CGSize textSize = [self sizeWithText:self.threeModel.text maxSize:CGSizeMake(355, MAXFLOAT) fontSize:TextFont];
     CGFloat textX = iconX;
+//    CGSize textSize = [self sizeWithText:self.threeModel.text maxSize:CGSizeMake(355, MAXFLOAT) fontSize:TextFont];
+    CGSize textSize = [self sizeWithText:self.threeModel.text maxSize:CGSizeMake([UIScreen mainScreen].applicationFrame.size.width - textX * 2, MAXFLOAT) fontSize:TextFont];
     CGFloat textY = CGRectGetMaxY(_iconFrame)+margin;
     _textFrame = (CGRect){{textX,textY},textSize};//CGRectMake(textX, textY, textSize.width, textSize.height);
 

@@ -4,7 +4,7 @@
 //
 //  Created by 理念科技有限公司 on 15/12/14.
 //  Copyright © 2015年 Yun. All rights reserved.
-//商家子页第三个cell
+//贵人圈的两个cell
 
 #import <UIKit/UIKit.h>
 
