@@ -74,7 +74,7 @@
         make.left.mas_equalTo(cell.contentView.mas_left).offset(80);
         make.top.mas_equalTo(cell.contentLabel.mas_bottom).offset(4);
         make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-8);
-        make.width.offset(100);
+        make.width.offset(80);
     }];
     /**
      *  申请到个人按钮
@@ -87,10 +87,10 @@
     [personalBtn setTitle:@"申请到个人" forState:UIControlStateNormal];
     [cell.contentView addSubview:personalBtn];
     [personalBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(storeBtn.mas_right).offset(40);
+        make.right.mas_equalTo(cell.contentView.mas_right).offset(-40);
         make.top.mas_equalTo(cell.contentLabel.mas_bottom).offset(4);
         make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-8);
-        make.width.offset(100);
+        make.width.offset(80);
     }];
     
     return cell;

@@ -108,7 +108,7 @@
         make.top.mas_equalTo(cell.subLabel.mas_bottom).offset(5);
         make.left.mas_equalTo(shareBtn.mas_right).offset(10);
         make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-10);
-        make.width.offset(100);
+        make.width.offset(80);
     }];
 
     return cell;

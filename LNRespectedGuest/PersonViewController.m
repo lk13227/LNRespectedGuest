@@ -139,7 +139,7 @@ static NSString *cellOne = @"cell";
         make.left.mas_equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
         make.top.mas_equalTo(imageView.mas_bottom).offset(+15);
-        make.height.offset(200);
+        make.height.offset(150);
     }];
     
     //申请商圈
@@ -153,7 +153,7 @@ static NSString *cellOne = @"cell";
     [circleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left).offset(+50);
         make.right.mas_equalTo(self.view.mas_right).offset(-50);
-        make.top.mas_equalTo(self.tableView.mas_bottom).offset(+30);
+        make.top.mas_equalTo(self.tableView.mas_bottom).offset(+10);
         make.height.offset(40);
     }];
     

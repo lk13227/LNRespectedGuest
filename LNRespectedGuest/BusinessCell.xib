@@ -63,11 +63,10 @@
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jb3-pM-dJ1" secondAttribute="trailing" constant="10" id="7Dq-Zr-g7l"/>
                     <constraint firstItem="8Gi-pC-41N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="8rF-yP-q6g"/>
                     <constraint firstItem="dwf-nQ-HLS" firstAttribute="leading" secondItem="8Gi-pC-41N" secondAttribute="trailing" constant="10" id="D6Q-XP-ZPV"/>
                     <constraint firstItem="jb3-pM-dJ1" firstAttribute="centerX" secondItem="dwf-nQ-HLS" secondAttribute="centerX" id="Ff0-Bd-Dge"/>
-                    <constraint firstAttribute="trailing" secondItem="jb3-pM-dJ1" secondAttribute="trailing" constant="10" id="Fu3-Bv-6Jq"/>
-                    <constraint firstItem="jb3-pM-dJ1" firstAttribute="width" secondItem="dwf-nQ-HLS" secondAttribute="width" id="GIf-av-Hjw"/>
                     <constraint firstItem="dwf-nQ-HLS" firstAttribute="leading" secondItem="8Gi-pC-41N" secondAttribute="trailing" constant="10" id="IEs-80-TH1"/>
                     <constraint firstAttribute="trailing" secondItem="dwf-nQ-HLS" secondAttribute="trailing" constant="10" id="Nxa-nJ-DDK"/>
                     <constraint firstItem="8Gi-pC-41N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="P6m-mb-c2Z"/>
@@ -94,7 +93,6 @@
                         <exclude reference="oyc-kf-zY9"/>
                         <exclude reference="qv3-RO-QuI"/>
                         <exclude reference="Ff0-Bd-Dge"/>
-                        <exclude reference="GIf-av-Hjw"/>
                         <exclude reference="ihc-m6-55G"/>
                         <exclude reference="orP-lh-3da"/>
                     </mask>

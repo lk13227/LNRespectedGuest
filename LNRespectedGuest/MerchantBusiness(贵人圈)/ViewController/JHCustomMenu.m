@@ -157,13 +157,13 @@
     CGContextBeginPath(context);//标记
     
     CGContextMoveToPoint(context,
-                         RightToView * 35.5, TopToView * 0.5);//设置起点
+                         kScreenWidth - 25, TopToView * 0.5);//设置起点
     
     CGContextAddLineToPoint(context,
-                            RightToView * 35, TopToView);
+                            kScreenWidth - 20, TopToView);
     
     CGContextAddLineToPoint(context,
-                            RightToView * 36, TopToView);
+                            kScreenWidth - 30, TopToView);
     
     CGContextClosePath(context);//路径结束标志，不写默认封闭
     

@@ -83,7 +83,7 @@
         //创建一个开发的对象
         self.mySwitch = [[UISwitch alloc]init];
         //设置开关的中心点坐标
-        self.mySwitch.center = CGPointMake(cell.contentView.frame.size.width-20, 70);
+        self.mySwitch.center = CGPointMake(cell.contentView.frame.size.width-60, 65);
         //设置开关的属性
         self.mySwitch.on = YES;
         //        //设置打开的颜色
@@ -95,6 +95,12 @@
         //事件的通知
         [self.mySwitch addTarget:self action:@selector(switchValueChangedCallBack:) forControlEvents:UIControlEventValueChanged];
         [self.tableView addSubview:self.mySwitch];
+//        [self.mySwitch mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(cell.contentView.mas_bottom).offset(5);
+//            make.right.mas_equalTo(cell.contentView.mas_right).offset(-10);
+//            make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-5);
+//            make.width.offset(80);
+//        }];
     }
     
     return cell;

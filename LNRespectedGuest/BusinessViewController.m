@@ -120,7 +120,7 @@
     {
        self.pageView = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width * i, 0, self.view.frame.size.width, 196)];
         if (i == 0) {
-            NSArray *array = @[@"饮食",@"电影",@"酒店",@"附近",@"外卖",@"KTV",@"火车",@"优惠"];
+            NSArray *array = @[@"饮食",@"电影",@"酒店",@"附近",@"外卖",@"KTV",@"旅行",@"优惠"];
             CGFloat start_y = 15;
             CGFloat Width_Space = 30;
             CGFloat Hight_sapce = 25;//40
@@ -154,7 +154,7 @@
         }
         else
         {
-            NSArray *array = @[@"附近",@"外卖",@"KTV",@"火车",@"优惠",@"饮食",@"电影",@"酒店"];
+            NSArray *array = @[@"附近",@"外卖",@"KTV",@"旅行",@"优惠",@"饮食",@"电影",@"酒店"];
             CGFloat start_y = 15;
             CGFloat Width_Space = 30;
             CGFloat Hight_sapce = 25;//40
@@ -265,10 +265,10 @@
     [quanButton setTitle:@"贵圈" forState:UIControlStateNormal];
     [cell.contentView addSubview:quanButton];
     [quanButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(cell.picImageView.mas_right).offset(10);
+        make.left.mas_equalTo(cell.picImageView.mas_right).offset(5);
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
-        make.width.offset(55);
+        make.width.offset(45);
         
     }];
     /**
@@ -282,10 +282,10 @@
      [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
     [cell.contentView addSubview:yuanButton];
     [yuanButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(quanButton.mas_right).offset(10);
+        make.left.mas_equalTo(quanButton.mas_right).offset(5);
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
-        make.width.offset(55);
+        make.width.offset(45);
         
     }];
     /**
@@ -299,10 +299,11 @@
     [renButton setTitle:@"贵人" forState:UIControlStateNormal];
     [cell.contentView addSubview:renButton];
     [renButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(yuanButton.mas_right).offset(10);
+        make.left.mas_equalTo(yuanButton.mas_right).offset(5);
+//        make.right.mas_equalTo(cell.subTitleLabel.mas_left).offset(-10);
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
-        make.width.offset(55);
+        make.width.offset(45);
         
     }];
 
