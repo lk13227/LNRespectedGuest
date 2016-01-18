@@ -139,7 +139,7 @@ static NSString *cellOne = @"cell";
         make.left.mas_equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
         make.top.mas_equalTo(imageView.mas_bottom).offset(+15);
-        make.height.offset(200);
+        make.height.offset(150);
     }];
     
     //申请商圈
