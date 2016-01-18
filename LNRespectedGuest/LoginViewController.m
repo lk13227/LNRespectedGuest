@@ -107,6 +107,7 @@
     
     self.userText = [[UITextField alloc] init];
     self.userText.placeholder = @"手机号";
+    self.userText.text = @"123";
     [self.view addSubview:self.userText];
     [self.userText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.userLabel.mas_right).offset(10);
@@ -139,6 +140,7 @@
     
     self.passwordText = [[UITextField alloc] init];
     self.passwordText.placeholder = @"请输入您的密码";
+    self.passwordText.text = @"123";
     self.passwordText.secureTextEntry = YES;
     [self.view addSubview:self.passwordText];
     [self.passwordText mas_makeConstraints:^(MASConstraintMaker *make) {
