@@ -88,10 +88,10 @@
     [quanButton setTitle:@"贵圈" forState:UIControlStateNormal];
     [cell.contentView addSubview:quanButton];
     [quanButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(cell.picImageView.mas_right).offset(10);
+        make.left.mas_equalTo(cell.picImageView.mas_right).offset(5);
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
-        make.width.offset(55);
+        make.width.offset(45);
         
     }];
     /**
@@ -105,10 +105,10 @@
     [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
     [cell.contentView addSubview:yuanButton];
     [yuanButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(quanButton.mas_right).offset(10);
+        make.left.mas_equalTo(quanButton.mas_right).offset(5);
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
-        make.width.offset(55);
+        make.width.offset(45);
         
     }];
     /**
@@ -122,10 +122,12 @@
     [renButton setTitle:@"贵人" forState:UIControlStateNormal];
     [cell.contentView addSubview:renButton];
     [renButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(yuanButton.mas_right).offset(10);
+        make.left.mas_equalTo(yuanButton.mas_right).offset(5);
+        //        make.right.mas_equalTo(cell.subTitleLabel.mas_left).offset(-10);
         make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
         make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
-        make.width.offset(55);
+        make.width.offset(45);
+        
     }];
 
     return cell;

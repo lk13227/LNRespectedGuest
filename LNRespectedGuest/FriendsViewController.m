@@ -190,7 +190,7 @@
 {
     __weak __typeof(self) weakSelf = self;
     if (!self.menu) {
-        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(230, 0) width:125 rowHeight:44];
+        self.menu = [[JHCustomMenu alloc] initWithDataArr:@[@"加好友", @"扫一扫", @"发动态", @"发起聊天",@"发起聊天"] origin:CGPointMake(WIDTH-125-20, 0) width:125 rowHeight:44];
         _menu.delegate = self;
         _menu.dismiss = ^() {
             weakSelf.menu = nil;

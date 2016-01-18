@@ -171,9 +171,10 @@
         [cell.contentView addSubview:useBtn];
         [useBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(cell.subLabel.mas_bottom).offset(5);
+//            make.right.mas_equalTo(cell.integralLabel.mas_left).offset(10);
             make.left.mas_equalTo(shareBtn.mas_right).offset(10);
             make.bottom.mas_equalTo(cell.contentView.mas_bottom).offset(-10);
-            make.width.offset(100);
+            make.width.offset(80);
         }];
 
         return cell;

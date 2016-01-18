@@ -22,7 +22,7 @@
     self.discountNumLabel.textColor = [UIColor colorWithRed:212./255. green:95./255. blue:114./255. alpha:1.0];
     self.discountNumLabel.font = [UIFont systemFontOfSize:11.0];
     self.integralLabel.text = @"贵人积分:100分";
-    self.integralLabel.font = [UIFont systemFontOfSize:13.0];
+    self.integralLabel.font = [UIFont systemFontOfSize:11.0];
     self.integralLabel.textColor = [UIColor colorWithRed:40./255. green:169./255. blue:179./255. alpha:1.0];
 }
 

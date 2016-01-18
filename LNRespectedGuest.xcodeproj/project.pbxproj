@@ -12,12 +12,12 @@
 		2550419F1C2CEF2000C913F7 /* MerchantManSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550418D1C2CEF2000C913F7 /* MerchantManSecondCell.m */; };
 		255041A11C2CEF2000C913F7 /* MerchantPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041901C2CEF2000C913F7 /* MerchantPersonCell.m */; };
 		255041A21C2CEF2000C913F7 /* MerchantPersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */; };
-		255041A31C2CEF2000C913F7 /* JHCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041931C2CEF2000C913F7 /* JHCustomMenu.m */; };
 		255041A41C2CEF2000C913F7 /* MerchantBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041961C2CEF2000C913F7 /* MerchantBusinessViewController.m */; };
 		255041A51C2CEF2000C913F7 /* MerchantManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255041981C2CEF2000C913F7 /* MerchantManViewController.m */; };
 		255041A61C2CEF2000C913F7 /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2550419A1C2CEF2000C913F7 /* MerchantViewController.m */; };
 		255290C91C33DDC600510831 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255290C81C33DDC600510831 /* MoreViewController.m */; };
 		255D2AED1C1BC34A00781D03 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */; };
+		255DECA01C4CD5410000C5A2 /* JHCustomMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 255DEC9F1C4CD5410000C5A2 /* JHCustomMenu.m */; };
 		25611A4D1C2BD38900C4418C /* ShopsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25611A4C1C2BD38900C4418C /* ShopsViewController.m */; };
 		256834B71C27D8E300E7BB1B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256834B61C27D8E300E7BB1B /* SearchViewController.m */; };
 		256A51D91C1AC6E8001F20EF /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 256A51D81C1AC6E8001F20EF /* SetViewController.m */; };
@@ -160,8 +160,6 @@
 		2550418F1C2CEF2000C913F7 /* MerchantPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantPersonCell.h; path = Cell/MerchantPersonCell.h; sourceTree = "<group>"; };
 		255041901C2CEF2000C913F7 /* MerchantPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantPersonCell.m; path = Cell/MerchantPersonCell.m; sourceTree = "<group>"; };
 		255041911C2CEF2000C913F7 /* MerchantPersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MerchantPersonCell.xib; path = Cell/MerchantPersonCell.xib; sourceTree = "<group>"; };
-		255041921C2CEF2000C913F7 /* JHCustomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHCustomMenu.h; path = ../JHCustomMenu.h; sourceTree = "<group>"; };
-		255041931C2CEF2000C913F7 /* JHCustomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHCustomMenu.m; path = ../JHCustomMenu.m; sourceTree = "<group>"; };
 		255041951C2CEF2000C913F7 /* MerchantBusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchantBusinessViewController.h; sourceTree = "<group>"; };
 		255041961C2CEF2000C913F7 /* MerchantBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchantBusinessViewController.m; sourceTree = "<group>"; };
 		255041971C2CEF2000C913F7 /* MerchantManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantManViewController.h; path = ViewController/MerchantManViewController.h; sourceTree = "<group>"; };
@@ -172,6 +170,8 @@
 		255290C81C33DDC600510831 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		255D2AEB1C1BC34A00781D03 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		255D2AEC1C1BC34A00781D03 /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
+		255DEC9E1C4CD5410000C5A2 /* JHCustomMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCustomMenu.h; sourceTree = "<group>"; };
+		255DEC9F1C4CD5410000C5A2 /* JHCustomMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCustomMenu.m; sourceTree = "<group>"; };
 		25611A4B1C2BD38900C4418C /* ShopsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopsViewController.h; sourceTree = "<group>"; };
 		25611A4C1C2BD38900C4418C /* ShopsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopsViewController.m; sourceTree = "<group>"; };
 		256834B51C27D8E300E7BB1B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -532,8 +532,8 @@
 		255041941C2CEF2000C913F7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				255041921C2CEF2000C913F7 /* JHCustomMenu.h */,
-				255041931C2CEF2000C913F7 /* JHCustomMenu.m */,
+				255DEC9E1C4CD5410000C5A2 /* JHCustomMenu.h */,
+				255DEC9F1C4CD5410000C5A2 /* JHCustomMenu.m */,
 				255041951C2CEF2000C913F7 /* MerchantBusinessViewController.h */,
 				255041961C2CEF2000C913F7 /* MerchantBusinessViewController.m */,
 			);
@@ -1417,8 +1417,8 @@
 				4CD9C1851C02C30900523846 /* MyTableViewCell.m in Sources */,
 				4C5FACF41C0BED1500027064 /* MASConstraint.m in Sources */,
 				B504457D1C48E7C800ACBEA9 /* DataSigner.m in Sources */,
-				255041A31C2CEF2000C913F7 /* JHCustomMenu.m in Sources */,
 				B504457F1C48E7C800ACBEA9 /* MD5DataSigner.m in Sources */,
+				255DECA01C4CD5410000C5A2 /* JHCustomMenu.m in Sources */,
 				255041A61C2CEF2000C913F7 /* MerchantViewController.m in Sources */,
 				255290C91C33DDC600510831 /* MoreViewController.m in Sources */,
 				4C8B4E251BFAC42B003A6F65 /* LNRespectedGuest.xcdatamodeld in Sources */,
