@@ -126,7 +126,7 @@
      *点击获取prodcut实例并初始化订单信息
      */
     //Product *product = [self.productList objectAtIndex:indexPath.row];
-    Product *product = [self.productList lastObject];
+    Product *product = [self.productList firstObject];
     
     /*
      *商户的唯一的parnter和seller。
@@ -136,9 +136,10 @@
     /*============================================================================*/
     /*=======================需要填写商户app申请的===================================*/
     /*============================================================================*/
-    NSString *partner = @"";//商户ID
-    NSString *seller = @"";//支付宝账号
-    NSString *privateKey = @"";//秘钥 用于数据安全，数据加密
+    NSString *partner = @"2088001577647355";//商户ID
+    NSString *seller = @"bjchcxdz@alibaba.com.cn";//支付宝账号
+    NSString *privateKey = @"";
+    //NSString *privateKey = @"MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBANwyIyNlDqgr/CmhikOQt+K6IG/Y6fHY5rmgV3Ya9MYsouvB6kXErA0A/lL9O5rRPtctBJiQyU2DjYnw221X3iR8ODPKmMp0ZRQG8LE1lDPOH+d+CSo8o9pCzWMHnpMqbA0XRLLgFe7229YdxkdLPrrCZ5aAcui7liTxuZHAvL9xAgMBAAECgYAnBYOQnDISv2i6f/QesSDFPzLMX2ZmA4gv0Shut6w1Cmf826qGnqnWzBxF3LaZYwd93m54EwB5ihylG1fncrDc9jcME1+3L2JQvWxvEPQy66X5EKtU1G3KrFO0hgnL0dv9LuZ6OsFHBCzOsLVApn8hNojhQ9KcGoC4Acwygyg4IQJBAO+vUfodLcHc+E7aFjzQQ5+AmKzbgOrAJYFY8cqnXf0XxEbfNpr6DH60bHACWuApetu6gD4g4Eey4s6+gY6f06UCQQDrLzUUxlLJgsVzd3LePhmJdhKr37sMFvPLUk1Qk4kIp6t0wHOO36A42ihEiU4STRyCKTCbMrC+X28MLzVq4MLdAkAZC3jFacceOri3hJJOSHTIded+KHGQFgPVQDYDtvlbOOCJh0ltaDNmCfRKv/Q++BaeXx6HX2gQFeEdOUrQXGMBAkEAwnJod8G1ZwhpChujbF55rK5jp5k2RDuh2+QzKkChFvfSCZiosmLwTLEKhAfl9bmtrWwy1M5nVS8AWFmb1773PQJAK0A/kvk4OWHrFr6xr08RMMjkhu9xKzSsmC0Zk5KmCvYsV0PeZf3+UAEOVwxWezmu2qzl4YOhIGQB0abRBMZtcg==";//秘钥 用于数据安全，数据加密
     //这三个数据支付宝会提供
     /*============================================================================*/
     /*============================================================================*/
