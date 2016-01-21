@@ -7,11 +7,16 @@
 //搜索按钮跳转searchBar
 
 #import "SearchViewController.h"
-
-#import "StoreVC.h"
+#import "BusinessCell.h"
+//贵员（人）按钮跳转页面
+#import "MerchantViewController.h"
+//贵圈按钮跳转页面
+#import "MerchantManViewController.h"
 
 @interface SearchViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
 
+@property(nonatomic,strong)MerchantViewController *merchantVC;
+@property(nonatomic,strong)MerchantManViewController *merchantManVC;
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)UISearchBar *searchBar;
 @property(nonatomic,strong)UISearchDisplayController *sdc;
@@ -21,22 +26,12 @@
 @end
 
 @implementation SearchViewController
+/**
+ *  创建数据源
+ */
 -(void)createData
 {
-    if (!_dataArray)
-    {
-        self.dataArray = [NSMutableArray array];
-        for (NSUInteger i = 'A'; i<'Z'; i++)
-        {
-            NSMutableArray *temp = [NSMutableArray array];
-            for (NSUInteger j = 0; j < 10; j++)
-            {
-                [temp addObject:[NSString stringWithFormat:@"%c%lu",(char)i,j]];
-            }
-            [self.dataArray addObject:temp];
-        }
-        [self.tableView reloadData];
-    }
+    self.dataArray = [[NSMutableArray alloc]init];
 }
 -(void)createUI
 {
@@ -68,86 +63,103 @@
     [self createData];
     [self createUI];
 }
-#pragma mark - 黄金三问
+#pragma mark - tableView方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (tableView != self.tableView)
-    {
-        return 1;
-    }
-    else
-    {
-        return self.dataArray.count;
-    }
+    return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    /*如果是搜索状态*/
-    if(tableView != self.tableView)
+    if (self.dataArray.count == 0)
     {
-        /*如果有数据先清空*/
-        if(self.resultArray.count != 0)
-            [self.resultArray removeAllObjects];
-        /*开始查找匹配的数据*/
-        for(NSArray *subArr in self.dataArray)
-        {
-            for(NSString *string in subArr)
-            {
-                /*A0~A9*/
-                NSRange range = [string rangeOfString:self.searchBar.text];
-                /*如果找到数据*/
-                if(range.location != NSNotFound)
-                {
-                    /*保存结果*/
-                    [self.resultArray addObject:string];
-                }
-            }
-        }
-        return self.resultArray.count;
+        return 100;
     }
     else
-    {
-        /*不是搜索状态 A1 A2 ...A9*/
-        return [self.dataArray[section] count];
-    }
-
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+        return self.dataArray.count;
+    
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellName = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    BusinessCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     if (!cell)
     {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"BusinessCell" owner:nil options:nil]firstObject];
+    }
+    /**
+     *  自定义贵圈按钮
+     */
+    UIButton *quanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    quanButton.backgroundColor = [UIColor colorWithRed:255./255. green:106./255. blue:135./255. alpha:1.0];
+    quanButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    quanButton.layer.cornerRadius = 6.0;//圆角
+    [quanButton addTarget:self action:@selector(quanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [quanButton setTitle:@"贵圈" forState:UIControlStateNormal];
+    [cell.contentView addSubview:quanButton];
+    [quanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(cell.picImageView.mas_right).offset(5);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(45);
         
-    }
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    button.frame = CGRectMake(100, 50, 50, 50);
-//    button.backgroundColor = [UIColor redColor];
-//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-//    [cell.contentView addSubview:button];
-    //判断
-    if(tableView != self.tableView)
-    {
-        /*如果是搜索状态需要从resultArray拿数据*/
-        cell.textLabel.text = self.resultArray[indexPath.row];
-    }
-    else
-    {
-        cell.textLabel.text = self.dataArray[indexPath.section][indexPath.row];
-    }
+    }];
+    /**
+     *  自定义贵员按钮
+     */
+    UIButton *yuanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    yuanButton.backgroundColor = [UIColor colorWithRed:255./255. green:224./255. blue:103./255. alpha:1.0];
+    yuanButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    yuanButton.layer.cornerRadius = 6.0;//圆角
+    [yuanButton addTarget:self action:@selector(yuanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [yuanButton setTitle:@"贵员" forState:UIControlStateNormal];
+    [cell.contentView addSubview:yuanButton];
+    [yuanButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(quanButton.mas_right).offset(5);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(45);
+        
+    }];
+    /**
+     *  自定义贵人按钮
+     */
+    UIButton *renButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    renButton.backgroundColor = [UIColor colorWithRed:93./255. green:226./255. blue:255./255. alpha:1.0];
+    renButton.titleLabel.font = [UIFont systemFontOfSize:14.];//button上字体的大小
+    renButton.layer.cornerRadius = 6.0;//圆角
+    [renButton addTarget:self action:@selector(renButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [renButton setTitle:@"贵人" forState:UIControlStateNormal];
+    [cell.contentView addSubview:renButton];
+    [renButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(yuanButton.mas_right).offset(5);
+        //        make.right.mas_equalTo(cell.subTitleLabel.mas_left).offset(-10);
+        make.top.mas_equalTo(cell.titleLabel.mas_bottom).offset(7);
+        make.bottom.mas_equalTo(cell.detailTitleLabel.mas_top).offset(-7);
+        make.width.offset(45);
+        
+    }];
+
     return cell;
 }
-//#pragma mark - 
-//-(void)btnClick
-//{
-//    LKLog(@"hehe");
-//    StoreVC *VC = [[StoreVC alloc] init];
-//    [self.navigationController pushViewController:VC animated:YES];
-//}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+#pragma mark - button的点击事件
+-(void)quanButtonClick:(UIButton *)button
+{
+    self.merchantManVC = [[MerchantManViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantManVC animated:YES];
+}
+-(void)yuanButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
+-(void)renButtonClick:(UIButton *)button
+{
+    self.merchantVC = [[MerchantViewController alloc]init];
+    [self.navigationController pushViewController:self.merchantVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
